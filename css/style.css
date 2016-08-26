@@ -3,9 +3,11 @@
 .default_color_text{color: #2196F3 !important}
 
 body {
-  background: url('../images/background.jpg');
+  background-image: url("../images/background3.jpg");
   background-repeat: no-repeat;
   background-size: fill;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .better_text {
