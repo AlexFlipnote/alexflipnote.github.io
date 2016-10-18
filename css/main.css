@@ -71,7 +71,7 @@ a.button:hover {
 .orange-text {color:orange;}
 .white-text {color:white;}
 .grey-text {color:#3B425B;}
-.darkblue-text {color:#14BAE4;}
+.lightblue-text {color:#14BAE4;}
 
 .white {background-color:white;}
 .black {background-color:black;}
@@ -82,7 +82,7 @@ a.button:hover {
 .orange {background-color:orange;}
 .white {background-color:white;}
 .grey {background-color:#3B425B;}
-.darkblue {background-color:#14BAE4;}
+.lightblue {background-color:#14BAE4;}
 
 @media screen and (max-width: 500px) {
   br {
