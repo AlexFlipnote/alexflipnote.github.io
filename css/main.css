@@ -54,10 +54,52 @@ a.button {
   transition: all 0.5s ease;
 }
 
-a.button:hover {
+a.button.fa-commenting:hover {
   transition: all 0.5s ease;
-  background: #CF4647;
-  color: white;
+  background: #31374C;
+}
+
+a.button.fa-twitter:hover {
+  transition: all 0.5s ease;
+  background: #11A2C6;
+}
+
+a.button.fa-github:hover {
+  transition: all 0.5s ease;
+  background: #31374C;
+}
+
+a.button.fa-steam:hover {
+  transition: all 0.5s ease;
+  background: #191919;
+}
+
+a.button.fa-commenting:active {
+  transition: all 0.5s ease;
+  color: #31374C;
+  border: 2px solid #31374C;
+  background-color: white;
+}
+
+a.button.fa-twitter:active {
+  transition: all 0.5s ease;
+  color: #11A2C6;
+  border: 2px solid #11A2C6;
+  background-color: white;
+}
+
+a.button.fa-github:active {
+  transition: all 0.5s ease;
+  color: #31374C;
+  border: 2px solid #31374C;
+  background-color: white;
+}
+
+a.button.fa-steam:active {
+  transition: all 0.5s ease;
+  color: #191919;
+  border: 2px solid #191919;
+  background-color: white;
 }
 
 .center_page {
