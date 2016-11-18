@@ -11,6 +11,31 @@ body {
   background-repeat: no-repeat;
 }
 
+.credits {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.url {
+  text-decoration: none;
+  color: #14BAE4;
+}
+
+.text-effect {
+    text-shadow: 3px 3px 15px black;
+    transition: all 0.5s ease;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px 0px 0px 0px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
 .image_title {
   width: 35vmin;
   border-radius: 100%;
