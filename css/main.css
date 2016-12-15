@@ -54,10 +54,22 @@ video {
   transition: all 1s ease;
 }
 
+.error-text {
+  font-size: 10vmin;
+  transition: all 0.5s ease;
+}
+
 .title {
   font-size: 12vmin;
   padding-bottom: 25px;
   transition: all 0.5s ease;
+}
+
+.gandalf {
+  background: url('../images/gandalf.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .overlay_black {
