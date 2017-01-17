@@ -1,5 +1,5 @@
 # alexflipnote.github.io | Details
-Website: https://alexflipnote.github.io
+Website: https://alexflipnote.xyz
 Font & Icons: http://fontawesome.io
 
 ## Copy and remake
