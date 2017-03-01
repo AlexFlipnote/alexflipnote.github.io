@@ -8,6 +8,12 @@ a, html, body, h1, h2, h3, h4, h5, p {
 
 body { background: #2C2F33; }
 
+main {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 b, a { color: #14BAE4; }
 b, a, p { font-size: 20px; }
 a { text-decoration: none; }
@@ -24,53 +30,48 @@ p { color: rgba(255, 255, 255, 0.6); }
 
 /* --- Index Page --- */
 .image_title { border-radius: 100%; width: 120px; }
-.title { font-size: 50px; }
-.space { padding-right: 15px; }
+.title { font-size: 3.5rem; }
+.space { padding: 0.5em; }
 
 .me {
-  top: 115px;
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
-
-.top_banner {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background: url('../images/background.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.5;
-  width: 100%;
-  height: 220px;
 }
 
 .parallax {
-  background: url('../images/background2.jpg');
+  background: url('../images/background.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.5;
   width: 100%;
-  height: 210px;
+  height: 14em;
 }
 
 .info {
-  padding-bottom: 15px;
+  padding-bottom: 1rem;
 }
 
 .text_panel_first {
   width: 100%;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.text_panel {
+.text_panel_info {
   width: 90%;
-  margin: 40px;
+  margin: 2rem;
 }
 
 .column {
@@ -90,8 +91,9 @@ p { color: rgba(255, 255, 255, 0.6); }
   padding-bottom: 15px;
 }
 
-.footer {
-  padding: 1rem;
+footer {
+  padding-top: 1rem; padding-bottom: 1rem;
+  width: 100%;
   text-align: center;
   background: #23272A;
 }
