@@ -128,6 +128,11 @@ footer {
   background-repeat: no-repeat;
 }
 
+.error-text {
+  text-align: center;
+  font-size: 10vmin;
+}
+
 .overlay_black {
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
