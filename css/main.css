@@ -1,5 +1,3 @@
-/* Global CSS */
-
 a, html, body, h1, h2, h3, h4, h5, p {
   color: white;
   margin: 0;
@@ -118,31 +116,4 @@ footer {
   b, a, p { font-size: 13px; }
   h2 { font-size: 27px; }
   .title { font-size: 40px; }
-}
-
-/* --- 404 Page --- */
-.gandalf {
-  background: url('../images/gandalf.gif');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.error-text {
-  text-align: center;
-  font-size: 10vmin;
-}
-
-.overlay_black {
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-}
-
-.center_page {
-  width: 100%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
