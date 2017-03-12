@@ -1,8 +1,9 @@
-# alexflipnote.github.io | Details
-Website: https://alexflipnote.xyz
-Font & Icons: http://fontawesome.io
+![Banner](http://i.imgur.com/gOScyns.png)
 
-## Copy and remake
+## Site Information
+- Site: https://alexflipnote.xyz
+- Usage: Information about myself
+- Framework: none
+
+## Open-source
 Just download and do whatever you want with it, I don't really mind, but please give credits, thanks <3
-
-(This is made without framework, yey)
