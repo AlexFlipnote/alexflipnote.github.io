@@ -14,14 +14,3 @@
   75%  { background: green; }
   100% { background: red; }
 }
-
-/* Index .me start up */
-@keyframes onload {
-  from { transform: translateY(-5em); opacity: 0; }
-  100% { transform: translateY(0px); opacity: 1; }
-}
-
-@-webkit-keyframes onload {
-  from { transform: translateY(-5em); opacity: 0; }
-  100% { transform: translateY(0px); opacity: 1; }
-}

@@ -9,7 +9,7 @@ a, html, body, h1, h2, h3, h4, h5, p {
   font-family: 'Montserrat', sans-serif;
 }
 
-body { background: #272727; animation: onload 600ms ease-in-out; }
+body { background: #272727; }
 main { display:flex; flex-direction: column; align-items: center; }
 b, a { color: #14BAE4; }
 b, a, p { font-size: 20px; }
@@ -44,7 +44,7 @@ p { color: rgba(255, 255, 255, 0.6); }
 
 
 /* Profile and Info */
-.image_title { border-radius: 100%; width: 120px; }
+.image_title { border-radius: 100%;width: 120px; }
 .title { font-size: 3.5rem; }
 .info { padding-bottom: 1rem; }
 .text_panel_info { width: 90%; margin: 2rem; }
@@ -57,18 +57,16 @@ p { color: rgba(255, 255, 255, 0.6); }
   justify-content: center;
   flex-direction: column;
 }
-.text_panel_first {
-  width: 100%;
-  text-align: center;
-  margin-top: 2rem;
+.header {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 /* Double List */
 .column p { margin-bottom: .6em; }
 .column { width: 47%; }
-.column:nth-of-type(1) { float: left; }
-.column:nth-of-type(2) { float: right; }
+.column:nth-of-type(1), .column:nth-of-type(3)  { float: left; }
+.column:nth-of-type(2), .column:nth-of-type(4) { float: right; }
 
 /* Bottom */
 footer {
