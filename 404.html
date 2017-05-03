@@ -15,13 +15,15 @@
 
   <!-- CSS/JS stuff -->
   <script src="https://alexflipnote.xyz/assets/js/videos.js"></script>
+  <script src="https://alexflipnote.xyz/assets/js/timer.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://alexflipnote.xyz/assets/css/index.css" type="text/css" rel="stylesheet">
 </head>
   <body>
     <iframe id="videolist" width="560" height="349" frameborder="0" allowfullscreen></iframe>
     <div class="center_page background_404">
-      <h1 class="error-text">404<br>I think you got lost... <i class="twa twa-frowning"></i></h1>
+      <h1 id="timer" class="error-text" style="font-family:Verdana">404<br>You've been lost for <span id="time">0.0s</span></h1>
+      <!--<h1 class="error-text">404<br>I think you got lost... <p id="time"></p> <i class="twa twa-frowning"></i></h1>-->
       <iframe id="videolist" frameborder="0" allowfullscreen></iframe>
       <section class="top-button" style="background:transparent;">
         <a href="/" style="color:#fff;">Back to home</a>
