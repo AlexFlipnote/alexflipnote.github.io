@@ -137,12 +137,6 @@ footer {
 
 /* Content */
 .error-text { text-align: center; font-size: 10vmin; }
-img.error-image {
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 2em;
-  display: block;
-}
 iframe {
   pointer-events: none;
   position: absolute;
