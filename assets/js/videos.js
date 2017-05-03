@@ -12,5 +12,4 @@ const pushVideo = `https://www.youtube.com/embed/${randomVideo}?playlist=${rando
 
 window.addEventListener("load", function() {
   document.getElementById("videolist").src = pushVideo;
-  document.getElementById("time").innerHTML = setInterval(loooop, 100);
 })
