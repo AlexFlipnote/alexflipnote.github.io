@@ -7,17 +7,6 @@ const videos = [
   'h6nm5R-h0kQ', '_V2sBURgUBI'
 ];
 
-if (!Date.now) {
-  Date.now = function () {
-    return new Date().getTime();
-  }
-}
-const now = Date.now(),
-function loooop() {
-  document.getElementById("time").innerHTML = String(Math.floor((Date.now() - now) / 1000));
-};
-//setInterval(loooop, 100);
-
 const randomVideo = videos[Math.floor(Math.random()*videos.length)];
 const pushVideo = `https://www.youtube.com/embed/${randomVideo}?playlist=${randomVideo}&autoplay=1&loop=1&hd=1`
 
