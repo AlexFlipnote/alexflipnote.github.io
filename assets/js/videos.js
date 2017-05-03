@@ -5,7 +5,7 @@ const videos = [
 ];
 
 const randomVideo = videos[Math.floor(Math.random()*videos.length)];
-const pushVideo = `http://www.youtube.com/embed/${randomVideo}?playlist=${randomVideo}&autoplay=1&loop=1&hd=1`
+const pushVideo = `https://www.youtube.com/embed/${randomVideo}?playlist=${randomVideo}&autoplay=1&loop=1&hd=1`
 
 window.addEventListener("load", function() {
   document.getElementById("videolist").src = pushVideo;
