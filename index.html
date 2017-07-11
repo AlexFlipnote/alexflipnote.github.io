@@ -6,72 +6,79 @@
 
     <!-- Meta Data -->
     <meta name="theme-color" content="#2196F3">
-    <meta content="http://alexflipnote.xyz/assets/images/profile.png" property="og:image" />
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta content="https://alexflipnote.xyz/assets/images/profile.png" property="og:image" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta content="AlexFlipnote" property="og:title" />
-    <meta content="My personal homepage :3" property="og:description" />
+    <meta content="My personal homepage" property="og:description" />
     <meta name="revisit-after" content="2 days">
     <meta name="keywords" content="AlexFlipnote, Festive Community, KawaiiBot, NodeJS, Twitter, Developer, Github">
 
     <!-- CSS/JS stuff -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
     <link href="assets/css/index.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-    <main>
+    <div class="background_main"></div>
+
+    <div class="center_object">
       <section class="me">
         <img draggable="false" src="assets/images/profile.png" class="image_title">
         <h1 class="title">AlexFlipnote</h1>
-      </section>
-
-      <section class="top-button">
-        <a href="https://discord.gg/J4mwTJR" target="_blank">Discord</a>
-        <a href="https://twitter.com/AlexFlipnote" target="_blank">Twitter</a>
-        <a href="https://github.com/AlexFlipnote" target="_blank">Github</a>
-        <a href="https://steamcommunity.com/id/AlexFlipnote/" target="_blank">Steam</a>
-        <a href="mailto:alexander@samuels1.no">Email</a>
-      </section>
-
-      <h2 class="header"><i class="twa twa-pencil2"></i> Information about me</h2>
-      <section class="text_panel_info flex-container">
-        <div class="flex-item">
-          <h1>Who am I?</h1><p>I'm a Developer that spends time building Nodejs applications and Websites</p>
-          <h1>How long have I been coding?</h1><p>Around 3 years now</p>
-        </div>
-        <div class="flex-item">
-          <h1>What languages do I know?</h1><p>HTML, CSS, JavaScript, PHP, SQL, Python, NodeJS</p>
-          <h1>What am I best in?</h1><p>Currently, web-development is my strongest side</p>
+        <div class="top-button">
+          <a href="https://discord.gg/J4mwTJR" target="_blank">Discord</a>
+          <a href="https://twitter.com/AlexFlipnote" target="_blank">Twitter</a>
+          <a href="https://github.com/AlexFlipnote" target="_blank">Github</a>
+          <a href="https://steamcommunity.com/id/AlexFlipnote/" target="_blank">Steam</a>
+          <a href="mailto:alexander@samuels1.no">Email</a>
         </div>
       </section>
+    </div>
 
-      <div class="parallax"></div>
+    <div class="arrow bounce"></div>
 
-      <section class="text_panel_info flex-container">
+    <div class="information">
+      <section class="flex-container">
         <div class="flex-item">
-          <h2><i class="twa twa-open-file-folder"></i> Projects:</h2>
+          <h2 class="item_title"><i class="twa twa-pencil2"></i> About me</h2>
+          <p>
+            Hello, my name is Alex, but known as <span class="highlight">AlexFlipnote</span> over the internet.
+            I'm a Developer that spends time building Nodejs applications and Websites.
+            I've been coding for around 3 years now and still on the road to learn more.
+            Current languages I know are <span class="highlight">HTML, CSS, JavaScript, PHP, SQL, Python</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <h2 class="item_title"><i class="twa twa-open-file-folder"></i> Projects:</h2>
           <p><a href="https://festive.tf" target="_blank">Festive Community</a>, a community made to host various of game servers.</p>
+          <p><a href="https://hatsuse-izuna.xyz/" target="_blank">Hatsuse Izuna</a>, a Discord bot made in Python and a cute foxgirl trying to take over Discord.</p>
           <p><a href="https://discord.gg/kawaii" target="_blank">KawaiiBot</a>, a Discord bot made in NodeJS to serve discord servers with fun- and moderator commands.</p>
           <p><a href="https://alexflipnote.xyz/homepage" target="_blank">homepage</a>, a website that can be used as a personal start page with clock and date.</p>
-          <p><a href="https://github.com/AlexFlipnote/Discord_Theme" target="_blank">Discord_Theme</a>, discord theme that changes your CSS style</p>
-          <p><a href="https://github.com/AlexFlipnote/SourceBans_Theme" target="_blank">SourceBans_Theme</a>, a custom theme to the default SourceBans one</p>
-          <p><a href="https://alexflipnote.xyz/Salanda" target="_blank">Salanda</a>, a clean one-page website.</p>
+          <p><a href="https://sourcecbl.com/" target="_blank">SourceCBL</a>, a multi-compatible and can be run on various Source games.</p>
         </div>
         <div class="flex-item">
-          <h2><i class="twa twa-white-check-mark"></i> My contributions:</h2>
+          <h2 class="item_title"><i class="twa twa-paintbrush"></i> Themes:</h2>
+          <p><a href="https://github.com/AlexFlipnote/Discord_Theme" target="_blank">Discord_Theme</a>, discord theme that changes the CSS style</p>
+          <p><a href="https://github.com/AlexFlipnote/Twitter_Theme" target="_blank">Twitter_Theme</a>, theme that changes the standard Twitter CSS</p>
+          <p><a href="https://github.com/AlexFlipnote/SourceBans_Theme" target="_blank">SourceBans_Theme</a>, custom theme to the default SourceBans one</p>
+        </div>
+        <div class="flex-item">
+          <h2 class="item_title"><i class="twa twa-white-check-mark"></i> My contributions:</h2>
           <p><a href="https://github.com/velddev/web-miki-dashboard" target="_blank">web-miki-dashboard</a>, Miki dashboard source code.</p>
           <p><a href="https://github.com/beautiful-discord-community/resources" target="_blank">BeautifulDiscord Community</a>, a curated list of awesome Beautiful Discord resources</p>
           <p><a href="https://tatsumaki.xyz" target="_blank">Tatsumaki</a>, A Discord bot for XP &amp; levels, moderation, more utilities and fun stuff</p>
           <p><a href="https://cleverbutts.cf" target="_blank">Cleverbutts</a>, a project that is focused on having discord bots talking to each other.</p>
         </div>
       </section>
+    </div>
 
-      <footer>
-        <p>
-          <a href="https://github.com/AlexFlipnote/alexflipnote.github.io/blob/master/LICENSE" target="_blank">LICENSE</a>
-          | AlexFlipnote |
-          <a href="https://github.com/AlexFlipnote/alexflipnote.github.io" target="_blank">Source</a>
-        </p>
-      </footer>
-    </main>
+    <footer>
+      <p>
+        <a href="https://github.com/AlexFlipnote/alexflipnote.github.io/blob/master/LICENSE" target="_blank">LICENSE</a>
+        | AlexFlipnote |
+        <a href="https://github.com/AlexFlipnote/alexflipnote.github.io" target="_blank">Source</a>
+      </p>
+    </footer>
+
   </body>
 </html>

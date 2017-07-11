@@ -1,0 +1,54 @@
+a, html, body, h1, h2, h3, h4, h5, p {
+  color: white;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body { background: #272727; }
+main { display:flex; flex-direction: column; align-items: center; }
+b, a { color: #14BAE4; }
+b, a, p { font-size: 20px; }
+a { text-decoration: none; }
+h2 { font-size: 37px; }
+p { color: rgba(255, 255, 255, 0.6); }
+
+.top-button a, .top-button a:hover { padding: .5em; transition: all 200ms ease; }
+.top-button a:hover {
+  background: #14BAE4;
+  color: white;
+  transform: translateY(-0.3em);
+}
+.top-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.overlay { background: rgba(0, 0, 0, 0.7); width: 100%; height: 100%; }
+.center_page {
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Content */
+.error-text { text-align: center; font-size: 10vmin; }
+iframe {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.credits {
+  padding: 10px;
+  position: absolute;
+  bottom: 0; left: 0;
+  background: rgba(0, 0, 0, .7);
+  border-radius: 0px 10px 0px 0px;
+}

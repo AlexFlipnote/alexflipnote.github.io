@@ -1,36 +1,75 @@
+<!-- This was only done because memes -->
+<style>
+body {
+  background: #181818;
+  margin: 0;
+  color: #fff;
+  font-family: Product Sans;
+  font-size: 15px;
+}
+
+h1 { font-size: 10vmin; }
+a {
+  color: lightgreen;
+  font-size: 5vmin;
+  text-decoration: none;
+}
+
+.mdl-button {
+  background: 0 0;
+  border: none;
+  border-radius: 2px;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: lighter;
+  height: 36px;
+  letter-spacing: 0;
+  line-height: 36px;
+  margin: 0;
+  min-width: 64px;
+  overflow: hidden;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s cubic-bezier(.4,0,1,1), background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+  vertical-align: middle;
+  will-change: box-shadow;
+}
+
+.colour { background: #e74c3c; color: #fff; }
+.colour:hover { background: #c0392b; transform: scale(1.15); }
+.colour, .colour:hover { transition: all 300ms ease; }
+
+.message {
+  width: 100%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@keyframes blink {
+  from, to { color: transparent; }
+  50% { color: #fff; }
+}
+.cursor {
+  animation: 1s blink step-end infinite;
+  font-weight: bolder;
+}
+</style>
+
 <html>
 <head>
-  <title>AlexFlipnote | 404</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-
-  <!-- Meta Data -->
-  <meta name="theme-color" content="#2196F3">
-  <meta content="http://alexflipnote.xyz/assets/images/profile.png" property="og:image" />
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <meta content="AlexFlipnote" property="og:title" />
-  <meta content="My personal homepage :3" property="og:description" />
-  <meta name="revisit-after" content="2 days">
-  <meta name="keywords" content="AlexFlipnote, Festive Community, KawaiiBot, NodeJS, Twitter, Developer, Github">
-
-  <!-- CSS/JS stuff -->
-  <script src="https://alexflipnote.xyz/assets/js/videos.js"></script>
-  <script src="https://alexflipnote.xyz/assets/js/timer.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link href="https://alexflipnote.xyz/assets/css/index.css" type="text/css" rel="stylesheet">
+  <title>404: Page not found</title>
+  <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
 </head>
-  <body>
-    <iframe id="videolist" width="560" height="349" frameborder="0" allowfullscreen></iframe>
-    <div class="center_page background_404">
-      <h1 id="timer" class="error-text" style="font-family:Verdana">404<br>You've been lost for <span id="time">0.0s</span></h1>
-      <!--<h1 class="error-text">404<br>I think you got lost... <p id="time"></p> <i class="twa twa-frowning"></i></h1>-->
-      <iframe id="videolist" frameborder="0" allowfullscreen></iframe>
-      <section class="top-button" style="background:transparent;">
-        <a href="/" style="color:#fff;">Back to home</a>
-      </section>
-    </div>
-    <div class="credits">
-      Click <a id="credits" target="_blank">here</a> to find this video
-    </div>
-  </body>
+<body>
+  <div class="message">
+    <h1>404<br>Page not found<span class="cursor">_</span></h1>
+    <a href="/" class="mdl-button colour">Back to home</a>
+  </div>
+</body>
 </html>
