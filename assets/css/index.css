@@ -46,13 +46,18 @@ p { color: rgba(255, 255, 255, 0.6); }
   filter: blur(5px);
 }
 .image_title { border-radius: 100%;width: 120px; }
-.title { font-size: 3.5rem; }
+.title { font-size: 3.5rem; font-family: Product Sans; }
 .info { padding-bottom: 1rem; }
 
+.information {
+  z-index: 1;
+  background: red;
+}
+
 .center_object {
+  z-index: 2;
   width: 100%;
-  padding: 0 50px;
-  position: fixed;
+  position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.5);
@@ -61,6 +66,7 @@ p { color: rgba(255, 255, 255, 0.6); }
 
 .text_panel_info { width: 90%; margin: 2rem; }
 .me {
+  z-index: 10;
   width: 100%;
   height: auto;
   padding: 1rem 0 1rem 0;
