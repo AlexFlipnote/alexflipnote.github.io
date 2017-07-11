@@ -1,0 +1,75 @@
+<!-- This was only done because memes -->
+<style>
+body {
+  background: #181818;
+  margin: 0;
+  color: #fff;
+  font-family: Product Sans;
+  font-size: 15px;
+}
+
+h1 { font-size: 10vmin; }
+a {
+  color: lightgreen;
+  font-size: 5vmin;
+  text-decoration: none;
+}
+
+.mdl-button {
+  background: 0 0;
+  border: none;
+  border-radius: 2px;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: lighter;
+  height: 36px;
+  letter-spacing: 0;
+  line-height: 36px;
+  margin: 0;
+  min-width: 64px;
+  overflow: hidden;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s cubic-bezier(.4,0,1,1), background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+  vertical-align: middle;
+  will-change: box-shadow;
+}
+
+.colour { background: #e74c3c; color: #fff; }
+.colour:hover { background: #c0392b; transform: scale(1.15); }
+.colour, .colour:hover { transition: all 300ms ease; }
+
+.message {
+  width: 100%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@keyframes blink {
+  from, to { color: transparent; }
+  50% { color: #fff; }
+}
+.cursor {
+  animation: 1s blink step-end infinite;
+  font-weight: bolder;
+}
+</style>
+
+<html>
+<head>
+  <title>404: Page not found</title>
+  <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="message">
+    <h1>404<br>Page not found<span class="cursor">_</span></h1>
+    <a href="/" class="mdl-button colour">Back to home</a>
+  </div>
+</body>
+</html>
