@@ -3,7 +3,7 @@
 ## Site Information
 - Site: https://alexflipnote.xyz
 - Usage: Information about myself
-- Framework: none
+- Framework: [smoothscroll.js](https://github.com/alicelieutier/smoothScroll)
 - Google Fonts: Montserrat, Product Sans
 - Emojis: Twemoji.css
 
