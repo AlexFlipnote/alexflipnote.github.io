@@ -10,7 +10,6 @@ a, html, body, h1, h2, h3, h4, h5, p {
 }
 
 body { background: #303030; }
-body.in-transition { transition: transform 900ms ease; }
 main { display:flex; flex-direction: column; align-items: center; }
 b, a { color: #14BAE4; }
 b, a, p { font-size: 20px; }
