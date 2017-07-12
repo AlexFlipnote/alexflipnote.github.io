@@ -10,6 +10,7 @@ a, html, body, h1, h2, h3, h4, h5, p {
 }
 
 body { background: #303030; }
+body.in-transition { transition: transform 900ms ease; }
 main { display:flex; flex-direction: column; align-items: center; }
 b, a { color: #14BAE4; }
 b, a, p { font-size: 20px; }
@@ -47,7 +48,7 @@ p { color: rgba(255, 255, 255, 0.6); }
 .information {
   z-index: 1;
   background: #303030;
-  width: 90%; margin: 2rem;
+  width: 95%; margin: 2rem;
 }
 
 .center_object {
@@ -73,8 +74,8 @@ p { color: rgba(255, 255, 255, 0.6); }
 
 /* Titles */
 .highlight { color: #fff; }
-.image_title { border-radius: 100%;width: 120px; }
-.item_title { font-family: Product Sans; letter-spacing: 2px; }
+.image_title { border-radius: 100%; width: 120px; }
+.item_title { font-family: Product Sans; letter-spacing: 2px; margin-bottom: 5px; }
 .title { font-size: 3.5rem; font-family: Product Sans; letter-spacing: 5px; }
 
 /* Flex Boxes */
@@ -96,15 +97,18 @@ p { color: rgba(255, 255, 255, 0.6); }
 
 .flex-item, .flex-item:hover {transition: all 200ms ease;}
 .flex-item {
-  padding: 5px;
-  width: calc(50% - 30px);
-  margin-top: 10px;
+  padding: 10px;
+  width: calc(50% - 40px);
+  margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
 
   line-height: 30px;
   color: white;
   font-weight: bold;
+
+  border-radius: 15px;
+  background: #181818;
 }
 
 /* Bottom */
@@ -125,8 +129,7 @@ footer {
 
 /* Responsive */
 @media screen and (max-width: 600px) {
-  .parallax { height: 5em; }
-
+  .information { width: 100%; margin: 0.1rem; }
   b, a, p { font-size: 15px; }
   h2 { font-size: 30px; }
 }
