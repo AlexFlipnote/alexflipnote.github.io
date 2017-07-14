@@ -124,7 +124,7 @@ footer {
 }
 
 /* Medium screens */
-@media all and (max-width: 700px) {
+@media all and (max-width: 1400px) {
   .flex-item {
     width: calc(100% - 30px);
   }
