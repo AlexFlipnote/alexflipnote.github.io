@@ -58,6 +58,8 @@ p { color: rgba(255, 255, 255, 0.6); }
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0px 25px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0px 25px 25px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0px 25px 25px rgba(0, 0, 0, 0.5);
 }
 
 .me {
@@ -117,6 +119,8 @@ footer {
   text-align: center;
   background: #282828;
   box-shadow: 0 0px 25px 15px #282828;
+  -moz-box-shadow: 0 0px 25px 15px #282828;
+  -webkit-box-shadow: 0 0px 25px 15px #282828;
 }
 
 /* Medium screens */
