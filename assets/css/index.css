@@ -9,7 +9,7 @@ a, html, body, h1, h2, h3, h4, h5, p {
   font-family: 'Montserrat', sans-serif;
 }
 
-body { background: #303030; }
+body { background: #191919; }
 main { display:flex; flex-direction: column; align-items: center; }
 b, a { color: #14BAE4; }
 b, a, p { font-size: 20px; }
@@ -22,7 +22,7 @@ p { color: rgba(255, 255, 255, 0.6); }
 .top-button a:hover {
   background: #14BAE4;
   color: white;
-  transform: translateY(-0.3em);
+  transform: translateY(-0.3em) scale(1.05);
 }
 .top-button {
   display: flex;
@@ -41,25 +41,18 @@ p { color: rgba(255, 255, 255, 0.6); }
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  filter: blur(5px);
+  filter: blur(5px) brightness(50%);
 }
 
 .information {
-  z-index: 1;
-  background: #303030;
   width: 95%; margin: 2rem;
 }
 
 .center_object {
-  z-index: 2;
   width: 100%;
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0px 25px 25px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0px 25px 25px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0px 25px 25px rgba(0, 0, 0, 0.5);
 }
 
 .me {
@@ -76,8 +69,17 @@ p { color: rgba(255, 255, 255, 0.6); }
 /* Titles */
 .highlight { color: #fff; }
 .image_title { border-radius: 100%; width: 120px; }
-.item_title { font-family: Product Sans; letter-spacing: 2px; margin-bottom: 5px; }
-.title { font-size: 3.5rem; font-family: Product Sans; letter-spacing: 5px; }
+.item_title, .title { filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.3)); }
+.item_title {
+  font-family: Product Sans;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+.title {
+  font-size: 3.5rem;
+  font-family: Product Sans;
+  letter-spacing: 5px;
+ }
 
 /* Flex Boxes */
 .flex-container {
@@ -109,7 +111,6 @@ p { color: rgba(255, 255, 255, 0.6); }
   font-weight: bold;
 
   border-radius: 15px;
-  background: #181818;
 }
 
 /* Bottom */
@@ -142,3 +143,13 @@ footer {
   h2 { font-size: 27px; }
   .title { font-size: 40px; }
 }
+
+/* Colours (Thanks ngb) */
+.blue { color: #0C8483; }
+.green { color: #93C56E; }
+.yellow { color: #E2D86A; }
+.purple { color: #8783BD; }
+.orange { color: #D28D5D; }
+.red { color: #DC3A3B; }
+.pink { color: #B53A93; }
+.grey { color: grey; }
