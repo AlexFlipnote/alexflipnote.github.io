@@ -1,4 +1,6 @@
-![Banner](https://i.alexflipnote.xyz/5dd301.png)
+<h1 style="text-align:center; font-weight: 600;">
+  AlexFlipnote.xyz
+</h1>
 
 ## Site Information
 - Site: https://alexflipnote.xyz
