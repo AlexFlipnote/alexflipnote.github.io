@@ -1,4 +1,4 @@
-<h1 style="text-align:center; font-weight: 600;">
+<h1 align="center" style="font-weight: 600;">
   AlexFlipnote.xyz
 </h1>
 
