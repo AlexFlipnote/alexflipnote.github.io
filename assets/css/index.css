@@ -68,7 +68,7 @@ p { color: rgba(255, 255, 255, 0.6); }
 
 /* Titles */
 .highlight { color: #fff; }
-.image_title { border-radius: 100%; width: 120px; }
+.image_title { border-radius: 100%; width: 9em; }
 .item_title, .title { filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.3)); }
 .item_title {
   font-family: Product Sans;
