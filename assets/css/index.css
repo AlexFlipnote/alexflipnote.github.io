@@ -69,7 +69,7 @@ p { color: rgba(255, 255, 255, 0.6); }
 /* Titles */
 .highlight { color: #fff; }
 .image_title { border-radius: 100%; width: 9em; }
-.item_title, .title { filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.3)); }
+.item_title, .title, .undertitle { filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.3)); }
 .item_title {
   font-family: Product Sans;
   letter-spacing: 2px;
@@ -79,6 +79,10 @@ p { color: rgba(255, 255, 255, 0.6); }
   font-size: 3.5rem;
   font-family: Product Sans;
   letter-spacing: 5px;
+}
+.undertitle {
+  font-size: 2rem;
+  font-family: Product Sans;
 }
 
 /* Flex Boxes */
@@ -111,6 +115,14 @@ p { color: rgba(255, 255, 255, 0.6); }
 
   border-radius: 15px;
 }
+
+.newterm {
+  margin-top: 1.5em;
+  font-size: 2em;
+}
+.newsubterm { margin-top: 1em; }
+.subterm { padding-left: 1.5em; }
+.subterm, .subterm p, .subterm b { font-size: 1em; }
 
 /* Bottom */
 footer {
