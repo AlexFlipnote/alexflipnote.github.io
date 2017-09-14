@@ -20,21 +20,33 @@
   </head>
   <body>
     <h1 class="center avatar_title">All avatars I have used</h1>
-    <div class="row center">
-      <div class="col s12 m6 l3"><img src="images/0.png" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/1.png" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/2.jpg" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/3.jpg" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/4.png" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/5.png" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/6.jpg" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/7.png" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/8.png" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/9.png" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/10.jpg" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/11.png" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/12.jpg" onclick="window.open(this.src)"></div>
-      <div class="col s12 m6 l3"><img src="images/13.png" onclick="window.open(this.src)"></div>
+    <div class="row center" id="load_avatars">
+      <!-- Images will load here -->
     </div>
+    <script>
+      var carousel = document.getElementById("load_avatars");
+      function constructAvatarItem(index) {
+        var wrapper = document.createElement("div");
+        wrapper.className = "col s12 m6 l3";
+        var image = document.createElement("img");
+        image.src = "images/" + index + "." + (index <= 7 ? "png" : "png");
+        image.addEventListener("click", function() {
+          window.open(this.src)
+        }, false);
+        wrapper.appendChild(image);
+        carousel.appendChild(wrapper);
+      }
+
+      var avatarCount = 16;
+      for (var i = 1; i <= avatarCount; i++) {
+        constructAvatarItem(i);
+      }
+
+      $(document).ready(function(){
+         $('.carousel').carousel({
+           dist: -10
+         });
+      });
+    </script>
   </body>
 </html>
