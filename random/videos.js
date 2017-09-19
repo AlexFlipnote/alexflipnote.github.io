@@ -5,10 +5,21 @@ const videos = [
   'NHO84rOp8FQ', 'OGbhJjXl9Rk', 'rY8DSFZ08JQ', '8HlqSrCazqo', '5cEL5mq-OOA', 'OW3q-fjIgAY', 'wsfg5aMRoTQ', 'u_zi6D0V9TI',
   'M3ruhqJBSug', 'lRkUQShOHnQ', 'Q2LMg7Mesrc', 'lMj-iyAoh30', '-y_1TmbMbi0', '0TvmP9S6Gy0', 'OWAgHF5ey6k', 'wdiJ5l30OBY',
   'h6nm5R-h0kQ', '_V2sBURgUBI', 'rtfMHC2H1Do', 'zTTTyoThFBU', 'S8x0G56QwJY', 'r8gzqSc2Qrc', 'xzO2F7g-jVk', '4xJoVCjBUco',
-  'yHJ70Iml_74', 'Wf8K2QSWF4E', 'UhRXn2NRiWI', '6C6zVnGtuFg', 'QH2-TGUlwu4', '74ExAh89kY4', 'HHgxOXEQaFU'
+  'yHJ70Iml_74', 'Wf8K2QSWF4E', 'UhRXn2NRiWI', '6C6zVnGtuFg', 'QH2-TGUlwu4', '74ExAh89kY4', 'HHgxOXEQaFU', 'nEun9I2VfP0',
+  'uoFQg0KAzqA', '9WasgRxx6r4', 'A1PAO3jgmXY', 'JC5Ud9_DmeU', 'bflfbR1i1Ds'
 ];
 
-const randomVideo = videos[Math.floor(Math.random()*videos.length)];
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
+
+const randomVideo = getQueryVariable("video") || videos[Math.floor(Math.random()*videos.length)];
 const pushVideo = `https://www.youtube.com/embed/${randomVideo}?playlist=${randomVideo}&autoplay=1&loop=1&hd=1`;
 const creditVideo = `https://www.youtube.com/watch?v=${randomVideo}`;
 

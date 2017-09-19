@@ -20,8 +20,7 @@ p { color: rgba(255, 255, 255, 0.6); }
   position: fixed;
   top: 50%;
   left: 50%;
-  background: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0px 25px 25px rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   transform: translate(-50%, -50%);
 }
 
