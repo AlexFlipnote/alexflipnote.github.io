@@ -1,0 +1,65 @@
+<style>
+/* Keyframes */
+@keyframes enter-page {
+  from {
+    transform: translate(-50%, 40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes color-animation {
+   0% { background-color: #FF0000; }
+   16.6% { background-color: #FF6300; }
+   33.2% { background-color: #FFFF00; }
+   49.8% { background-color: #008000; }
+   66.4% { background-color: #0000FF; }
+   83% { background-color: #4B0082; }
+   100% { background-color: #BD31FF; }
+}
+
+@keyframes pulsate {
+    0% { transform: scale(1, 1); }
+    50% { transform: scale(1.1, 1.1); }
+    100% { transform: scale(1, 1); }
+}
+
+html, body {
+  margin: 0;
+  text-align: center;
+  font-family: sans-serif, Verdana;
+  color: #fff;
+  background: url("https://i.alexflipnote.xyz/a93686.gif");
+  animation: color-animation 5s infinite linear alternate;
+}
+
+.center_page {
+  animation: enter-page 1s ease-in-out;
+  width: 100%;
+  padding: 0 50px;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image { border-radius: 100%; width: 23vmin; }
+.title { font-size: 8vmin; animation: pulsate 1s infinite; }
+.video { pointer-events: none; position: absolute; top: 0; left: 0; visibility: hidden; }
+.shadow { box-shadow: 1px 1px 25px #000; }
+.shadow-text { text-shadow: 1px 1px 15px #000; }
+</style>
+<html>
+  <head>
+    <title>General Lentils is gay</title>
+  </head>
+  <body>
+    <div class="center_page">
+      <iframe class="video" width="560" height="349" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/noQXojwExRA?playlist=noQXojwExRA&autoplay=1&loop=1&hd=1"></iframe>
+      <img class="image shadow" src="https://i.alexflipnote.xyz/17adfd.png">
+      <h1 class="title shadow-text">General Lentils is gay</h1>
+    </div>
+  </body>
+</html>
