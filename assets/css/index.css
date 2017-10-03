@@ -74,6 +74,8 @@ p { color: rgba(255, 255, 255, 0.6); }
   font-family: Product Sans;
   letter-spacing: 2px;
   margin-bottom: 5px;
+  padding: 3px;
+  border-radius: 5px;
 }
 .title {
   font-size: 3.5rem;
@@ -159,19 +161,14 @@ footer {
 
 .avatar_title {
   margin-top: 1em;
-  margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
 .col.s12.m6.l3 { margin-bottom: 4em; }
 .col.s12.m6.l3 img { width: 10em; cursor: pointer; }
 .col.s12.m6.l3 img:hover { transform: scale(0.9); }
 .col.s12.m6.l3 img, .col.s12.m6.l3 img:hover { transition: all 300ms ease; }
 
-/* Colours (Thanks ngb) */
-.blue { color: #0C8483; }
-.green { color: #93C56E; }
-.yellow { color: #E2D86A; }
-.purple { color: #8783BD; }
-.orange { color: #D28D5D; }
-.red { color: #DC3A3B; }
-.pink { color: #B53A93; }
-.grey { color: grey; }
+.green { background-color: #4CAF50 }
+.cyan { background-color: #00bcd4 }
+.pink { background-color: #e91e63 }
+.orange { background-color:#ff9800 }
