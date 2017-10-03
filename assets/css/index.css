@@ -12,13 +12,13 @@ a, html, body, h1, h2, h3, h4, h5, p {
 body { background: #191919; }
 main { display:flex; flex-direction: column; align-items: center; }
 b, a { color: #14BAE4; }
-b, a, p { font-size: 20px; }
+b, p, a { font-size: 1.1em; }
 a { text-decoration: none; }
-h2 { font-size: 37px; }
+h2 { font-size: 1.75em; }
 p { color: rgba(255, 255, 255, 0.6); }
 
 /* Navbar */
-.top-button a, .top-button a:hover { padding: .5em; transition: all 200ms ease; }
+.top-button a, .top-button a:hover { padding: .5em; transition: all 200ms ease; font-size: 1.15em; }
 .top-button a:hover {
   background: #14BAE4;
   color: white;
@@ -69,13 +69,18 @@ p { color: rgba(255, 255, 255, 0.6); }
 /* Titles */
 .highlight { color: #fff; }
 .image_title { border-radius: 100%; width: 9em; }
-.item_title, .title, .undertitle { filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.3)); }
+.item_title, .title, .undertitle { filter: drop-shadow(6px 6px 0px rgba(0,0,0,0.4)); }
 .item_title {
   font-family: Product Sans;
   letter-spacing: 2px;
-  margin-bottom: 5px;
-  padding: 3px;
-  border-radius: 5px;
+  padding: 9px;
+  border-radius: 5px 5px 0 0;
+}
+.item_content {
+  filter: drop-shadow(6px 6px 0px rgba(0,0,0,0.4));
+  padding: 10px;
+  background-color: #303030;
+  border-radius: 0 0 5px 5px;
 }
 .title {
   font-size: 3.5rem;
@@ -129,6 +134,7 @@ p { color: rgba(255, 255, 255, 0.6); }
 /* Bottom */
 footer {
   padding-top: 1rem; padding-bottom: 1rem;
+  margin-top: 4rem;
   width: 100%;
   text-align: center;
   background: #282828;
