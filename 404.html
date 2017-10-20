@@ -59,6 +59,39 @@ a {
   animation: 1s blink step-end infinite;
   font-weight: bolder;
 }
+
+.flex-container {
+  padding: 0;
+  margin: 2rem;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.flex-item, .flex-item:hover {transition: all 200ms ease;}
+.flex-item {
+  padding: 10px;
+  width: calc(50% - 40px);
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  line-height: 30px;
+  color: white;
+  font-weight: bold;
+
+  border-radius: 15px;
+}
+
+#cat { margin-top: 1em; }
+#cat img { width: 75vmin; }
 </style>
 
 <html>
@@ -67,9 +100,32 @@ a {
   <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <div class="message">
-    <h1>404<br>Page not found<span class="cursor">_</span></h1>
-    <a href="/" class="mdl-button colour">Back to home</a>
-  </div>
+  <main>
+    <section class="message">
+      <div class="flex-container">
+        <div class="flex-item" id="cat"></div>
+        <div class="flex-item">
+          <h1>404</h1><h1>Page not found<span class="cursor">_</span></h1>
+          <a href="/" class="mdl-button colour">Back to home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+  var target = document.getElementById('cat');
+  var cat = document.createElement('img');
+
+  var request = new XMLHttpRequest();
+  request.open('GET', "https://random.cat/meow");
+  request.responseType = 'json';
+  request.send();
+
+  request.onload = () => {
+    var data = request.response;
+    cat.src = data.file;
+    target.appendChild(cat);
+  }
+
+  </script>
 </body>
 </html>
