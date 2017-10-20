@@ -91,7 +91,7 @@ a {
 }
 
 #cat { margin-top: 1em; }
-#cat img { width: 75vmin; }
+#cat img { width: 70vmin; }
 </style>
 
 <html>
@@ -121,8 +121,9 @@ a {
   request.send();
 
   request.onload = () => {
-    var data = request.response;
-    cat.src = data.file;
+    var data = request.response.file;
+    datare = data.replace(/^http:\/\//i, 'https://');
+    cat.src = datare;
     target.appendChild(cat);
   }
 
