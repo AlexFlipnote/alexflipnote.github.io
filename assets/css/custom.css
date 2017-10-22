@@ -103,10 +103,13 @@ footer {
 
 /* Responsive */
 @media (max-width: 660px) {
+  .title { font-size: 4rem; }
+  .image_title { width: 7em; }
   .buttons a {
     display: block;
-    margin: 1em;
-    font-size: 1.5em;
+    margin: 0.5em;
+    padding: 0 1.5rem;
+    font-size: 1em;
     text-align: center;
   }
 }
