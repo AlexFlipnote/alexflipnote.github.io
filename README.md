@@ -5,8 +5,10 @@
 ## Site Information
 - Site: https://alexflipnote.xyz
 - Usage: Information about myself
-- Framework: [smoothscroll.js](https://github.com/alicelieutier/smoothScroll)
-- Google Fonts: Montserrat, Product Sans
+- Framework:
+  [smoothscroll.js](https://github.com/alicelieutier/smoothScroll)
+  [skeleton](http://getskeleton.com/)
+- Google Fonts: Montserrat
 - Emojis: Twemoji.css
 
 ## Open-source
