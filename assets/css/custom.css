@@ -27,7 +27,7 @@ p { color: rgba(255, 255, 255, 0.6); }
   border: none;
   color: #fff;
   border-radius: 2px;
-  font-size: 1.5em;
+  font-size: 1em;
   display: inline-block;
   height: 36px;
   line-height: 36px;
@@ -68,7 +68,12 @@ p { color: rgba(255, 255, 255, 0.6); }
   flex-direction: column;
 }
 
-.title { filter: drop-shadow(6px 6px 0px rgba(0,0,0,0.4)); font-size: 6rem; letter-spacing: 1px; }
+.title {
+  filter: drop-shadow(6px 6px 0px rgba(0,0,0,0.4));
+  font-size: 5rem;
+  margin: 0.25em;
+  letter-spacing: 1px;
+}
 .image_title { border-radius: 100%; width: 9em; }
 
 #information { margin-top: 2em; }
@@ -97,12 +102,11 @@ footer {
 
 
 /* Responsive */
-@media (max-width: 900px) { .one-half.column { width: 80%; } }
 @media (max-width: 660px) {
   .buttons a {
     display: block;
-    font-size: 2em;
     margin: 1em;
+    font-size: 1.5em;
     text-align: center;
   }
 }
@@ -115,4 +119,5 @@ footer {
   padding: 1em;
   background-color: rgba(0, 0, 0, 0.25);
 }
+.one-half.column { width: 95%; }
 .container { max-width: 1350px; }
