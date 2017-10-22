@@ -1,132 +1,30 @@
 <!-- This was only done because memes -->
 <style>
-body {
-  background: #181818;
-  margin: 0;
-  color: #fff;
-  font-family: Product Sans;
-  font-size: 15px;
-}
+  body { background: #181818; margin: 0; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 15px; }
+  body { width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
 
-h1 { font-size: 10vmin; }
-a {
-  color: lightgreen;
-  font-size: 5vmin;
-  text-decoration: none;
-}
+  h1 { font-size: 4em; }
+  a { color: lightgreen; font-size: 1.5em; text-decoration: none; }
 
-.mdl-button {
-  background: 0 0;
-  border: none;
-  border-radius: 2px;
-  color: #000;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: lighter;
-  height: 36px;
-  letter-spacing: 0;
-  line-height: 36px;
-  margin: 0;
-  min-width: 64px;
-  overflow: hidden;
-  padding: 0 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .2s cubic-bezier(.4,0,1,1), background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
-  vertical-align: middle;
-  will-change: box-shadow;
-}
+  .button, .button:hover { transition: all 300ms ease; }
+  .button { background: #e74c3c; color: #fff; padding: 0.2em 0.5em; border-radius: 5px; }
+  .button:hover { background: #c0392b; padding: 0.5em 1em; }
 
-.colour { background: #e74c3c; color: #fff; }
-.colour:hover { background: #c0392b; transform: scale(1.15); }
-.colour, .colour:hover { transition: all 300ms ease; }
+  .cursor { animation: 1s blink step-end infinite; font-weight: bolder; }
 
-.message {
-  width: 100%;
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-@keyframes blink {
-  from, to { color: transparent; }
-  50% { color: #fff; }
-}
-.cursor {
-  animation: 1s blink step-end infinite;
-  font-weight: bolder;
-}
-
-.flex-container {
-  padding: 0;
-  margin: 2rem;
-  list-style: none;
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-flex-flow: row wrap;
-  justify-content: flex-start;
-}
-
-.flex-item, .flex-item:hover {transition: all 200ms ease;}
-.flex-item {
-  padding: 10px;
-  width: calc(50% - 40px);
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-
-  line-height: 30px;
-  color: white;
-  font-weight: bold;
-
-  border-radius: 15px;
-}
-
-#cat { margin-top: 1em; }
-#cat img { width: 70vmin; }
+  @keyframes blink {
+    from, to { color: transparent; }
+    50% { color: #fff; }
+  }
 </style>
 
 <html>
 <head>
   <title>404: Page not found</title>
-  <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
-  <main>
-    <section class="message">
-      <div class="flex-container">
-        <div class="flex-item" id="cat"></div>
-        <div class="flex-item">
-          <h1>404</h1><h1>Page not found<span class="cursor">_</span></h1>
-          <a href="/" class="mdl-button colour">Back to home</a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <script>
-  var target = document.getElementById('cat');
-  var cat = document.createElement('img');
-
-  var request = new XMLHttpRequest();
-  request.open('GET', "https://random.cat/meow");
-  request.responseType = 'json';
-  request.send();
-
-  request.onload = () => {
-    var data = request.response.file;
-    datare = data.replace(/^http:\/\//i, 'https://');
-    cat.src = datare;
-    target.appendChild(cat);
-  }
-
-  </script>
+  <h1>404<br>Page not found<span class="cursor">_</span></h1>
+  <a href="/" class="button">Back to home</a>
 </body>
 </html>
