@@ -1,0 +1,9 @@
+$main-color: #ce4dd6;
+$style: solid;
+$side: bottom;
+#navbar {
+    border-#{$side}: {
+    color: $main-color;
+    style: $style;
+    }
+}
