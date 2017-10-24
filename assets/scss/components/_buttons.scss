@@ -1,0 +1,20 @@
+.buttons a {
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.1em;
+  height: 36px;
+  line-height: 36px;
+  margin: .25em;
+  padding: 0 2rem;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 200ms ease;
+  vertical-align: middle;
+
+  &:hover {
+    color: #fff;
+    filter: brightness(50%);
+    transform: translateY(-.3em) scale(1.05);
+  }
+}
