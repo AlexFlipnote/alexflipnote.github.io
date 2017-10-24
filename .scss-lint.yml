@@ -1,0 +1,11 @@
+scss_files: 'assets/scss/*.scss'
+
+linters:
+  ColorVariable:
+    enabled: false
+
+  SingleLinePerSelector:
+    enabled: false
+
+  IdSelector:
+    enabled: false
