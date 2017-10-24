@@ -21,6 +21,9 @@ https://rubyinstaller.org/
 
 #3 Watch the files in SASS with CSS
 sass --watch assets/scss:assets/css
+
+#4 Always be linter friendly
+(sudo) gem install scss_lint
 ```
 
 ## Open-source
