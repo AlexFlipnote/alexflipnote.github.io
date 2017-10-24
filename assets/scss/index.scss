@@ -1,123 +1,129 @@
 @import url("twemoji.css");
 @import url("skeleton.css");
-@import "arrow";
+@import 'arrow';
+@import 'browser';
 
-a, html, body, h1, h2, h3, h4, h5, p {
-  color: white;
-  margin: 0;
+a, html, body, h1, h2, h3, h4, p {
+  color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
+  margin: 0;
 }
 
 body { background: #191919; }
-b, a { color: #14BAE4; }
+b, a { color: #14bae4; }
 b, p, a { font-size: 1.1em; }
 a { text-decoration: none; }
-p { color: rgba(255, 255, 255, 0.6); }
+p { color: rgba(255, 255, 255, .6); }
 
 .buttons a {
-  border: none;
-  color: #fff;
+  border: 0;
   border-radius: 2px;
-  font-size: 1.1em;
+  color: #fff;
   display: inline-block;
+  font-size: 1.1em;
   height: 36px;
   line-height: 36px;
+  margin: .25em;
   padding: 0 2rem;
-  margin: 0.25em;
-  vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
   transition: all 200ms ease;
+  vertical-align: middle;
+
   &:hover {
-    transform: translateY(-0.3em) scale(1.05);
+    color: #fff;
     filter: brightness(50%);
-    color: white;
+    transform: translateY(-.3em) scale(1.05);
   }
 }
 
-/* Profile and Info */
-.background_main {
+// Profile and Info
+.background-main {
   background: url('../images/background.jpg');
-  background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  background-size: cover;
   filter: blur(2px) brightness(50%);
+  height: 100%;
+  width: 100%;
 }
 
-.center_object {
-  width: 100%;
+.center-object {
+  left: 50%;
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+
   .me {
-    z-index: 10;
-    width: 100%;
-    height: auto;
-    padding: 1rem 0 1rem 0;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
     flex-direction: column;
+    height: auto;
+    justify-content: center;
+    padding: 1rem 0;
+    width: 100%;
+    z-index: 10;
   }
 }
 
-.image_title { border-radius: 100%; width: 9em; }
+.image-title { border-radius: 100%; width: 9em; }
 .title {
-  filter: drop-shadow(6px 6px 0px rgba(0,0,0,0.4));
+  filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, .4));
   font-size: 5rem;
-  margin: 0.25em;
   letter-spacing: 1px;
+  margin: .25em;
 }
 
 #information {
   margin-top: 2em;
 
-  /* Skeleton Custom CSS */
+  // Skeleton Custom CSS
   .row {
-    margin-bottom: 3em;
+    background-color: rgba(0, 0, 0, .25);
     border-radius: 10px;
+    margin-bottom: 3em;
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.25);
   }
+
   .one-half.column { width: 95%; }
   .container { max-width: 1350px; }
 }
+
 .highlight { color: #fff; }
 
 
-/* Bottom */
+// Bottom
 footer {
-  padding-top: 1rem; padding-bottom: 1rem;
-  margin-top: 4rem;
-  width: 100%;
-  text-align: center;
+  @include crossbrowser(box-shadow, 0 0 25px 15px #282828);
   background: #282828;
-  box-shadow: 0 0px 25px 15px #282828;
-  -moz-box-shadow: 0 0px 25px 15px #282828;
-  -webkit-box-shadow: 0 0px 25px 15px #282828;
+  margin-top: 4rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+  width: 100%;
 }
 
 
-/* Colours */
-.discord { background-color: #7289DA; }
-.twitter { background-color: #1DA1F2; }
-.github { background-color: #24292E; }
-.steam { background-color: #000000; }
+// Colours
+.discord { background-color: #7289da; }
+.twitter { background-color: #1da1f2; }
+.github { background-color: #24292e; }
+.steam { background-color: #000; }
 .email { background-color: #9b59b6; }
 
 
-/* Responsive */
+// Responsive
 @media (max-width: 660px) {
   .title { font-size: 4rem; }
-  .image_title { width: 7em; }
+  .image-title { width: 7em; }
+
   .buttons a {
     display: block;
-    margin: 0.5em;
-    padding: 0 1.5rem;
     font-size: 1em;
+    margin: .5em;
+    padding: 0 1.5rem;
     text-align: center;
   }
 }

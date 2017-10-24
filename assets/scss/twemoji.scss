@@ -1,14 +1,14 @@
 @import 'emoji-map';
 
 .twa {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 1em 1em;
   display: inline-block;
   height: 1em;
-  width: 1em;
   margin: 0 .05em 0 .1em;
-  vertical-align: -0.1em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 1em 1em;
+  vertical-align: -.1em;
+  width: 1em;
 }
 
 $size-map: (
@@ -21,11 +21,11 @@ $size-map: (
 
 @each $name, $size in $size-map {
   .twa-#{$name} {
-    height: 1em * $size;
-    width: 1em * $size;
-    margin: 0 .05em * $size 0 .1em * $size;
-    vertical-align: -0.1em * $size;
     background-size: 1em * $size 1em * $size;
+    height: 1em * $size;
+    margin: 0 .05em * $size 0 .1em * $size;
+    vertical-align: -.1em * $size;
+    width: 1em * $size;
   }
 }
 
