@@ -8,7 +8,7 @@
 }
 
 .container, .row {
-  &:after {
+  &::after {
     clear: both;
     content: '';
     display: table;

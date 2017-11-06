@@ -1,4 +1,9 @@
+@import '../assets/animation';
+@import '../assets/browser';
+
 .buttons a {
+  @include transition('all 200ms ease');
+  @include crossbrowser('tap-highlight-color', transparent);
   border: 0;
   border-radius: 2px;
   color: #fff;
@@ -8,13 +13,11 @@
   line-height: 36px;
   margin: .25em;
   padding: 0 2rem;
-  -webkit-tap-highlight-color: transparent;
-  transition: all 200ms ease;
   vertical-align: middle;
 
   &:hover {
+    @include transform(translateY(-.3em) scale(1.05));
     color: #fff;
     filter: brightness(50%);
-    transform: translateY(-.3em) scale(1.05);
   }
 }

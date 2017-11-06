@@ -851,6 +851,15 @@ footer {
       margin: .25em; }
 
 .buttons a {
+  transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
   border: 0;
   border-radius: 2px;
   color: #fff;
@@ -860,13 +869,15 @@ footer {
   line-height: 36px;
   margin: .25em;
   padding: 0 2rem;
-  -webkit-tap-highlight-color: transparent;
-  transition: all 200ms ease;
   vertical-align: middle; }
   .buttons a:hover {
+    -moz-transform: translateY(-0.3em) scale(1.05);
+    -o-transform: translateY(-0.3em) scale(1.05);
+    -ms-transform: translateY(-0.3em) scale(1.05);
+    -webkit-transform: translateY(-0.3em) scale(1.05);
+    transform: translateY(-0.3em) scale(1.05);
     color: #fff;
-    filter: brightness(50%);
-    transform: translateY(-0.3em) scale(1.05); }
+    filter: brightness(50%); }
 
 .highlight {
   color: #fff; }
