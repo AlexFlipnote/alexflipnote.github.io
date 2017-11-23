@@ -643,8 +643,11 @@ a, html, body, h1, h2, h3, h4, p {
   font-weight: normal;
   margin: 0; }
 
+html {
+  margin: 0; }
+
 body {
-  background: #191919; }
+  background: #181818; }
 
 b, a {
   color: #14bae4; }
@@ -670,20 +673,25 @@ footer {
   text-align: center;
   width: 100%; }
 
-.discord {
-  background-color: #7289da; }
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #181818;
+  border-radius: 10px; }
 
-.twitter {
-  background-color: #1da1f2; }
+::-webkit-scrollbar {
+  background-color: #181818;
+  width: 12px; }
 
-.github {
-  background-color: #24292e; }
-
-.steam {
-  background-color: #000; }
-
-.email {
-  background-color: #9b59b6; }
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #2ecc71;
+  border-radius: 10px; }
 
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
@@ -822,16 +830,20 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(2px) brightness(50%);
+  filter: blur(5px) brightness(50%);
   height: 100%;
   width: 100%; }
 
 .center-object {
-  left: 50%;
-  position: absolute;
-  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 100%; }
+  left: 50%;
+  padding: 0 50px;
+  position: absolute;
+  top: 50%; }
   .center-object .me {
     align-items: center;
     display: flex;
@@ -850,34 +862,56 @@ footer {
       letter-spacing: 1px;
       margin: .25em; }
 
-.buttons a {
-  transition: all 200ms ease;
-  -webkit-transition: all 200ms ease;
-  -ms-transition: all 200ms ease;
-  -moz-transition: all 200ms ease;
-  -o-transition: all 200ms ease;
-  -webkit-tap-highlight-color: transparent;
-  -moz-tap-highlight-color: transparent;
-  -ms-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
-  border: 0;
-  border-radius: 2px;
-  color: #fff;
-  display: inline-block;
-  font-size: 1.1em;
-  height: 36px;
-  line-height: 36px;
-  margin: .25em;
-  padding: 0 2rem;
-  vertical-align: middle; }
-  .buttons a:hover {
-    -moz-transform: translateY(-0.3em) scale(1.05);
-    -o-transform: translateY(-0.3em) scale(1.05);
-    -ms-transform: translateY(-0.3em) scale(1.05);
-    -webkit-transform: translateY(-0.3em) scale(1.05);
-    transform: translateY(-0.3em) scale(1.05);
+.buttons {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+  .buttons .btn {
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    background-color: transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
     color: #fff;
-    filter: brightness(50%); }
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 38px;
+    line-height: 38px;
+    margin: .5em;
+    padding: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap; }
+    .buttons .btn.discord {
+      background-color: #7289da; }
+    .buttons .btn.twitter {
+      background-color: #1da1f2; }
+    .buttons .btn.github {
+      background-color: #24292e; }
+    .buttons .btn.steam {
+      background-color: #000; }
+    .buttons .btn.email {
+      background-color: #9b59b6; }
+    .buttons .btn:hover {
+      transition: all 300ms ease;
+      -webkit-transition: all 300ms ease;
+      -ms-transition: all 300ms ease;
+      -moz-transition: all 300ms ease;
+      -o-transition: all 300ms ease;
+      -moz-transform: translateY(-0.3em) scale(1.05);
+      -o-transform: translateY(-0.3em) scale(1.05);
+      -ms-transform: translateY(-0.3em) scale(1.05);
+      -webkit-transform: translateY(-0.3em) scale(1.05);
+      transform: translateY(-0.3em) scale(1.05);
+      color: #fff;
+      filter: brightness(50%); }
 
 .highlight {
   color: #fff; }
@@ -885,8 +919,9 @@ footer {
 #information {
   margin-top: 2em; }
   #information .row {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: #191919;
     border-radius: 10px;
+    filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 0.5));
     margin-bottom: 3em;
     padding: 1em; }
   #information .one-half.column {
@@ -895,17 +930,21 @@ footer {
     max-width: 1350px; }
 
 @media (max-width: 660px) {
-  .title {
-    font-size: 4rem; }
+  .center-object .me .title {
+    font-size: 5rem; }
+  .center-object .me .image-title {
+    width: 8em; }
 
-  .image-title {
-    width: 7em; }
-
-  .buttons a {
+  .buttons {
+    align-items: center;
     display: block;
-    font-size: 1em;
-    margin: .5em;
-    padding: 0 1.5rem;
-    text-align: center; } }
+    justify-content: center; }
+    .buttons .btn {
+      align-items: center;
+      display: flex;
+      font-size: 24px;
+      justify-content: center;
+      padding: 30px 0;
+      text-align: center; } }
 
 /*# sourceMappingURL=index.css.map */

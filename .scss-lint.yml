@@ -9,3 +9,6 @@ linters:
 
   IdSelector:
     enabled: false
+
+  ImportantRule:
+    enabled: false
