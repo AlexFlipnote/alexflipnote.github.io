@@ -956,7 +956,8 @@ footer {
 
   .buttons {
     align-items: center;
-    display: block;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center; }
     .buttons .btn {
       align-items: center;
@@ -964,7 +965,8 @@ footer {
       font-size: 20px;
       justify-content: center;
       padding: 25px 0;
-      text-align: center; }
+      text-align: center;
+      width: calc(45% - 30px); }
     .buttons .btn, .buttons .btn:hover {
       filter: none; }
 
