@@ -1,7 +1,12 @@
 @media (max-width: 660px) {
-  .center-object .me {
-    .title { font-size: 5rem; }
-    .image-title { width: 8em; }
+  .center-object {
+    top: 45%;
+
+    .me {
+      padding: 0;
+      .title { font-size: 5rem; }
+      .image-title { width: 8em; }
+    }
   }
 
   .buttons {
@@ -12,10 +17,17 @@
     .btn {
       align-items: center;
       display: flex;
-      font-size: 24px;
+      font-size: 20px;
       justify-content: center;
-      padding: 30px 0;
+      padding: 25px 0;
       text-align: center;
     }
+
+    .btn, .btn:hover { filter: none; }
+  }
+
+  .container {
+    h1 { font-size: 8vmin; }
+    p { font-size: 1em; }
   }
 }

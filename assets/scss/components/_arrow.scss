@@ -23,14 +23,13 @@
   margin-left: -20px;
   position: absolute;
   width: 40px;
-
-  .arrow--scrolled {
-    @include animation('fading 300ms ease-in-out');
-    cursor: default;
-    opacity: 0;
-  }
 }
 
+.arrow--scrolled {
+  @include animation('fading 300ms ease-in-out');
+  cursor: default;
+  opacity: 0;
+}
 
 .bounce {
   @include animation('bounce 2s infinite');
