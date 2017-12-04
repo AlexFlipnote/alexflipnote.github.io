@@ -16,6 +16,13 @@ b, p, a { font-size: 1.1em; }
 a { text-decoration: none; }
 p { color: rgba(255, 255, 255, .6); }
 
+.warning {
+  background-color: rgba(0, 0, 0, .75);
+  color: #e74c3c;
+  font-size: 1em;
+  text-align: center;
+}
+
 footer {
   @include crossbrowser(box-shadow, 0 0 25px 15px #282828);
   background: #282828;
