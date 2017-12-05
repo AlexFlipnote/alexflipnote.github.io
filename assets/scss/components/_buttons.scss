@@ -9,7 +9,14 @@
 }
 
 .btn {
-  @include transition('all 300ms ease');
+  @for $x from 1 through 10 {
+    &:nth-child(#{$x}) {
+      animation-delay: $x * .25s;
+    }
+  }
+
+  @include animation('button-enter 750ms ease-in-out forwards');
+  @include transition('all 350ms ease');
   background-color: transparent;
   border-radius: 5px;
   box-sizing: border-box;
@@ -22,6 +29,7 @@
   height: 38px;
   line-height: 38px;
   margin: .5em;
+  opacity: 0;
   padding: 0 30px;
   text-align: center;
   text-decoration: none;
@@ -36,8 +44,7 @@
   &.back { @include dropshadow(#2ecc71); }
 
   &:hover {
-    @include transition('all 300ms ease');
-    @include transform(translateY(-.3em) scale(1.05));
+    @include transition('all 350ms ease');
     color: #fff;
   }
 }
