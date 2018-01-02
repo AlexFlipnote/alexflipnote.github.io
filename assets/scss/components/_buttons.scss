@@ -40,8 +40,6 @@
   &.github { @include dropshadow(#24292e); }
   &.steam { @include dropshadow(#000); }
   &.email { @include dropshadow(#9b59b6); }
-  &.mine { @include dropshadow(#1abc9c); }
-  &.back { @include dropshadow(#2ecc71); }
 
   &:hover {
     @include transition('all 350ms ease');

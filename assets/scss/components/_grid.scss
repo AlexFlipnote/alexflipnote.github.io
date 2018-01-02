@@ -21,16 +21,4 @@
   width: 100%;
 }
 
-// For devices larger than 400px
-@media (min-width: 400px) {
-  .container { padding: 0; width: 85%; }
-}
-
-// For devices larger than 550px
-@media (min-width: 550px) {
-  .container { width: 80%; }
-  .column, .columns { margin-left: 4%; }
-  .column:first-child, .columns:first-child { margin-left: 0; }
-}
-
 .one-half.column { width: 48%; }
