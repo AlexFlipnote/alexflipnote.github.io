@@ -2,6 +2,7 @@
 @media (max-width: 750px) {
   .center-object {
     top: 45%;
+    width: 90%;
 
     .me {
       padding: 0;
@@ -44,7 +45,7 @@
 
 // For devices larger than 550px
 @media (min-width: 550px) {
-  .container { width: 80%; }
+  .container { width: 90%; }
   .column, .columns { margin-left: 4%; }
   .column:first-child, .columns:first-child { margin-left: 0; }
 }

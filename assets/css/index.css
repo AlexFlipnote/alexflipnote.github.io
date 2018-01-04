@@ -276,10 +276,9 @@ footer {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   left: 50%;
-  padding: 0 50px;
   position: absolute;
   top: 50%;
-  width: 85%; }
+  width: 100%; }
   .center-object .me {
     align-items: center;
     display: flex;
@@ -707,7 +706,8 @@ footer {
 
 @media (max-width: 750px) {
   .center-object {
-    top: 45%; }
+    top: 45%;
+    width: 90%; }
     .center-object .me {
       padding: 0; }
       .center-object .me .title {
@@ -743,7 +743,7 @@ footer {
     width: 85%; } }
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 90%; }
 
   .column, .columns {
     margin-left: 4%; }
