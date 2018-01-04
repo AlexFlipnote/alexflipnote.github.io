@@ -723,13 +723,13 @@ footer {
     .buttons .btn {
       align-items: center;
       display: flex;
-      font-size: 20px;
+      font-size: 18px;
       justify-content: center;
+      line-height: 20px;
       padding: 25px 0;
       text-align: center;
+      white-space: pre-line;
       width: calc(45% - 30px); }
-    .buttons .btn-one {
-      width: calc(100% - 30px); }
     .buttons .btn, .buttons .btn:hover {
       filter: none; }
 
