@@ -235,9 +235,8 @@ footer {
     background: #282828;
     display: block;
     filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 0.5));
-    margin: 10px;
-    max-width: 325px;
-    padding: .5em;
+    margin: .5em;
+    max-width: 350px;
     text-align: center; }
     .container.bot .card .name {
       background: rgba(0, 0, 0, 0.5);
@@ -245,10 +244,20 @@ footer {
       margin-bottom: 0;
       padding-bottom: 5px;
       padding-top: 5px; }
+    .container.bot .card .title {
+      background: rgba(0, 0, 0, 0.3);
+      font-family: 'Roboto Mono', monospace;
+      font-size: 16px;
+      letter-spacing: .5px;
+      margin-bottom: 0;
+      padding-bottom: 5px;
+      padding-top: 5px; }
     .container.bot .card .text {
-      font-size: 14px;
+      font-size: 13px;
       margin-left: 10px;
       margin-right: 10px;
+      padding-bottom: .5em;
+      padding-top: .5em;
       text-align: left; }
 
 .background {
