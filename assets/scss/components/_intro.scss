@@ -1,14 +1,23 @@
 @import '../assets/animation';
 
-.background-main {
-  background: url('../images/background.jpg');
+@mixin bgdefault($url) {
+  background: url($url);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.background {
   filter: blur(5px) brightness(50%);
   height: 100%;
   width: 100%;
+
+  &.main { @include bgdefault('../images/background.jpg'); }
+  &.bot {
+    @include bgdefault('../images/background_bot.gif');
+    filter: blur(5px) brightness(200%);
+  }
 }
 
 .center-object {
@@ -17,6 +26,7 @@
   padding: 0 50px;
   position: absolute;
   top: 50%;
+  width: 90%;
 
   .me {
     align-items: center;
@@ -34,6 +44,13 @@
       font-size: 5rem;
       letter-spacing: 1px;
       margin: .25em;
+    }
+
+    .undertitle {
+      filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, .4));
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      margin: 0;
     }
   }
 }
