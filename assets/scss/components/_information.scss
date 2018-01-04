@@ -13,5 +13,54 @@
   }
 
   .one-half.column { width: 95%; }
-  .container { max-width: 1350px; }
+  .container {
+    max-width: 1350px;
+  }
+}
+
+.container.bot {
+  margin-bottom: 5em;
+  max-width: none;
+  width: 90%;
+
+  h1 {
+    display: block;
+    margin-bottom: .5em;
+    text-align: center;
+  }
+
+  .rowcard {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .card {
+    $image-width: 325px;
+
+    background: #282828;
+    display: block;
+    filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, .5));
+    margin: 10px;
+    max-width: 325px;
+    padding: .5em;
+    text-align: center;
+
+    .name {
+      background: rgba(#000, .5);
+      font-size: 20px;
+      margin-bottom: 0;
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
+
+    .text {
+      font-size: 14px;
+      margin-left: 10px;
+      margin-right: 10px;
+      text-align: left;
+    }
+  }
 }
