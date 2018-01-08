@@ -12,3 +12,9 @@ linters:
 
   ImportantRule:
     enabled: false
+
+  SelectorDepth:
+    enabled: false
+
+  NestingDepth:
+    enabled: false

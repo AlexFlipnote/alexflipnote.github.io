@@ -31,45 +31,18 @@ favicon: assets/images/profile_bot.png
 <section class="container bot" id="information">
   <h1><i class="twa twa-spiral-notepad"></i> Testimonials:</h1>
   <div class="rowcard">
-    <!-- Next card -->
+    {% for member in site.data.testimonials %}
     <div class="card">
-      <img draggable="false" src="{{ site.url }}/assets/images/testimonials/medusa_chan.png">
-      <h1 class="name">medusa_chan#0008</h1>
-      <h1 class="title">Owner of 9gagCommunity</h1>
-      <p class="text">
-        God, I love this bot, xelA! She got what we all needed - for moderation, fun commands, music, etc.
-        It's a life saver! Especially for a server with thousands of members to accommodate.
-        What I love more about this bot is how neat her codes are and how helpful is her developer is.
-        Trust me, you have to have this in your server and you won't regret it.
-      </p>
+      <img draggable="false" src="{{ site.url }}/assets/images/testimonials/{{ member.avatar }}">
+      <h1 class="name">{{ member.name }}</h1>
+      {% if member.url %}
+        <a href="{{ member.url }}" target="_blank"><h1 class="title">{{ member.title }}</h1></a>
+      {% else %}
+        <h1 class="title">{{ member.title }}</h1>
+      {% endif %}
+      <p class="text">{{ member.text }}</p>
     </div>
-
-    <!-- Next card -->
-    <div class="card">
-      <img draggable="false" src="{{ site.url }}/assets/images/testimonials/yahiamice.png">
-      <h1 class="name">yahiamice.#3144</h1>
-      <h1 class="title">"YouTuber"</h1>
-      <p class="text">
-        bot's gucci<br>
-        commands aplenty<br>
-        contant updates by an anime wannabe <i class="twa twa-smiling-face-with-sunglasses"></i><br>
-        sweet community<br>
-        music functionnality<br>
-        and most importantly, it's free!<br>
-        whacha waitin for? add it to your server already!
-      </p>
-    </div>
-
-    <!-- Next card -->
-    <div class="card">
-      <img draggable="false" src="{{ site.url }}/assets/images/testimonials/kromatic.png">
-      <h1 class="name">Kromatic#0387</h1>
-      <h1 class="title">Co-Developer of KawaiiBot</h1>
-      <p class="text">
-        Solid bot, plenty of features, absolutely flawless. Amazing job <i class="twa twa-thumbs-up"></i>
-      </p>
-    </div>
-
+    {% endfor %}
   </div>
 </section>
 
