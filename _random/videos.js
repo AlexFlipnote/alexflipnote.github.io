@@ -1,4 +1,4 @@
-const videos = [
+var videos = [
   'TklM2-lSby4', 'iPuTYsiLhzA', 'a0uQnWAmf-k', 'NghF4a58YI0', 'boDSEeGt8hg', 'b8HO6hba9ZE', '4hpEnLtqUDg', 'b8Qb3Kjsm6o',
   'y-wtAYBiO9g', 'MLPkKZS6q9k', 'EW86sEEPsTg', 'JbepN4dKLbU', 'G7RgN9ijwE4', '1Bix44C1EzY', 'gnT8ra9a2eI', '9MrnAJsxL8c',
   'Z8nD8N84Kds', 'SAxpAs1Iaec', 'tKNhPpUR0Pg', 'o2TO5atI4rU', 'TPYKwcAyb-o', '5IXQ6f6eMxQ', 'dvyZfa9x3UU', 'pnj9FAHmgL0',
@@ -19,9 +19,9 @@ function getQueryVariable(variable) {
   return(false);
 }
 
-const randomVideo = getQueryVariable("video") || videos[Math.floor(Math.random()*videos.length)];
-const pushVideo = `https://www.youtube.com/embed/${randomVideo}?playlist=${randomVideo}&autoplay=1&loop=1&hd=1`;
-const creditVideo = `https://www.youtube.com/watch?v=${randomVideo}`;
+var randomVideo = getQueryVariable("video") || videos[Math.floor(Math.random()*videos.length)];
+var pushVideo = `https://www.youtube.com/embed/${randomVideo}?playlist=${randomVideo}&autoplay=1&loop=1&hd=1`;
+var creditVideo = `https://www.youtube.com/watch?v=${randomVideo}`;
 
 window.addEventListener("load", function() {
   document.getElementById("videolist").src = pushVideo;

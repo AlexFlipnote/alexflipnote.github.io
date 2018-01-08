@@ -1,0 +1,18 @@
+# Site Config
+
+name: AlexFlipnote
+title: AlexFlipnote
+description: Default description
+
+themecolour: "#2196F3"
+
+domain: "https://alexflipnote.xyz"
+baseurl: ""
+url: "https://alexflipnote.xyz"
+encoding: utf-8
+
+include: ['_pages']
+
+sass:
+  sass_dir: _sass
+  style: compressed
