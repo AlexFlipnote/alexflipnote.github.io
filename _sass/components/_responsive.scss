@@ -49,3 +49,8 @@
   .column, .columns { margin-left: 4%; }
   .column:first-child, .columns:first-child { margin-left: 0; }
 }
+
+// For devices smaller than 500px
+@media (max-width: 500px) {
+  table.stats { display: none; }
+}

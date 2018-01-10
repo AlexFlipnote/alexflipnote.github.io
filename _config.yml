@@ -16,3 +16,7 @@ include: ['_pages']
 sass:
   sass_dir: _sass
   style: compressed
+
+jekyll_get:
+  - data: stats
+    json: https://api.terminal.ink/xela.json

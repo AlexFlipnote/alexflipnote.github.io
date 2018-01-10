@@ -53,3 +53,23 @@
     }
   }
 }
+
+table.stats {
+  @include animation('fading-modal-in 600ms ease-in-out forwards');
+  background-color: #282828;
+  border-spacing: 0;
+  filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, .4));
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  opacity: 0;
+  padding: .5em 1.5em;
+
+  tr:nth-child(1) td { border-bottom: 1px solid #fff; }
+  tr td {
+    border: 0;
+    margin: 0;
+    text-align: center;
+  }
+}

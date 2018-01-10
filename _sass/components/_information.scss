@@ -2,6 +2,12 @@
 
 .highlight { color: #fff; }
 
+@mixin direction($dir) {
+  h1, h2, h3, h4, a, b, p {
+    text-align: $dir;
+  }
+}
+
 #information {
   margin-top: 2em;
 
@@ -24,6 +30,9 @@
   margin-bottom: 5em;
   max-width: none;
   width: 90%;
+
+  .left { * { text-align: left; } }
+  .right { * { text-align: right; } }
 
   h1 {
     display: block;
