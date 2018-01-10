@@ -21,7 +21,6 @@ favicon: assets/images/profile_bot.png
   <div class="buttons">
     <a href="https://discord.gg/DpxkY3x" class="btn discord" target="_blank">Discord</a>
     <a id="trigger" class="btn green">Invite</a>
-    <a class="btn green">Stats</a>
     <a href="https://twitter.com/AlexFlipnote" class="btn twitter" target="_blank">Twitter</a>
     <a href="https://github.com/AlexFlipnote/discord_bot.py" class="btn github" target="_blank">GitHub Source</a>
   </div>
@@ -37,9 +36,9 @@ favicon: assets/images/profile_bot.png
       <img draggable="false" src="{{ site.url }}/assets/images/testimonials/{{ member.avatar }}">
       <h1 class="name">{{ member.name }}</h1>
       {% if member.url %}
-        <a href="{{ member.url }}" target="_blank"><h1 class="title">{{ member.title }}</h1></a>
+      <a href="{{ member.url }}" target="_blank"><h1 class="title">{{ member.title }}</h1></a>
       {% else %}
-        <h1 class="title">{{ member.title }}</h1>
+      <h1 class="title">{{ member.title }}</h1>
       {% endif %}
       <p class="text">{{ member.text }}</p>
     </div>
