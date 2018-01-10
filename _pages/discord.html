@@ -16,7 +16,7 @@ favicon: assets/images/profile_bot.png
       <img draggable="false" src="{{ site.url }}/assets/images/discord.png" class="image-title" style="border-radius: 0;">
     </div>
     <h1 class="title">xelA</h1>
-    <h1 class="undertitle">A powerful bot for your discord server, serving {{ site.data.stats.servers }} servers</h1>
+    <h1 class="undertitle">A powerful bot for your discord server</h1>
   </section>
   <div class="buttons">
     <a href="https://discord.gg/DpxkY3x" class="btn discord" target="_blank">Discord</a>
@@ -25,24 +25,6 @@ favicon: assets/images/profile_bot.png
     <a href="https://twitter.com/AlexFlipnote" class="btn twitter" target="_blank">Twitter</a>
     <a href="https://github.com/AlexFlipnote/discord_bot.py" class="btn github" target="_blank">GitHub Source</a>
   </div>
-  <table class="stats">
-    <tr>
-      {% for x in site.data.stats %}
-        {% if x[0] == 'rambytes' %}
-          {% continue %}
-        {% endif %}
-      <td>{{ x[0] | capitalize }}</td>
-      {% endfor %}
-    </tr>
-    <tr>
-      {% for x in site.data.stats %}
-        {% if x[0] == 'rambytes' %}
-          {% continue %}
-        {% endif %}
-      <td>{{ x[1] }}</td>
-      {% endfor %}
-    </tr>
-  </table>
 </div>
 
 <a href="#information"><div id="fade" class="arrow bounce"></div></a>
