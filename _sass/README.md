@@ -1,7 +1,7 @@
 # SCSS Usage
 ```ini
 #1 Install Ruby
-https://rubyinstaller.org/
+https://ruby-lang.org/downloads/
 
 #2 Install SASS
 (sudo) gem install sass
