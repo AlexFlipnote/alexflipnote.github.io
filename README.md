@@ -4,16 +4,17 @@
 
 ## Site Information
 - Site: https://alexflipnote.xyz
+- Google Fonts: Montserrat, Roboto Mono
 - Usage: Information about myself
 - Framework:
-  [smoothscroll.js](https://github.com/alicelieutier/smoothScroll)
-  [skeleton](http://getskeleton.com/)
-- Google Fonts: Montserrat, Roboto Mono
-- Emojis: Twemoji.css
+  - [jarallax](https://github.com/nk-o/jarallax)
+  - [skeleton](http://getskeleton.com/)
+  - [smoothscroll.js](https://github.com/alicelieutier/smoothScroll)
+  - [twemoji-awesome](https://github.com/ellekasai/twemoji-awesome)
 
 ## Requirements
-- jekyll & bundle - https://jekyllrb.com/
 - Ruby 2.4 or above - https://rubyinstaller.org/downloads/
+- jekyll & bundle - https://jekyllrb.com/
 - sass & scss_lint - Ruby Packages (gem install)
 
 ## Commands
