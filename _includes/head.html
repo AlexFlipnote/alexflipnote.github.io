@@ -7,7 +7,7 @@
 <meta content="{{ site.url }}/assets/images/profile.png" property="og:image" />
 <link rel="icon" type="image/x-icon" href="{% if page.favicon %}{{ site.url }}/{{ page.favicon }}{% else %}{{ site.url }}/assets/images/favicon.ico{% endif %}">
 <meta content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" property="og:title" />
-<meta content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" property="og:description" />
+{% if page.description %}<meta content="{{ page.description }}" property="og:description" />{% else %}{% endif %}
 <meta name="revisit-after" content="2 days">
 <meta name="keywords" content="AlexFlipnote, Twitter, Developer, Github{% if page.keywords %}, {{ page.keywords }}{% else %}{% endif %}">
 

@@ -1,0 +1,16 @@
+<html>
+  <head>
+    {% include analytics.html %}
+    {% include head.html %}
+  </head>
+  <body>
+    <div class="docs-title">
+      <h1>{% if page.title %}{{ page.title }}{% else %}Default title{% endif %}</h1>
+    </div>
+    <div class="docs-content">
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+  </body>
+</html>

@@ -2,7 +2,6 @@
 
 name: AlexFlipnote
 title: AlexFlipnote
-description: Default description
 
 themecolour: "#2196F3"
 
@@ -11,12 +10,8 @@ baseurl: ""
 url: "https://alexflipnote.xyz"
 encoding: utf-8
 
-include: ['_pages']
+include: ['_pages', '_docs']
 
 sass:
   sass_dir: _sass
   style: compressed
-
-jekyll_get:
-  - data: stats
-    json: https://api.terminal.ink/xela.json
