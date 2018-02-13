@@ -6,6 +6,7 @@
   <body>
     <div class="docs-title">
       <h1>{% if page.title %}{{ page.title }}{% else %}Default title{% endif %}</h1>
+      {% if page.author %}<p><i>by {{ page.author }}</i></p>{% else %}{% endif %}
     </div>
     <div class="docs-content">
       <div class="content">
