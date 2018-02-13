@@ -1,15 +1,14 @@
-<h1 align="center" style="font-weight: 600;">
-  AlexFlipnote.xyz
-</h1>
-
+# alexflipnote.xyz
+---
 ## Site Information
 - Site: https://alexflipnote.xyz
 - Google Fonts: Montserrat, Roboto Mono
 - Usage: Information about myself
 - Framework:
+  - [github-markdown-css](https://github.com/sindresorhus/github-markdown-css)
   - [jarallax](https://github.com/nk-o/jarallax)
   - [skeleton](http://getskeleton.com/)
-  - [smoothscroll.js](https://github.com/alicelieutier/smoothScroll)
+  - [smoothScroll](https://github.com/alicelieutier/smoothScroll)
   - [twemoji-awesome](https://github.com/ellekasai/twemoji-awesome)
 
 ## Requirements
@@ -21,6 +20,9 @@
 ```
 bundle exec jekyll serve
     Testing website locally with localhost (Port 4000 is default)
+
+scss-lint
+    Check if your source code is linter friendly (SCSS only)
 ```
 
 ## Open-source

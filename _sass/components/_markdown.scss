@@ -6,15 +6,18 @@ $fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-se
 
 .docs-title {
   background: #282828;
-  padding: 1em 0;
+  // padding: 0 0 1em;
   text-align: center;
   width: 100%;
+
+  .title { background: #212121; padding: 1em 0; }
+  .undertitle { padding: 1em 0; }
 }
 
 
 .docs-content {
   font-family: $fonts !important;
-  padding: 2em;
+  padding: 2em 10em;
 
   .start-img { width: 100%; }
   img {

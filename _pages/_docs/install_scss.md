@@ -4,6 +4,7 @@ type: docs
 permalink: "/docs/install_scss"
 
 title: Installing SCSS
+description: How to install SCSS and taking usage of it.
 author: AlexFlipnote
 ---
 
