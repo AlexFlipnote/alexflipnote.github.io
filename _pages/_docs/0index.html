@@ -1,0 +1,14 @@
+---
+layout: docs
+permalink: "/docs/index"
+
+title: Docs Homepage
+---
+<h3>Links to all documents</h3>
+<ul>
+  {% for post in site.pages %}
+    {% if post.layout == 'docs' and post.permalink != '/docs/index' %}
+      <li style="font-size: 3.5vmin;"><a href="{{ site.url }}{{ post.url }}" target="_blank">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
