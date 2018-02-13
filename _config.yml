@@ -12,6 +12,12 @@ encoding: utf-8
 
 include: ['_pages', '_docs']
 
+plugins:
+  - jekyll-seo-tag
+
+twitter:
+  username: AlexFlipnote
+
 sass:
   sass_dir: _sass
   style: compressed
