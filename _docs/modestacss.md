@@ -18,6 +18,18 @@ on anything if you want.
 <span class="center-text">Only make the text inside center aligned</span>
 ```
 
+# Buttons
+```html
+<a href="https://discord.gg/DpxkY3x" class="btn animation COLOUR" target="_blank">Button</a>
+<a href="https://discord.gg/DpxkY3x" class="btn COLOUR" target="_blank">Button</a>
+<a href="https://discord.gg/DpxkY3x" class="btn COLOUR-flat" target="_blank">Button</a>
+<a href="https://discord.gg/DpxkY3x" class="btn COLOUR-nodark" target="_blank">Button</a>
+<a href="https://discord.gg/DpxkY3x" class="btn hover COLOUR" target="_blank">Button</a>
+<button class="COLOUR">Button</button>
+```
+If you want a preview of all buttons, please check the file **buttons.html** inside **examples**<br>
+or visit [this website](https://modesta.alexflipnote.xyz/examples/buttons.html)
+
 
 # Colours/Colors
 ```html
