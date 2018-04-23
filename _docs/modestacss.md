@@ -41,6 +41,24 @@ If you want a preview of all colours, please check the file **colours.html** ins
 or visit [this website](https://modesta.alexflipnote.xyz/examples/colours.html)
 
 
+# Columns
+```html
+<div class="row">
+  <div class="one-half column">
+    <h4>2 Column</h4>
+  </div>
+  <div class="one-half column">
+    <h4>Magic</h4>
+  </div>
+</div>
+```
+Column choices:
+- none ( 1/1 ) [ but why... ]
+- one-half ( 1/2  1/2 )
+- one-third ( 1/3  1/3  1/3 )
+- one-fourth ( 1/4  1/4  1/4  1/4 )
+
+
 # Cards
 The cards you make must always be inside a card container.
 If you're making multiple, just add all the card classes inside the container.
