@@ -1,5 +1,5 @@
 ---
-title: Modesta CSS
+title: ModestaCSS
 description: All components to ModestaCSS
 author: AlexFlipnote
 ---
