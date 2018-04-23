@@ -1,8 +1,4 @@
 ---
-layout: docs
-type: docs
-permalink: "/docs/modestacss"
-
 title: Modesta CSS
 description: All components to ModestaCSS
 author: AlexFlipnote

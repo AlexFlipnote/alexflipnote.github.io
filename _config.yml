@@ -28,3 +28,15 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed
+
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "docs"
