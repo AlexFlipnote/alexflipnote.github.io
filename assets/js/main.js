@@ -1,14 +1,17 @@
 window.addEventListener('scroll', function() {
-  var scrollPosition = window.scrollY;
-  var logoContainer = document.getElementsByClassName('arrow')[0];
+  if (document.getElementsByClassName('arrow').length > 0) {
+    var scrollPosition = window.scrollY;
+    var logoContainer = document.getElementsByClassName('arrow')[0];
 
-  scrollPosition = window.scrollY;
-  if (scrollPosition >= 100) logoContainer.classList.add('arrow--scrolled');
-  else logoContainer.classList.remove('arrow--scrolled');
+    scrollPosition = window.scrollY;
+    if (scrollPosition >= 100) logoContainer.classList.add('arrow--scrolled');
+    else logoContainer.classList.remove('arrow--scrolled');
+  }
 });
 
 window.onload = function() {
-  if(window.location.href.indexOf("discord") > -1) {
+  // Modal checker
+  if (document.getElementById('modal') !== null) {
     var modal = document.getElementById('modal');
     var modaltarget = document.getElementsByClassName('modal')[0];
     var btn = document.getElementById("trigger");
@@ -36,4 +39,5 @@ window.onload = function() {
       }
     }
   }
+
 }

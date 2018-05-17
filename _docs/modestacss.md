@@ -9,13 +9,14 @@ These classes will enforce style to an object, so you don't need to use `style="
 NOTE: All objects are presented as **span** for example, can be used
 on anything if you want.
 ```html
-<span class="box-shadow">Add box shadow on any box</span>
 <span class="bold">Make any text bold</span>
+<span class="box-shadow">Add box shadow on any box</span>
+<span class="center-text">Only make the text inside center aligned</span>
+<span class="center">Make anything inside center aligned</span>
 <span class="no-margin">Remove margin from object</span>
 <span class="no-padding">Remove padding from object</span>
+<span class="noselect">Remove the text marker</span>
 <span class="transparent">Make the object's background transparent</span>
-<span class="center">Make anything inside center aligned</span>
-<span class="center-text">Only make the text inside center aligned</span>
 ```
 
 # Buttons
