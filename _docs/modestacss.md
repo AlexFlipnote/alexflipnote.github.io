@@ -100,6 +100,7 @@ start with a fullscreen/half screen on the start.
       <a href="#" class="btn animation nephritis-flat" target="_blank">Website 2</a>
     </div>
   </div>
+  <!-- <div id="fade" class="arrow bounce"></div> -->
 </section>
 ```
 
