@@ -11,32 +11,8 @@ baseurl: ""
 url: "https://alexflipnote.xyz"
 encoding: utf-8
 
-include: ['_pages', '_docs']
-
-markdown: kramdown
-
-kramdown:
-  auto_ids:       true
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  input:          GFM
-  hard_wrap:      false
-  footnote_nr:    1
-  show_warnings:  false
+include: ['_pages']
 
 sass:
   sass_dir: _sass
   style: compressed
-
-collections:
-  docs:
-    output: true
-    permalink: /:collection/:name
-
-defaults:
-  - scope:
-      path: ""
-      type: "docs"
-    values:
-      layout: "docs"
