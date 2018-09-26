@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'MSsans';
+  src: url("MS Sans Serif.ttf") format("truetype"); }
+video {
+  height: 100%;
+  width: 100%;
+  z-index: 10; }
+
+#spookyvid {
+  visibility: hidden; }
+
+button {
+  box-shadow: none;
+  margin: 0; }
+  button:active {
+    top: 0; }
+
+.window {
+  width: 300px;
+  height: 139px;
+  background: #c0c0c0;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #000;
+  border-top: 1px solid #dfdfdf;
+  display: block;
+  font-family: Arial, sans-serif;
+  padding: 2px;
+  position: relative; }
+  .window .window-titlebar {
+    align-items: center;
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px; }
+    .window .window-titlebar .window-title-area {
+      flex: 1;
+      height: 16px;
+      position: relative; }
+    .window .window-titlebar .window-title {
+      bottom: 0;
+      display: inline-block !important;
+      font-weight: bold;
+      left: 0;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      padding-left: 3px;
+      position: absolute;
+      right: 0;
+      text-overflow: ellipsis;
+      top: -1px;
+      white-space: nowrap; }
+    .window .window-titlebar .window-button {
+      background: #c0c0c0;
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #000;
+      border-top: 1px solid #fff;
+      font-size: 12px;
+      margin: 2px;
+      padding: 0;
+      position: relative;
+      vertical-align: middle; }
+      .window .window-titlebar .window-button::after {
+        border-bottom: 1px solid #808080;
+        border-left: 1px solid #dfdfdf;
+        border-right: 1px solid #808080;
+        border-top: 1px solid #dfdfdf;
+        bottom: 0;
+        content: '';
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0; }
+      .window .window-titlebar .window-button:active {
+        border-bottom: 1px solid #dfdfdf;
+        border-left: 1px solid #000;
+        border-right: 1px solid #dfdfdf;
+        border-top: 1px solid #000;
+        box-shadow: inset 1px 1px grey, 1px 0 #fff, 0 1px #fff, 1px 1px #fff; }
+    .window .window-titlebar .window-close-button {
+      width: 13px;
+      height: 11px;
+      display: block !important;
+      float: right; }
+      .window .window-titlebar .window-close-button::before {
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        color: #555;
+        content: 'x';
+        font-weight: bold;
+        left: 50%;
+        position: absolute;
+        top: 50%; }
+  .window .window-content {
+    margin-top: 5px;
+    outline: 0 none;
+    overflow: auto;
+    padding: 5px;
+    padding-left: 10px;
+    position: relative; }
+    .window .window-content .alert {
+      width: 32px;
+      height: 32px;
+      float: left;
+      margin: 7px; }
+    .window .window-content .alert-text {
+      color: #000;
+      font-family: 'MSsans', sans-serif;
+      margin-top: 7px;
+      word-break: break-word;
+      word-wrap: break-word; }
+  .window .window-buttons {
+    display: flex; }
+    .window .window-buttons button {
+      background: #c0c0c0;
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #000;
+      border-top: 1px solid #fff;
+      color: #000;
+      font-family: 'MSsans', sans-serif;
+      font-size: 12px;
+      height: 24px;
+      margin: 1.5em 3.7em;
+      padding: 0 13px;
+      position: relative;
+      text-align: center;
+      vertical-align: middle; }
+      .window .window-buttons button:active {
+        border-bottom: 1px solid #dfdfdf;
+        border-left: 1px solid #000;
+        border-right: 1px solid #dfdfdf;
+        border-top: 1px solid #000;
+        box-shadow: inset 1px 1px grey, 1px 0 #fff, 0 1px #fff, 1px 1px #fff; }
+
+/*# sourceMappingURL=custom.css.map */
