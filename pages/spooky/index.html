@@ -14,12 +14,14 @@
     <meta content="Have a spooky October!" name="description" />
 
     <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="../../assets/js/timer.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../assets/js/dragable.js" type="text/javascript" charset="utf-8"></script>
     <script src="script.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
-    <section id="drag">
-      <div class="window win-animation" id="window">
-        <div class="window-titlebar">
+    <section id="window">
+      <div class="window win-animation" id="drag">
+        <div class="window-titlebar" id="drag-titlebar">
           <div class="window-title-area">
             <span class="window-title">It's nearly October</span>
           </div>
@@ -40,10 +42,18 @@
       </div>
     </section>
 
-    <video loop id="spookyvid">
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support video...
-    </video>
+    <div id="dankmode">
+      <button id="dank">Enable dank mode</button>
+    </div>
+
+    <div id="spookwindow">
+      <h1 id="timer" style="font-family: Verdana;">
+        You've been spooked for<br><span id="time">0.0s</span>
+      </h1>
+      <video loop id="spookyvid">
+        Your browser does not support video...
+      </video>
+    </div>
 
   </body>
 </html>

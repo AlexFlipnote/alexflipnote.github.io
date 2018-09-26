@@ -2,6 +2,7 @@
 html, body {
   background: #181818;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 // Functions
@@ -31,7 +32,17 @@ video {
   z-index: 10;
 }
 
-#spookyvid { display: none; }
+#spookwindow { display: none; }
+
+#timer {
+  background: rgba(0, 0, 0, .4);
+  color: #fff;
+  padding: .3em 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
 
 // Drag thing
 #drag {
@@ -165,32 +176,38 @@ video {
 
   .window-buttons {
     display: flex;
-
-    button {
-      background: #c0c0c0;
-      border-bottom: 1px solid #000;
-      border-left: 1px solid #fff;
-      border-right: 1px solid #000;
-      border-top: 1px solid #fff;
-      color: #000;
-      font-family: 'MSsans', sans-serif;
-      font-size: 12px;
-      height: 24px;
-      margin: 1.5em 3.7em;
-      padding: 0 13px;
-      position: relative;
-      text-align: center;
-      vertical-align: middle;
-
-      &:active {
-        border-bottom: 1px solid #dfdfdf;
-        border-left: 1px solid #000;
-        border-right: 1px solid #dfdfdf;
-        border-top: 1px solid #000;
-        box-shadow: inset 1px 1px grey, 1px 0 #fff, 0 1px #fff, 1px 1px #fff;
-      }
-    }
   }
+}
+
+button {
+  background: #c0c0c0;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #000;
+  border-top: 1px solid #fff;
+  color: #000;
+  font-family: 'MSsans', sans-serif;
+  font-size: 12px;
+  height: 24px;
+  margin: 1.5em 3.7em;
+  padding: 0 13px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+
+  &:active {
+    border-bottom: 1px solid #dfdfdf;
+    border-left: 1px solid #000;
+    border-right: 1px solid #dfdfdf;
+    border-top: 1px solid #000;
+    box-shadow: inset 1px 1px grey, 1px 0 #fff, 0 1px #fff, 1px 1px #fff;
+  }
+}
+
+#dankmode {
+  bottom: .5em;
+  position: absolute;
+  right: .5em;
 }
 
 // Tooltip

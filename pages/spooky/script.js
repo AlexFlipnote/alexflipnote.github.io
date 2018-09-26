@@ -1,49 +1,30 @@
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById("window-titlebar")) {
-    document.getElementById("window-titlebar").onmousedown = dragMouseDown;
-  } else {
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-
 window.onload = function() {
   var winerr = document.getElementById('window');
   var spookyvid = document.getElementById('spookyvid');
+  var spookwindow = document.getElementById('spookwindow');
+  var dankmode = document.getElementById('dankmode');
 
-  dragElement(document.getElementById('drag'));
+  var element = document.createElement("source");
+  element.type = "video/mp4";
+
+  dragElement(document.getElementById("drag"), "-titlebar");
 
   function showvideo() {
+    if (dankmode.style.display !== "none") {
+      element.src = "video.mp4";
+    }
+
+    spookyvid.appendChild(element);
     winerr.style.display = "none";
-    spookyvid.style.display = "block";
+    dankmode.style.display = "none";
+    spookwindow.style.display = "block";
     spookyvid.play();
+    addTimer();
+  }
+
+  document.getElementById('dank').onclick = function() {
+    element.src = "video_dank.mp4";
+    dankmode.style.display = "none";
   }
 
   document.getElementById('spooktime').onclick = function() {
