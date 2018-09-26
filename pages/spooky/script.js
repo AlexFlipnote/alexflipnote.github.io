@@ -3,11 +3,12 @@ window.onload = function() {
   var spookyvid = document.getElementById('spookyvid');
   var spookwindow = document.getElementById('spookwindow');
   var dankmode = document.getElementById('dankmode');
+  var drag = document.getElementById("drag");
 
   var element = document.createElement("source");
   element.type = "video/mp4";
 
-  dragElement(document.getElementById("drag"), "-titlebar");
+  dragElement(drag, "-titlebar");
 
   function showvideo() {
     if (dankmode.style.display !== "none") {
@@ -27,11 +28,27 @@ window.onload = function() {
     dankmode.style.display = "none";
   }
 
-  document.getElementById('spooktime').onclick = function() {
-    showvideo();
-  }
+  document.body.onclick = function (ev) {
+    if (ev.target.getAttribute("id") == "window-close") {
+      var min = 1;
+      var max = 80;
 
-  document.getElementById('spooktime2').onclick = function() {
-    showvideo();
-  }
+      var clone = drag.cloneNode(true);
+
+      clone.id = drag.id;
+      clone.style.top = Math.floor(Math.random() * (max - min + 1)) + min + "%";
+      clone.style.left = Math.floor(Math.random() * (max - min + 1)) + min + "%";
+
+      winerr.appendChild(clone);
+      dragElement(clone, null);
+    }
+
+    if (ev.target.getAttribute("id") == "spooktime") {
+      showvideo();
+    }
+
+    if (ev.target.getAttribute("id") == "spooktime2") {
+      showvideo();
+    }
+  };
 }

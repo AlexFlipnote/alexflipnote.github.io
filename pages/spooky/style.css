@@ -113,9 +113,9 @@ video {
         color: #555;
         content: 'x';
         font-weight: bold;
-        left: 50%;
+        left: 55%;
         position: absolute;
-        top: 50%; }
+        top: 30%; }
   .window .window-content {
     margin-top: 5px;
     outline: 0 none;
