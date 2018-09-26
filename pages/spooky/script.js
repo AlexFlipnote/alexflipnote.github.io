@@ -39,6 +39,9 @@ window.onload = function() {
       clone.style.top = Math.floor(Math.random() * (max - min + 1)) + min + "%";
       clone.style.left = Math.floor(Math.random() * (max - min + 1)) + min + "%";
 
+      var doot = new Audio('doot.mp3');
+      doot.play();
+
       winerr.appendChild(clone);
       dragElement(clone, null);
     }
