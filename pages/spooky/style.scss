@@ -1,3 +1,9 @@
+// Always first
+html, body {
+  background: #181818;
+  margin: 0 auto;
+}
+
 // Functions
 @mixin box-size($x, $y) {
   width: $x;
@@ -25,20 +31,19 @@ video {
   z-index: 10;
 }
 
-#spookyvid {
-  visibility: hidden;
-}
+#spookyvid { display: none; }
 
-// Remove ModestaCSS standards
-button {
-  box-shadow: none;
-  margin: 0;
-  &:active { top: 0; }
+// Drag thing
+#drag {
+  left: 40%;
+  position: absolute;
+  top: 40%;
 }
 
 // Windows 95 Popup
 .window {
   @include box-size(300px, 139px);
+  @include prefix(user-select, none);
   background: #c0c0c0;
   border-bottom: 1px solid #000;
   border-left: 1px solid #dfdfdf;
@@ -75,7 +80,7 @@ button {
       position: absolute;
       right: 0;
       text-overflow: ellipsis;
-      top: -1px;
+      top: 1px;
       white-space: nowrap;
     }
 
@@ -152,6 +157,10 @@ button {
       word-break: break-word;
       word-wrap: break-word;
     }
+
+    .alert-inner-text {
+      margin: 0;
+    }
   }
 
   .window-buttons {
@@ -182,4 +191,44 @@ button {
       }
     }
   }
+}
+
+// Tooltip
+.tooltip {
+  border-bottom: 1px dotted rgba(0, 0, 0, .6);
+  display: inline-block;
+  position: relative;
+
+  .tooltiptext {
+    @include prefix(transition, all 350ms ease);
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 6px;
+    bottom: 100%;
+    color: #fff;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    z-index: 1;
+  }
+
+  &:hover .tooltiptext {
+    @include prefix(transition, all 350ms ease);
+    @include prefix(transform, translateY(-.6em));
+    opacity: 1;
+  }
+}
+
+// Animation
+.win-animation {
+  animation: ease-in-out popup-window-anim .5s;
+}
+
+@keyframes popup-window-anim {
+  0% { @include prefix(transform, scale(0)); }
+  70% { @include prefix(transform, scale(1.1)); }
+  100% { @include prefix(transform, scale(1)); }
 }
