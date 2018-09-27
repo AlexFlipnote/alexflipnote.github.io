@@ -23,35 +23,47 @@ window.onload = function() {
     addTimer();
   }
 
+  function createClone() {
+    var min = 1;
+    var max = 80;
+
+    var clone = drag.cloneNode(true);
+
+    clone.id = drag.id;
+    clone.style.top = Math.floor(Math.random() * (max - min + 1)) + min + "%";
+    clone.style.left = Math.floor(Math.random() * (max - min + 1)) + min + "%";
+
+    var doot = new Audio('doot.mp3');
+    doot.play();
+
+    winerr.appendChild(clone);
+    dragElement(clone, null);
+  }
+
   document.getElementById('dank').onclick = function() {
     element.src = "video_dank.mp4";
     dankmode.style.display = "none";
   }
 
   document.body.onclick = function (ev) {
-    if (ev.target.getAttribute("id") == "window-close") {
-      var min = 1;
-      var max = 80;
-
-      var clone = drag.cloneNode(true);
-
-      clone.id = drag.id;
-      clone.style.top = Math.floor(Math.random() * (max - min + 1)) + min + "%";
-      clone.style.left = Math.floor(Math.random() * (max - min + 1)) + min + "%";
-
-      var doot = new Audio('doot.mp3');
-      doot.play();
-
-      winerr.appendChild(clone);
-      dragElement(clone, null);
-    }
-
-    if (ev.target.getAttribute("id") == "spooktime") {
-      showvideo();
-    }
-
-    if (ev.target.getAttribute("id") == "spooktime2") {
-      showvideo();
-    }
+    if (ev.target.getAttribute("id") == "window-close") { createClone(); }
+    if (ev.target.getAttribute("id") == "spooktime") { showvideo(); }
+    if (ev.target.getAttribute("id") == "spooktime2") { showvideo(); }
   };
+
+  // Prevent shit
+  // Right-click menu
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // Deleting popup
+  window.setInterval(function() {
+    if (document.getElementById("window") == null) {
+      location.reload();
+    }
+
+    if (document.getElementsByClassName("window").length == 0) {
+      createClone();
+      console.log("Nice try.. but you can't delete it that simply");
+    }
+  }, 1000);
 }
