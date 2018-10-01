@@ -1,6 +1,5 @@
 # alexflipnote.xyz
----
-## Site Information
+
 - Site: https://alexflipnote.xyz
 - Usage: Information about myself
 - Framework:
