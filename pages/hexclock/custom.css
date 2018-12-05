@@ -1,0 +1,8 @@
+.time-container .time, .time-container .hex {
+  transition: all .5s ease;
+  font-family: monospace, sans-serif;
+  user-select: none;
+}
+
+.time { font-size: 13vmin; }
+.hex { font-size: 9vmin; }
