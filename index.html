@@ -37,31 +37,35 @@
     <!-- CSS -->
     <link href="https://modesta.alexflipnote.xyz/css/modesta.min.css" type="text/css" rel="stylesheet">
     <link href="https://modesta.alexflipnote.xyz/css/blobcat.min.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/custom.css" type="text/css" rel="stylesheet">
 
     <!-- JavaScript -->
     <script src="assets/js/smoothscroll.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="assets/js/main.js" type="text/javascript" charset="utf-8"></script>
-
-    <!-- Custom CSS -->
-    <style>
-      .one-full.column p, .one-full.column h1 { margin: 0; }
-    </style>
   </head>
   <body>
     <div class="fullscreen">
       <div class="background" style="background-image: url('assets/images/background.jpg');"></div>
       <div class="center-object">
-        <section class="me unset">
-          <img draggable="false" src="assets/images/profile.png" class="image-title">
-          <h1 class="title">AlexFlipnote</h1>
-        </section>
-        <div class="buttons">
-          <a href="https://discord.gg/DpxkY3x" class="btn discord animation hover" target="_blank">Discord</a>
-          <a href="mailto:root@alexflipnote.xyz" class="btn wisteria animation hover">Email</a>
-          <a href="https://github.com/AlexFlipnote" class="btn github animation hover" target="_blank">GitHub</a>
-          <a href="https://steamcommunity.com/id/AlexFlipnote/" class="btn black animation hover" target="_blank">Steam</a>
-          <a href="https://twitter.com/AlexFlipnote" class="btn twitter animation hover" target="_blank">Twitter</a>
-          <a href="https://youtube.com/AlexFlipnote" class=" btn youtube animation hover" target="_blank">YouTube</a>
+        <div class="container flex-grid">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-10">
+            <section class="me flex-left">
+              <img draggable="false" src="assets/images/profile.png" class="image-title medium-border">
+            </section>
+            <section class="introduction-text">
+              <p class="no-margin"> Hello, my name is <span class="emerald-text">Alex</span>, but known as <span class="emerald-text">AlexFlipnote</span> over the internet.</p>
+              <p class="no-margin">I'm a Developer that spends time coding and building websites.</p>
+              <p class="no-margin">I've been coding for around <span class="sun-flower-text">4 years</span> now and still on the road to learn more.</p>
+              <p class="no-margin">Current languages I know well are <span class="emerald-text">HTML, CSS, SCSS, JavaScript, Python, NodeJS</span></p>
+            </section>
+            <div class="buttons flex-left">
+              <a href="https://discord.gg/DpxkY3x" class="btn discord animation hover" target="_blank">Discord</a>
+              <a href="mailto:root@alexflipnote.xyz" class="btn wisteria animation hover">Email</a>
+              <a href="https://github.com/AlexFlipnote" class="btn github animation hover" target="_blank">GitHub</a>
+            </div>
+          </div>
+          <div class="col-xs-1"></div>
         </div>
       </div>
 
@@ -70,23 +74,20 @@
 
     <section class="container" id="information">
       <div class="box-container row">
-        <div class="one-full column"><h1 class="emerald-text"><i class="emoji blobcatcoffee"></i> About myself:</h1></div>
-        <div class="one-full column">
-          <p>
-            Hello, my name is Alex, but known as <span class="twitter-text">AlexFlipnote</span> over the internet.
-            I'm a Developer that spends time coding and building websites.
-            I've been coding for around <span class="sun-flower-text">4 years</span> now and still on the road to learn more.
-            Current languages I know well are <span class="twitter-text">HTML, CSS, SCSS, JavaScript, Python, NodeJS</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="box-container row">
         <div class="one-full column"><h1 class="emerald-text"><i class="emoji blobcatmoustache"></i> CSS Themes:</h1></div>
         <div class="one-full column">
           <p><a href="https://github.com/AlexFlipnote/Discord_Theme" target="_blank">Discord_Theme</a>, discord theme that changes the CSS style</p>
           <p><a href="https://github.com/AlexFlipnote/ModestaCSS" target="_blank">ModestaCSS</a>, a clean CSS framework made to match my website design</p>
           <p><a href="https://github.com/AlexFlipnote/Twitter_Theme" target="_blank">Twitter_Theme</a>, theme that changes the standard Twitter CSS</p>
+        </div>
+      </div>
+
+      <div class="box-container row">
+        <div class="one-full column"><h1 class="emerald-text"><i class="emoji blobcatnomdisk"></i> Social medias:</h1></div>
+        <div class="one-full column">
+          <a href="https://steamcommunity.com/id/AlexFlipnote" class="btn black-flat hover" target="_blank">Steam</a>
+          <a href="https://twitter.com/AlexFlipnote" class="btn twitter-flat hover" target="_blank">Twitter</a>
+          <a href="https://youtube.com/AlexFlipnote" class=" btn youtube-flat hover" target="_blank">YouTube</a>
         </div>
       </div>
 

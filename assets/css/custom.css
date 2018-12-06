@@ -1,0 +1,13 @@
+.one-full.column p, .one-full.column h1 { margin: 0; }
+.introduction-text { margin: 1em 0; }
+
+.flex-left, .fullscreen .me {
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+@media (max-width: 750px) {
+  .flex-left, .fullscreen .me {
+    justify-content: center;
+  }
+}
