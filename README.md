@@ -1,6 +1,6 @@
-# alexflipnote.xyz
+# alexflipnote.dev
 
-- Site: https://alexflipnote.xyz
+- Site: https://alexflipnote.dev
 - Usage: Information about myself
 - Framework:
   - [ModestaCSS](https://github.com/AlexFlipnote/ModestaCSS)
