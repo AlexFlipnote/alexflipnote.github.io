@@ -1,0 +1,31 @@
+#waveform {
+  background: rgba(0, 0, 0, .8);
+  margin-bottom: 10px;
+}
+
+input[type="range"] {
+  position: relative;
+  margin: 2em 0;
+}
+
+input[type="range"]:before {
+  bottom: -2em;
+  content: attr(title);
+  display: block;
+  left: 25%;
+  position: absolute;
+}
+
+input[type="range"]:after {
+  content: attr(data-value);
+  display: block;
+  left: 25%;
+  position: absolute;
+  top: -2em;
+}
+
+input#volume { margin: 0; }
+
+.eq-value-container {
+  margin-top: 2em;
+}
