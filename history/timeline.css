@@ -28,7 +28,14 @@
   margin-bottom: 2.45em;
   padding: .5em 1em;
   position: relative;
+  transition: box-shadow 200ms ease-in-out;
   width: auto;
+}
+
+.timeline-container .timeline:hover {
+  box-shadow: 7px 7px 0 rgba(40, 40, 40, 0.6);
+  position: relative;
+  transition: box-shadow 200ms ease-in-out;
 }
 
 .timeline-container .timeline:after {
@@ -49,6 +56,8 @@
   margin: 0;
   padding: 0;
 }
+
+.timeline a { font-family: consolas, 'Montserrat', sans-serif; }
 
 @media (max-width: 550px) {
   .container {
