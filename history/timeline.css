@@ -1,1 +1,68 @@
-/* Placeholder */
+.timeline-info {
+  align-items: center;
+  border-bottom: 2px solid #e3e3e3;
+  display: flex;
+  flex-direction: unset;
+  margin-bottom: 2em;
+}
+
+.timeline-info img {
+  height: 8em;
+  margin-right: 1em;
+  width: 8em;
+}
+
+.timeline-info h1 {
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+.timeline-info-text, .timeline-container {
+  display: inline-block;
+}
+
+.timeline-container .timeline {
+  background: #282828;
+  display: table;
+  height: auto;
+  margin-bottom: 2.45em;
+  padding: .5em 1em;
+  position: relative;
+  width: auto;
+}
+
+.timeline-container .timeline:after {
+  background-color: #14bae4;
+  content: ' ';
+  height: 100%;
+  left: 1.75em;
+  position: absolute;
+  top: 2.5em;
+  width: .45em;
+  z-index: -1;
+}
+
+.timeline-container .timeline:last-child { margin-bottom: 0; }
+.timeline-container .timeline:last-child::after { display: none; }
+
+.timeline a, .timeline p {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+@media (max-width: 700px) {
+  .timeline-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .timeline-info h1 { letter-spacing: 2px; }
+  .timeline-info img { border-radius: 10px; margin-bottom: .25em; }
+}
