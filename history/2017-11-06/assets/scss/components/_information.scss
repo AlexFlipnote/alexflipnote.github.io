@@ -1,0 +1,16 @@
+.highlight { color: #fff; }
+
+#information {
+  margin-top: 2em;
+
+  // Skeleton Custom CSS
+  .row {
+    background-color: rgba(0, 0, 0, .25);
+    border-radius: 10px;
+    margin-bottom: 3em;
+    padding: 1em;
+  }
+
+  .one-half.column { width: 95%; }
+  .container { max-width: 1350px; }
+}
