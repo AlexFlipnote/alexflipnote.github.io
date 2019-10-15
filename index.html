@@ -35,8 +35,9 @@
     <meta name="twitter:site" content="@AlexFlipnote" />
 
     <!-- CSS -->
-    <link href="https://modesta.alexflipnote.dev/css/modesta.min.css" type="text/css" rel="stylesheet">
-    <link href="https://modesta.alexflipnote.dev/css/blobcat.min.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
+    <link href="https://modesta.alexflipnote.dev/css/modesta.css" type="text/css" rel="stylesheet">
+    <link href="https://modesta.alexflipnote.dev/css/blobcat.css" type="text/css" rel="stylesheet">
     <link href="assets/css/custom.css" type="text/css" rel="stylesheet">
 
     <!-- JavaScript -->
@@ -52,34 +53,36 @@
             <img draggable="false" src="assets/images/profile.png" class="image-title">
             <div class="unset"><h1 class="title">AlexFlipnote</h1></div>
           </section>
-          <div class="buttons">
-            <a href="https://discord.gg/DpxkY3x" class="btn discord animation hover" target="_blank">Discord</a>
-            <a href="https://github.com/AlexFlipnote" class="btn github animation hover" target="_blank">GitHub</a>
-            <a href="https://twitter.com/AlexFlipnote" class="btn twitter animation hover" target="_blank">Twitter</a>
-            <a href="mailto:root@alexflipnote.dev" class="btn emerald animation hover">Email</a>
+          <div class="buttons github-font-standard">
+            <a href="https://discord.gg/DpxkY3x" class="btn discord-dropshadow animation hover" target="_blank">Discord</a>
+            <a href="https://github.com/AlexFlipnote" class="btn github-dropshadow animation hover" target="_blank">GitHub</a>
+            <a href="https://twitter.com/AlexFlipnote" class="btn twitter-dropshadow animation hover" target="_blank">Twitter</a>
+            <a href="mailto:root@alexflipnote.dev" class="btn emerald-dropshadow animation hover">Email</a>
           </div>
         </div>
       </div>
 
-      <a href="#information"><div id="fade" class="arrow bounce"></div></a>
+      <a href="#information"><div id="fade" class="arrow bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.32 291.98" class="white-fill">
+          <path d="M466.5,15.5L466,15c-19.8-19.8-52-19.8-71.9,0L240.8,168.3L87.2,14.8C67.4-5,35.2-5,15.4,14.8l-0.5,0.5 C-5,35.2-5,67.4,14.8,87.2l186.6,186.6c0.9,1,1.8,2,2.7,3v0c3.8,3.8,8.1,6.9,12.7,9.3c17,9,38.1,7.7,53.9-3.9 c2.2-1.6,4.4-3.4,6.4-5.4L466.5,87.4C486.4,67.6,486.4,35.4,466.5,15.5z"/>
+        </svg>
+      </div></a>
     </div>
 
     <section class="container" id="information">
-      <div class="box-container row">
-        <div class="one-full column"><h1 class="emerald-text"><i class="emoji blobcatnerd"></i> Information:</h1></div>
-        <div class="one-full column">
-          <p>
-            Hello, my name is <span class="emerald-text">Alex</span>, but known as <span class="emerald-text">AlexFlipnote</span> over the internet.
-            I'm a Developer that spends time coding scripts and building websites.
-            Been coding for around <span class="sun-flower-text" id="years-of-coding">[var years_since | main.js]</span> now and still on the road to learn more.
-            Current coding languages I know fair enough are <span class="emerald-text">HTML, CSS, SCSS, JavaScript, Python, SQL</span>
-          </p>
-        </div>
+      <div class="box-container">
+        <h3 class="title emerald-text"><i class="emoji blobcatnerd"></i> Information:</h3>
+        <p class="github-font-standard">
+          Hello, my name is <span class="emerald-text">Alex</span>, but known as <span class="emerald-text">AlexFlipnote</span> over the internet.
+          I'm a Developer that spends time coding scripts and building websites.
+          Been coding for around <span class="sun-flower-text" id="years-of-coding">[var years_since | main.js]</span> now and still on the road to learn more.
+          Current coding languages I know fair enough are <span class="emerald-text">HTML, CSS, SCSS, JavaScript, Python, SQL</span>
+        </p>
       </div>
 
-      <div class="box-container row">
-        <div class="one-full column"><h1 class="emerald-text"><i class="emoji blobcatbusiness"></i> Projects:</h1></div>
-        <div class="one-full column">
+      <div class="box-container">
+        <h3 class="title emerald-text"><i class="emoji blobcatbusiness"></i> Projects:</h3>
+        <div class="github-font-standard">
           <p><a href="https://alexflipnote.dev/history/" target="_blank">AlexFlipnote/history</a>, timeline history of my personal website</p>
           <p><a href="https://alexflipnote.dev/homepage" target="_blank">AlexFlipnote/homepage</a>, website that can be used as a personal start page with clock and date.</p>
           <p><a href="https://github.com/AlexFlipnote/CoffeeAPI" target="_blank">CoffeeAPI</a>, simple, yet powerful API providing random images.</p>

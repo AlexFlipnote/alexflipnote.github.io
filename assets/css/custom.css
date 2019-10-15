@@ -1,3 +1,23 @@
+/* Add font */
+html, body {
+  font-family: 'Hepta Slab', serif;
+}
+
+/* Change a bit default ModestaCSS values */
+.title {
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+
+.fullscreen h1.title {
+  letter-spacing: 2px;
+}
+
+.box-container p {
+  font-size: 18px;
+  margin-bottom: .2em;
+}
+
 /* Removes annoying paragraph and header margin spacing */
 .one-full.column p, .one-full.column h1 { margin-bottom: 0; }
 
