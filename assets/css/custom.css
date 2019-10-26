@@ -1,25 +1,15 @@
-/* Add font */
-html, body {
-  font-family: 'Hepta Slab', serif;
-}
-
 /* Change a bit default ModestaCSS values */
-.title {
-  margin-bottom: 0;
-  letter-spacing: 2px;
-}
+.title { margin-bottom: 0; letter-spacing: 2px; }
+.fullscreen h1.title { letter-spacing: 2px; }
+.box-container p { font-size: 18px; margin-bottom: .2em; }
 
-.fullscreen h1.title {
-  letter-spacing: 2px;
-}
-
-.box-container p {
-  font-size: 18px;
-  margin-bottom: .2em;
-}
-
-/* Removes annoying paragraph and header margin spacing */
-.one-full.column p, .one-full.column h1 { margin-bottom: 0; }
+/* Add some spacing to the info on "second page" for more depth */
+.info-container { padding-left: 2.5em; }
 
 /* Remove border-radius standard from ModestaCSS */
 .btn { border-radius: 0; }
+
+/* R e s p o n s i v e */
+@media (max-width: 550px) {
+  .info-container { padding-left: 0; }
+}
