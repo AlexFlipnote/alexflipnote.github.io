@@ -1,0 +1,106 @@
+html, body {
+  background: #fff;
+  color: #000;
+  margin: 8px;
+}
+
+.github-font-standard, .monospace {
+  font-family: "Times New Roman";
+}
+
+.btn[class*="-dropshadow"] {
+  animation: none;
+  filter: none;
+  font-size: 18px;
+  color: #0000EE;
+  background-color: transparent !important;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
+  white-space: inherit;
+  height: auto;
+  line-height: normal;
+  margin: 0;
+  opacity: 1;
+}
+
+.btn[class*="-dropshadow"]:hover {
+  transform: none;
+  filter: none;
+}
+
+.me .image-title { border-radius: 0; }
+.me.unset .image-title { margin: 0; }
+
+.center-object {
+  display: block;
+  height: auto;
+  width: auto;
+  position: relative;
+}
+
+.box-container {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.me { display: block; }
+.box-container p { margin: 0; }
+.info-container { padding: 0; }
+i.emoji { display: none; }
+.me.unset { padding: 0; }
+.me.unset .unset { margin: 0; }
+
+.buttons {
+  text-align: inherit;
+  display: block;
+}
+
+.fullscreen {
+  background: transparent;
+  display: block;
+  height: auto;
+  width: auto;
+}
+
+.emerald-text { color: green !important; }
+.sun-flower-text { color: red !important; }
+
+.fullscreen .background {
+  display: block;
+  height: auto;
+  width: auto;
+}
+
+.arrow { display: none; }
+
+.container {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+footer.primary {
+  background: transparent !important;
+  filter: none !important;
+  border-top: solid 1px #000;
+}
+
+@media (max-width: 750px) {
+  .buttons, .buttons .btn {
+    display: inline-block;
+    width: auto;
+  }
+
+  .me .title { font-size: 5rem; }
+  .me .image-title {
+    height: 9em;
+    width: 9em;
+  }
+}
