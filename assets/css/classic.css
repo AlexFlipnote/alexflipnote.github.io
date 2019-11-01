@@ -86,6 +86,8 @@ a {
   text-decoration: underline;
 }
 
+a:hover { color: #0000EE; }
+
 footer.primary {
   background: transparent !important;
   filter: none !important;
