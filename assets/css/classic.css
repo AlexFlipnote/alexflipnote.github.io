@@ -51,6 +51,7 @@ html, body {
 i.emoji { display: none; }
 .me.unset { padding: 0; }
 .me.unset .unset { margin: 0; }
+.gibus-hat { display: none; }
 
 .buttons {
   text-align: inherit;

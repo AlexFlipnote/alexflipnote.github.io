@@ -9,6 +9,30 @@
 /* Remove border-radius standard from ModestaCSS */
 .btn { border-radius: 0; }
 
+/* Funny gibus hat */
+.avatar-container {
+  position: relative;
+}
+
+.avatar-container .gibus-hat {
+  background-image: url('../images/gibus.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  left: 20%;
+  opacity: 0;
+  position: absolute;
+  top: -25%;
+  transform: scaleX(-1);
+  transition: opacity 250ms ease-in-out;
+  width: 100%;
+}
+
+.avatar-container:hover .gibus-hat {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+
 /* R e s p o n s i v e */
 @media (max-width: 550px) {
   .info-container { padding-left: 0; }
