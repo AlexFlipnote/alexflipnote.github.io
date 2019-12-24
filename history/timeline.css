@@ -30,6 +30,7 @@
   position: relative;
   transition: box-shadow 200ms ease-in-out;
   width: auto;
+  z-index: 10;
 }
 
 .timeline-container .timeline:hover {
@@ -44,7 +45,7 @@
   height: 100%;
   left: 1.75em;
   position: absolute;
-  top: 2.5em;
+  top: 3.5em;
   width: .45em;
   z-index: -1;
 }
