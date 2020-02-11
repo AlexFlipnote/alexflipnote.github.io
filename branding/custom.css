@@ -4,8 +4,8 @@
 .flex-grid { margin-top: .5em; }
 
 .flex-grid .colour {
-  flex-basis: 20%;
-  max-width: 20%;
+  flex-basis: 14.1%;
+  max-width: 14.1%;
   position: relative;
   height: 200px;
   transition: transform 200ms ease-in-out;
@@ -16,13 +16,6 @@
   transform: translateY(-.5em) scale(1.05);
   transition: transform 200ms ease-in-out;
   z-index: 10000;
-}
-
-@media (max-width: 600px) {
-  .flex-grid .colour, .flex-grid .image-preview {
-    flex-basis: 90% !important; max-width: 90% !important;
-    padding: 0; width: 90%; margin: 0 auto;
-  }
 }
 
 .flex-grid .colour .name, .flex-grid .colour .hex {
@@ -64,4 +57,16 @@
   position: absolute;
   top: .25em;
   text-shadow: 0 0 5px #000;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .flex-grid .colour .name, .flex-grid .colour .hex { font-size: 16px; }
+}
+
+@media (max-width: 600px) {
+  .flex-grid .colour, .flex-grid .image-preview {
+    flex-basis: 90% !important; max-width: 90% !important;
+    padding: 0; width: 90%; margin: 0 auto;
+  }
 }
