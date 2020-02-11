@@ -1,16 +1,9 @@
 .container .box-container { margin: 0; padding: 0; }
 .parallax-container .parallax { filter: blur(4px) brightness(50%); }
 
-.colours-container {
-  box-sizing: border-box;
-  display: flex;
-  flex: 0 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: .5em;
-}
+.flex-grid { margin-top: .5em; }
 
-.colours-container .colour {
+.flex-grid .colour {
   flex-basis: 20%;
   max-width: 20%;
   position: relative;
@@ -19,24 +12,56 @@
   z-index: 10;
 }
 
-.colours-container .colour:hover {
-  transform: translateY(-.75em) scale(1.05);
+.flex-grid .colour:hover {
+  transform: translateY(-.5em) scale(1.05);
   transition: transform 200ms ease-in-out;
   z-index: 10000;
 }
 
-@media (max-width: 550px) {
-  .colours-container .colour {
-    flex-basis: 90%; max-width: 90%;
+@media (max-width: 600px) {
+  .flex-grid .colour, .flex-grid .image-preview {
+    flex-basis: 90% !important; max-width: 90% !important;
     padding: 0; width: 90%; margin: 0 auto;
   }
 }
 
-.colours-container .colour .name, .colours-container .colour .hex {
+.flex-grid .colour .name, .flex-grid .colour .hex {
   position: absolute;
   font-size: 20px;
   font-weight: bold;
 }
 
-.colours-container .colour .name { left: .5em; top: .25em; }
-.colours-container .colour .hex { bottom: .5em; right: .5em; }
+.flex-grid .colour .name { left: .5em; top: .25em; }
+.flex-grid .colour .hex { bottom: .5em; right: .5em; }
+
+.image-preview {
+  border-radius: 5px;
+  border: 3px solid #303030;
+  flex-basis: 48% !important;
+  margin-top: .5em !important;
+  max-width: 48% !important;
+  position: relative;
+
+  background-size: 20px 20px;
+  background-position: 0 0, 30px 30px;
+  background-image: linear-gradient(45deg,#2e3033 25%, transparent 0, transparent 75%, #2e3033 0, #2e3033),
+                    linear-gradient(45deg, #2e3033 25%, transparent 0, transparent 75%, #2e3033 0, #2e3033);
+}
+
+.image-preview img { max-height: 250px; }
+.image-preview .image-links {
+  bottom: .5em;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  right: .5em;
+}
+
+.image-preview .image-text {
+  font-size: 22px;
+  font-weight: bold;
+  left: .5em;
+  position: absolute;
+  top: .25em;
+  text-shadow: 0 0 5px #000;
+}

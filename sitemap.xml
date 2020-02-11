@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://alexflipnote.dev/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://alexflipnote.dev/branding</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://github.com/AlexFlipnote</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://alexflipnote.dev/homepage</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.10</priority>
+  </url>
+  <url>
+    <loc>https://alexflipnote.dev/history</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.10</priority>
+  </url>
+</urlset>
