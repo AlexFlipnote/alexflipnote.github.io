@@ -1,0 +1,42 @@
+.container .box-container { margin: 0; padding: 0; }
+.parallax-container .parallax { filter: blur(4px) brightness(50%); }
+
+.colours-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: .5em;
+}
+
+.colours-container .colour {
+  flex-basis: 20%;
+  max-width: 20%;
+  position: relative;
+  height: 200px;
+  transition: transform 200ms ease-in-out;
+  z-index: 10;
+}
+
+.colours-container .colour:hover {
+  transform: translateY(-.75em) scale(1.05);
+  transition: transform 200ms ease-in-out;
+  z-index: 10000;
+}
+
+@media (max-width: 550px) {
+  .colours-container .colour {
+    flex-basis: 90%; max-width: 90%;
+    padding: 0; width: 90%; margin: 0 auto;
+  }
+}
+
+.colours-container .colour .name, .colours-container .colour .hex {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.colours-container .colour .name { left: .5em; top: .25em; }
+.colours-container .colour .hex { bottom: .5em; right: .5em; }
