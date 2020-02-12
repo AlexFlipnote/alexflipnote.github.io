@@ -1,6 +1,5 @@
-.container .box-container { margin: 0; padding: 0; }
+.container .box-container { margin: 1em 0; padding: 0; }
 .parallax-container .parallax { filter: blur(4px) brightness(50%); }
-
 .flex-grid { margin-top: .5em; }
 
 .flex-grid .colour {
