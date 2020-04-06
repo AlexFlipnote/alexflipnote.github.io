@@ -9,6 +9,10 @@
 /* Remove border-radius standard from ModestaCSS */
 .btn { border-radius: 0; }
 
+/* Custom emojis */
+.alexcoffee { background-image: url('../images/AlexCoffee.png'); }
+.alexnerd { background-image: url('../images/AlexNerd.png'); }
+
 /* Funny gibus hat */
 .avatar-container {
   position: relative;
