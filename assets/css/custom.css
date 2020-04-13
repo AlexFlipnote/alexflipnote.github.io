@@ -1,7 +1,10 @@
 /* Change a bit default ModestaCSS values */
-.title { margin-bottom: 0; letter-spacing: 2px; }
-.fullscreen h1.title { letter-spacing: 2px; }
+.fullscreen h1.title { margin-bottom: 0; letter-spacing: 2px; }
+.undertitle { font-style: italic; }
 .box-container p { font-size: 18px; margin-bottom: .2em; }
+
+/* Add a pointer to arrow <span> */
+.info-button { cursor: pointer; }
 
 /* Add some spacing to the info on "second page" for more depth */
 .info-container { padding-left: 2.5em; }
@@ -12,10 +15,12 @@
 /* Custom emojis */
 .alexcoffee { background-image: url('../images/AlexCoffee.png'); }
 .alexnerd { background-image: url('../images/AlexNerd.png'); }
-
-/* Funny gibus hat */
-.avatar-container {
-  position: relative;
+.norway {
+  background-image: url('https://twemoji.maxcdn.com/2/svg/1f1f3-1f1f4.svg');
+  vertical-align: -.3em;
+  height: 1.25em;
+  width: 1.25em;
+  background-size: 1.25em 1.25em;
 }
 
 /* R e s p o n s i v e */
