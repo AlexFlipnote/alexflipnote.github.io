@@ -1,5 +1,4 @@
 {
-  "watch": true,
   "path": "src:dist",
   "debug": true,
   "variables": {
