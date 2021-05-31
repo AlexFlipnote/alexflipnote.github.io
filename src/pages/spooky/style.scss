@@ -1,0 +1,251 @@
+// Always first
+html, body {
+  background: #181818;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+// Functions
+@mixin box-size($x, $y) {
+  width: $x;
+  height: $y;
+}
+
+@mixin prefix($name, $argument) {
+  #{$name}: #{$argument};
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+}
+
+// The font
+@font-face {
+  font-family: 'MSsans';
+  src: url('assets/MS Sans Serif.ttf') format('truetype');
+}
+
+// Normal stuff
+video {
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+#spookwindow { display: none; }
+
+#timer {
+  background: rgba(0, 0, 0, .4);
+  color: #fff;
+  padding: .3em 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+// Drag thing
+#drag {
+  left: 40%;
+  position: absolute;
+  top: 40%;
+}
+
+// Windows 95 Popup
+.window {
+  @include box-size(300px, 139px);
+  @include prefix(user-select, none);
+  background: #c0c0c0;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #dfdfdf;
+  border-right: 1px solid #000;
+  border-top: 1px solid #dfdfdf;
+  display: block;
+  font-family: Arial, sans-serif;
+  padding: 2px;
+  position: relative;
+
+  .window-titlebar {
+    align-items: center;
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+
+    .window-title-area {
+      flex: 1;
+      height: 16px;
+      position: relative;
+    }
+
+    .window-title {
+      bottom: 0;
+      display: inline-block !important;
+      font-weight: bold;
+      left: 0;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      padding-left: 3px;
+      position: absolute;
+      right: 0;
+      text-overflow: ellipsis;
+      top: 1px;
+      white-space: nowrap;
+    }
+
+    .window-button {
+      background: #c0c0c0;
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #000;
+      border-top: 1px solid #fff;
+      font-size: 12px;
+      margin: 2px;
+      padding: 0;
+      position: relative;
+      vertical-align: middle;
+
+      &::after {
+        border-bottom: 1px solid #808080;
+        border-left: 1px solid #dfdfdf;
+        border-right: 1px solid #808080;
+        border-top: 1px solid #dfdfdf;
+        bottom: 0;
+        content: '';
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      &:active {
+        border-bottom: 1px solid #dfdfdf;
+        border-left: 1px solid #000;
+        border-right: 1px solid #dfdfdf;
+        border-top: 1px solid #000;
+        box-shadow: inset 1px 1px grey, 1px 0 #fff, 0 1px #fff, 1px 1px #fff;
+      }
+    }
+
+    .window-close-button {
+      @include box-size(13px, 11px);
+      display: block !important;
+      float: right;
+
+      &::before {
+        @include prefix(transform, translate(-50%, -50%));
+        color: #555;
+        content: 'x';
+        font-weight: bold;
+        left: 55%;
+        position: absolute;
+        top: 30%;
+      }
+    }
+  }
+
+  .window-content {
+    margin-top: 5px;
+    outline: 0 none;
+    overflow: auto;
+    padding: 5px;
+    padding-left: 10px;
+    position: relative;
+
+    .alert {
+      @include box-size(32px, 32px);
+      float: left;
+      margin: 7px;
+    }
+
+    .alert-text {
+      color: #000;
+      font-family: 'MSsans', sans-serif;
+      margin-top: 7px;
+      word-break: break-word;
+      word-wrap: break-word;
+    }
+
+    .alert-inner-text {
+      margin: 0;
+    }
+  }
+
+  .window-buttons {
+    display: flex;
+  }
+}
+
+button {
+  background: #c0c0c0;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #000;
+  border-top: 1px solid #fff;
+  color: #000;
+  font-family: 'MSsans', sans-serif;
+  font-size: 12px;
+  height: 24px;
+  margin: 1.5em 3.7em;
+  padding: 0 13px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+
+  &:active {
+    border-bottom: 1px solid #dfdfdf;
+    border-left: 1px solid #000;
+    border-right: 1px solid #dfdfdf;
+    border-top: 1px solid #000;
+    box-shadow: inset 1px 1px grey, 1px 0 #fff, 0 1px #fff, 1px 1px #fff;
+  }
+}
+
+#dankmode {
+  bottom: .5em;
+  position: absolute;
+  right: .5em;
+}
+
+// Tooltip
+.tooltip {
+  border-bottom: 1px dotted rgba(0, 0, 0, .6);
+  display: inline-block;
+  position: relative;
+
+  .tooltiptext {
+    @include prefix(transition, all 350ms ease);
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 6px;
+    bottom: 100%;
+    color: #fff;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    z-index: 1;
+  }
+
+  &:hover .tooltiptext {
+    @include prefix(transition, all 350ms ease);
+    @include prefix(transform, translateY(-.6em));
+    opacity: 1;
+  }
+}
+
+// Animation
+.win-animation {
+  animation: ease-in-out popup-window-anim .5s;
+}
+
+@keyframes popup-window-anim {
+  0% { @include prefix(transform, scale(0)); }
+  70% { @include prefix(transform, scale(1.1)); }
+  100% { @include prefix(transform, scale(1)); }
+}
