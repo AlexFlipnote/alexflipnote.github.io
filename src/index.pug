@@ -1,0 +1,44 @@
+html
+  head
+    - var HEAD_TITLE = "AlexFlipnote"
+    - var HEAD_DESC = "My personal homepage"
+    - var HEAD_PATH = "/"
+    - var HEAD_ASSETS_JUMP = "./"
+    include includes/_head
+  body.dark-theme.github.test
+    .fullscreen
+      .background(style="background-image: url('assets/images/background.jpg')")
+      .center-object
+        .container
+          section(class="me unset")
+            .avatar-container
+              img(draggable="false" src="assets/images/profile.png" class="image-title")
+            .unset
+              h1.title.monospace AlexFlipnote
+              p.undertitle.monospace #[i(class="emoji norway")] I do coding, yes.
+          .buttons
+            each l, c, n in homepage_links
+              a(href=l, class="btn #{c} animation hover", target="_blank") #{n}
+
+      span(class="info-button" onclick="scroll_to('information')")
+        #fade.arrow.bounce
+          svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.32 291.98" class="white-fill")
+            path(d="M466.5,15.5L466,15c-19.8-19.8-52-19.8-71.9,0L240.8,168.3L87.2,14.8C67.4-5,35.2-5,15.4,14.8l-0.5,0.5 C-5,35.2-5,67.4,14.8,87.2l186.6,186.6c0.9,1,1.8,2,2.7,3v0c3.8,3.8,8.1,6.9,12.7,9.3c17,9,38.1,7.7,53.9-3.9 c2.2-1.6,4.4-3.4,6.4-5.4L466.5,87.4C486.4,67.6,486.4,35.4,466.5,15.5z")
+
+    section#information.container
+      .box-container
+        h1.title.emerald-text #[i.emoji.alexcoffee] Information:
+        .info-container
+          p Hello, my name is #[span(emerald-text) Alex], but known as #[span(emerald-text) AlexFlipnote]
+            | over the internet. I'm a developer that spends time coding scripts and building websites.
+            | Been coding for around #[span(class="sun-flower-text" id="years-of-coding") {INSERT TIME HERE, YES}]
+            | now and still on the road to learn more. Current coding languages I know fair enough are
+            | #[span(class="emerald-text") HTML, CSS, SCSS, JavaScript, Python] and #[span(class="emerald-text") SQL]
+
+      .box-container
+        h1.title.emerald-text #[i.emoji.alexnoted] Projects:
+        .info_container
+          each link, name, desc in homepage_projects
+            p #[a(href=link target="_blank") #{name}] #{desc}
+
+    include includes/_footer

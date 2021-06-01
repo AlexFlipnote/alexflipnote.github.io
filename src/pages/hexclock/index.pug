@@ -1,0 +1,17 @@
+html
+  head
+    - var HEAD_TITLE = "HEX Clock - #000000"
+    - var HEAD_DESC = "The clock that changes the HEX background after 24h clock"
+    - var HEAD_PATH = "/pages/hexclock"
+    - var HEAD_ASSETS_JUMP = "../../"
+    include includes/_head
+    link(href="custom.css" type="text/css" rel="stylesheet")
+    script(src="clock.js" type="text/javascript")
+  body(id="bg" style="background-color: #000000" class="dark-theme")
+    .center-object.center-text.time-container
+      h1#timetext.time.no-margin 00:00:00
+      h1#time.hex.no-margin #000000
+    .homepage
+      p.
+        My homepage plugin uses this as an option with the backgrounds of choice,
+        #[a(href="https://github.com/AlexFlipnote/homepage" target="_blank") try it out] for free.

@@ -1,0 +1,37 @@
+script(async src="https://www.googletagmanager.com/gtag/js?id=UA-52771679-1")
+script.
+  window.dataLayer = window.dataLayer || []
+  function gtag(){dataLayer.push(arguments)}
+  gtag("js", new Date())
+  gtag("config", "UA-52771679-1")
+
+title #{HEAD_TITLE}
+meta(http-equiv="Content-Type"  content="text/html; charset=UTF-8")
+meta(name="viewport"  content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no")
+
+// Meta Data
+meta(name="theme-color" content="#{colour}")
+meta(content="#{logo}" property="og:image")
+link(rel="icon" type="image/x-icon" href="#{url}/assets/images/favicon.ico")
+meta(content="#{HEAD_TITLE}" property="og:title")
+
+meta(content="#{HEAD_DESC}" property="og:description")
+meta(content="#{HEAD_DESC}" name="description")
+
+meta(name="revisit-after" content="2 days")
+meta(name="keywords" content="AlexFlipnote, Twitter, Developer, Github")
+
+meta(property="og:locale" content="en_GB")
+link(rel="canonical" href="#{url}#{HEAD_PATH}")
+meta(property="og:url" content="#{url}#{HEAD_PATH}")
+meta(property="og:site_name" content="AlexFlipnote")
+
+meta(name="twitter:card" content="summary")
+meta(name="twitter:site" content="@AlexFlipnote")
+
+// CSS
+link(href="#{HEAD_ASSETS_JUMP}assets/css/modesta.css" type="text/css" rel="stylesheet")
+link(href="#{HEAD_ASSETS_JUMP}assets/css/custom.css" type="text/css" rel="stylesheet")
+
+// JavaScript
+script(src="#{HEAD_ASSETS_JUMP}assets/js/main.js" type="text/javascript" charset="utf-8")
