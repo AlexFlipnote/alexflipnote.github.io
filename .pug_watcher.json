@@ -1,6 +1,7 @@
 {
   "path": "src:dist",
   "debug": true,
+  "scss_compressed": true,
   "variables": {
     "discord": "https://discord.gg/DpxkY3x",
     "colour": "#14bae4",
