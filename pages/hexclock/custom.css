@@ -1,0 +1,27 @@
+.time-container .time, .time-container .hex {
+  transition: all .5s ease;
+  font-family: monospace, sans-serif;
+  user-select: none;
+}
+
+.time { font-size: 13vmin; }
+.hex { font-size: 9vmin; }
+
+.homepage {
+  background: rgba(0, 0, 0, .6);
+  border-top: 2px solid rgba(0, 0, 0, .3);
+  bottom: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .7em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: auto;
+}
+
+.homepage p {
+  margin: 0;
+  padding: 0;
+}
