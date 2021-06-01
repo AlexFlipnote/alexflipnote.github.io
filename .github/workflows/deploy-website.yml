@@ -25,7 +25,7 @@ jobs:
           pip install pug_watcher
 
       - name: Compile Pug code
-        run: pug_watcher --config
+        run: make build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.3
