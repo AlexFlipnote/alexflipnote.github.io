@@ -23,6 +23,15 @@
       ["https://github.com/AlexFlipnote/Modesta", "Modesta", "a responsive CSS framework with built-in dark and light theme"],
       ["https://typing.alexflipnote.dev", "Typing test", "how fast can you type? Find out today with a typing test!"],
       ["https://xela.dev", "xelA", "the only bot your Discord would ever need, it's time to ditch Mee6 and Tickets"]
+    ],
+    "brand_colours": [
+      {"name": "Pelati", "pos": "hair", "colour": "#FF2E30", "text": "#FFF"},
+      {"name": "Eerie Black", "pos": "clothes", "colour": "#1A191A", "text": "#FFF"},
+      {"name": "Deep Dumpling", "pos": "belt colour", "colour": "#9E3716", "text": "#FFF"},
+      {"name": "Jubilation", "pos": "belt holder colour", "colour": "#FE860F", "text": "#000"},
+      {"name": "Violet Clues", "pos": "the mask", "colour": "#EFE9EF", "text": "#000"},
+      {"name": "Apricot Wash", "pos": "skin colour", "colour": "#F7B082", "text": "#000"},
+      {"name": "Gingerbread", "pos": "shoes color", "colour": "#8F4A2D", "text": "#FFF"}
     ]
   }
 }

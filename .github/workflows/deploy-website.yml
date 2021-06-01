@@ -2,7 +2,7 @@ name: Fetch, build and deploy
 on:
   push:
     branches:
-      - pug-rewrite
+      - master
 
 jobs:
   deploy:
@@ -12,7 +12,7 @@ jobs:
       - name: Fetching branch
         uses: actions/checkout@v2.3.1
         with:
-          ref: pug-rewrite
+          ref: master
 
       - name: Prepare Python
         uses: actions/setup-python@v2
