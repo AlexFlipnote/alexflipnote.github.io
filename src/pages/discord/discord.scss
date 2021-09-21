@@ -7,7 +7,7 @@
   .col-xs-6 {
     background-color: #303030;
     border-radius: 1em;
-    height: 10em;
+    height: 12em;
     flex-basis: 45%;
     max-width: 45%;
     margin: 1em 1.6em;
@@ -22,4 +22,12 @@
 
   h1 { margin: 0; }
   audio { margin: .5em 0; }
+}
+
+@media (max-width: 1100px) {
+  .flex-grid .col-xs-6 {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 1.5em 0;
+  }
 }
