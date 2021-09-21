@@ -33,6 +33,18 @@
       {"name": "Violet Clues", "pos": "the mask", "colour": "#EFE9EF", "text": "#000"},
       {"name": "Apricot Wash", "pos": "skin colour", "colour": "#F7B082", "text": "#000"},
       {"name": "Gingerbread", "pos": "shoes color", "colour": "#8F4A2D", "text": "#FFF"}
+    ],
+    "discord_ringtones": [
+      "2girls1cup", "Accumula Town", "Arabic Nokia Ringtone",
+      "Bad Apple", "Balcony - Cave Story", "Birthday", "C418 Alpha",
+      "Christmas", "Coffin dance", "Crab rave", "Despacito",
+      "Dire Dire Docks", "The Living Tombstone", "Doki Doki",
+      "Dreamland kirby", "Halloween ringtone", "Horizon Mix",
+      "Luma", "Mario 7", "Michael Stevens", "Pyrocynical Experience",
+      "Rare ringtone", "Replay", "Reverse", "Ringtone (Delete Server)",
+      "Ringtone", "Rock my forum", "Sans", "ScottTheWoz",
+      "Undertale Beta", "Yandere Simulator", "YIAY",
+      "Yo nunca vi television", "You - Higurashi no Naku Koro ni"
     ]
   }
 }

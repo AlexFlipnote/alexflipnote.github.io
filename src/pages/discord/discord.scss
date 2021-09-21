@@ -1,0 +1,25 @@
+.flex-grid {
+  [class^=col-xs]:first-child {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+  .col-xs-6 {
+    background-color: #303030;
+    border-radius: 1em;
+    height: 10em;
+    flex-basis: 45%;
+    max-width: 45%;
+    margin: 1em 1.6em;
+  }
+}
+
+.center-flex {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+
+  h1 { margin: 0; }
+  audio { margin: .5em 0; }
+}

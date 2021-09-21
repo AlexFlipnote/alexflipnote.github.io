@@ -1,0 +1,20 @@
+html
+  head
+    - var HEAD_TITLE = "Discord Ringtones"
+    - var HEAD_DESC = "A collection of Discord ringtone mashups/rips/remixes"
+    - var HEAD_PATH = "/pages/discord"
+    - var HEAD_ASSETS_JUMP = "../../"
+    include includes/_head
+    link(href="discord.css" type="text/css" rel="stylesheet")
+  body.dark-theme.github
+    section.container
+      h1.no-margin.sun-flower-text Discord Ringtones
+      p.no-margin.sun-flower-text A collection of Discord ringtone mashups/rips/remixes
+      p Got a ringtone that I am missing? Make a GitHub PR #[a(href="https://github.com/AlexFlipnote/alexflipnote.github.io/tree/master/src/pages/discord" target="_blank") here]
+        | and help me fill up this lovely list of ringtones! ❤
+      div.flex-grid
+        each tune in discord_ringtones
+          div.col-xs-6.center-flex
+            h1.text-center #{tune}.mp3
+            audio(controls)
+              source(src="./ringtones/#{tune}.mp3", type="audio/mpeg")
