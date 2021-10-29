@@ -14,10 +14,12 @@ jobs:
         with:
           ref: master
 
-      - name: Installing NodeJS and installing Yarn
+      - name: Installing NodeJS
         uses: actions/setup-node@v2
         with:
           node-version: "14"
+
+      - name: Installing Yarn
         run: npm install -g yarn
 
       - name: Installing package.json
