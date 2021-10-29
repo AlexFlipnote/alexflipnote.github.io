@@ -14,16 +14,17 @@ jobs:
         with:
           ref: master
 
-      - name: Installing NodeJS and building
+      - name: Installing NodeJS and installing Yarn
         uses: actions/setup-node@v2
         with:
           node-version: "14"
-        - run: npm install -g yarn
-        - run: yarn install
-        - run: yarn export
+        run: npm install -g yarn
 
-      - name: Compile Pug code
-        run: make build
+      - name: Installing package.json
+        run: yarn install
+
+      - name: Building and exporting
+        run: yarn github
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.3
