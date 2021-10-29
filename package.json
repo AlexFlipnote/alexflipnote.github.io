@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "yarn build && next export",
-    "github": "yarn export && cp CNAME ./out/CNAME",
+    "github": "yarn export && cp {CNAME,.nojekyll} ./out/",
     "start": "next start",
     "localhost": "http-server ./out"
   },
