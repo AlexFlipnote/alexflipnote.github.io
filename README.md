@@ -7,8 +7,7 @@ This site proudly uses CSS from [Modesta](https://github.com/AlexFlipnote/Modest
 (since I made it, lol)
 
 ## Requirements
-- Python 3.6 or above
-- pug_watcher (pip install pug-watcher)
+- NodeJS
 
 #### Optional requirements
 - make (For the Makefile, yes)

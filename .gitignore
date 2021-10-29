@@ -4,3 +4,6 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 dist/
+out/
+.next/
+node_modules/
