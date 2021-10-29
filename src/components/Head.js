@@ -11,6 +11,7 @@ export default class Head extends React.Component {
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
         <meta name="theme-color" content="#14bae4"/>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico"></link>
 
         <meta content={this.props.title} property="og:title"/>
         <meta content={this.props.description} property="og:description"/>
