@@ -25,6 +25,9 @@ jobs:
       - name: Compile Flask/Jinja files
         run: python index.py build
 
+      - name: Copy important GitHub Pages files
+        run: cp ./CNAME ./public/CNAME
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
