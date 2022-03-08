@@ -1,9 +1,11 @@
+{% set URL = 'https://alexflipnote.dev' %}
 <title>{{ title or 'default title' }}</title>
 
 <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 <meta name="theme-color" content="#14bae4"/>
-<link rel="icon" type="image/x-icon" href="{{ static('images/favicon.ico') }}"></link>
+<link rel="icon" type="image/x-icon" href="{{ URL + static('images/favicon.ico') }}"></link>
+<meta property="og:image" content="{{ URL + static('images/profile.png') }}" />
 
 <meta content="{{ title or 'Title' }}" property="og:title"/>
 <meta content="{{ desc or 'default description' }}" property="og:description"/>
@@ -12,8 +14,8 @@
 <meta name="revisit-after" content="2 days"/>
 <meta name="keywords" content="AlexFlipnote, Twitter, Developer, Github"/>
 <meta property="og:locale" content="en_GB"/>
-<link rel="canonical" href="https://alexflipnote.dev{{ path or '/' }}" />
-<meta property="og:url" content="https://alexflipnote.dev{{ path or '/' }}" />
+<link rel="canonical" href="{{ URL + path }}" />
+<meta property="og:url" content="{{ URL + path }}" />
 <meta property="og:site_name" content="AlexFlipnote"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:site" content="@AlexFlipnote"/>
