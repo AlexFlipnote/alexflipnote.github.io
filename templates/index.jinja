@@ -12,7 +12,9 @@
         <div class="container">
           <section class="me unset">
             <div class="avatar-container">
+              <img draggable="false" src="/static/images/antlers.png" class="image-antlers">
               <img draggable="false" src="/static/images/profile.png" class="image-title">
+              <img draggable="false" src="/static/images/fragmented_photons.png" class="image-unusual">
             </div>
             <div class="unset">
               <h1 class="title monospace">AlexFlipnote</h1>
@@ -20,12 +22,12 @@
             </div>
           </section>
           <div class="buttons">
-            <a href="/branding" class="btn sun-flower-dropshadow black-text animation hover">Branding</a>
-            <a href="https://discord.gg/DpxkY3x" class="btn discord-dropshadow animation hover" target="_blank">Discord</a>
-            <a href="mailto:root@alexflipnote.dev" class="btn emerald-dropshadow animation hover">Email</a>
-            <a href="https://github.com/AlexFlipnote" class="btn github-dropshadow animation hover" target="_blank">GitHub</a>
-            <a href="https://typing.alexflipnote.dev/" class="btn alizarin-dropshadow animation hover" target="_blank">Typing test</a>
-            <a href="https://youtube.com/AlexFlipnote" class="btn youtube-dropshadow animation hover" target="_blank">YouTube</a>
+            <span class="btn sun-flower-dropshadow black-text animation hover" onclick="scroll_to('branding')">Branding</span>
+            <a href="https://discord.gg/DpxkY3x" class="btn discord-dropshadow white-text animation hover" target="_blank">Discord</a>
+            <a href="mailto:root@alexflipnote.dev" class="btn emerald-dropshadow black-text animation hover">Email</a>
+            <a href="https://github.com/AlexFlipnote" class="btn github-dropshadow white-text animation hover" target="_blank">GitHub</a>
+            <a href="https://typing.alexflipnote.dev/" class="btn alizarin-dropshadow white-text animation hover" target="_blank">Typing test</a>
+            <a href="https://youtube.com/AlexFlipnote" class="btn youtube-dropshadow white-text animation hover" target="_blank">YouTube</a>
           </div>
         </div>
       </div>
@@ -38,6 +40,7 @@
     </div>
 
     <section class="container" id="information">
+
       <div class="box-container">
         <h1 class="title emerald-text"><i class="emoji alex-coffee"></i> Information:</h1>
         <div class="info-container"><p>
@@ -51,22 +54,79 @@
       <div class="box-container">
         <h1 class="title emerald-text"><i class="emoji alex-noted"></i> Projects:</h1>
         <div class="info-container">
-          {%
-            set projects_list = [
-              ("https://xela.dev", "xelA", "the only bot your Discord would ever need, it's time to ditch Mee6 and Tickets."),
-              ("https://github.com/xelA/discord_bot.py", "discord_bot.py", "a simple discord bot that helps you get started within discord.py."),
-              ("https://github.com/AlexFlipnote/Modesta", "Modesta", "a responsive CSS framework with built-in dark and light theme."),
-              ("https://alexflipnote.dev/homepage", "AlexFlipnote/homepage", "website that can be used as a personal start page with clock and date."),
-              ("https://github.com/AlexFlipnote/CoffeeAPI", "CoffeeAPI", "simple, yet powerful API providing random images."),
-              ("https://github.com/AlexFlipnote/diskspace", "diskspace", "making it possible to use Linux df & du command on Windows."),
-              ("https://typing.alexflipnote.dev", "Typing test", "how fast can you type? Find out today with a typing test!"),
-            ]
-          %}
-          {% for url, title, info in projects_list %}
-            <p><a href="{{ url }}" target="_blank">{{ title }}</a>, {{ info }}</p>
+          {% for g in data.projects_list %}
+            <p><a href="{{ g.url }}" target="_blank">{{ g.name }}</a>, {{ g.desc }}</p>
           {% endfor %}
         </div>
       </div>
+
+      <div class="box-container" id="branding">
+        <h1 class="title emerald-text"><i class="emoji alex-wholesome"></i> Branding:</h1>
+        <p>
+          Releasing my branding materials if you desire to use it.
+          Only requirement I have for using this is to give proper
+          information/credits about where the image comes from (alexflipnote.dev)
+        </p>
+        <p>
+          <span class="sun-flower-text bold">Note: </span>All images listed under are licenced under
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+        </p>
+
+        <h2 class="subtitle nephritis-blue-text">Colour usage:</h2>
+        <p>
+          These colours are the correct HEX codes to the original avatar.
+          The seasonal versions are not included in here.
+        </p>
+        <div class="flex-grid">
+          {% for g in data.branding_colours %}
+            <div class="colour {{ g.font_colour }}-text" style="background: #{{ g.hex }};">
+              <span class="name">{{ g.name }}<br>({{ g.part }})</span>
+              <span class="hex">#{{ g.hex }}</span>
+            </div>
+          {% endfor %}
+        </div>
+
+        <h2 class="subtitle nephritis-blue-text">Current avatar</h2>
+        <p>The official avatar I use under the username <b>AlexFlipnote</b> online</p>
+        <div class="flex-grid">
+          <div class="col-xs-6 image-preview center-flex">
+            {{ branding_builder("avatar_full") }}
+          </div>
+          <div class="col-xs-6 image-preview center-flex">
+            {{ branding_builder("avatar") }}
+          </div>
+        </div>
+
+        <h2 class="subtitle nephritis-blue-text">xelA (simplified version)</h2>
+        <p>The avatar used for xelA, which is a simplified version of the official avatar</p>
+        <div class="flex-grid">
+          <div class="col-xs-3 image-preview center-flex">
+            {{ branding_builder("xela_winter") }}
+          </div>
+          <div class="col-xs-3 image-preview center-flex">
+            {{ branding_builder("xela_spring") }}
+          </div>
+          <div class="col-xs-3 image-preview center-flex">
+            {{ branding_builder("xela_summer") }}
+          </div>
+          <div class="col-xs-3 image-preview center-flex">
+            {{ branding_builder("xela_autumn") }}
+          </div>
+        </div>
+        <div class="flex-grid">
+          <div class="col-xs-4 image-preview center-flex">
+            {{ branding_builder("xela_default") }}
+          </div>
+          <div class="col-xs-4 image-preview center-flex">
+            {{ branding_builder("xela_halloween") }}
+          </div>
+          <div class="col-xs-4 image-preview center-flex">
+            {{ branding_builder("xela_christmas") }}
+          </div>
+        </div>
+
+      </div>
+
     </section>
     {% include "components/_footer.jinja" %}
   </body>

@@ -1,0 +1,107 @@
+{
+  "projects_list": [
+    {
+      "name": "xelA",
+      "desc": "the only bot your Discord would ever need, it's time to ditch Mee6 and Tickets",
+      "url": "https://xela.dev"
+    },
+    {
+      "name": "KawaiiBot",
+      "desc": "a kawaii bot that makes your server more kawaii",
+      "url": "https://kawaiibot.dev/"
+    },
+    {
+      "name": "discord_bot.py",
+      "desc": "a simple discord bot that helps you get started within discord.py",
+      "url": "https://github.com/xelA/discord_bot.py"
+    },
+    {
+      "name": "Modesta",
+      "desc": "a responsive CSS framework with built-in dark and light theme",
+      "url": "https://github.com/AlexFlipnote/Modesta"
+    },
+    {
+      "name": "AlexFlipnote/homepage",
+      "desc": "website that can be used as a personal start page with clock and date",
+      "url": "https://alexflipnote.dev/homepage"
+    },
+    {
+      "name": "CoffeeAPI",
+      "desc": "simple, yet powerful API providing random images",
+      "url": "https://github.com/AlexFlipnote/CoffeeAPI"
+    },
+    {
+      "name": "diskspace",
+      "desc": "making it possible to use Linux df & du command on Windows",
+      "url": "https://github.com/AlexFlipnote/diskspace"
+    }
+  ],
+  "branding_colours": [
+    {
+      "hex": "FF4442", "name": "Tomato Frog",
+      "part": "hair", "font_colour": "white"
+    },
+    {
+      "hex": "1A191A", "name": "Eerie Black",
+      "part": "clothes", "font_colour": "white"
+    },
+    {
+      "hex": "9E3716", "name": "Deep Dumpling",
+      "part": "belt colour", "font_colour": "white"
+    },
+    {
+      "hex": "FE860F", "name": "Jubilation",
+      "part": "belt holder colour", "font_colour": "white"
+    },
+    {
+      "hex": "EFE9EF", "name": "Violet Clues",
+      "part": "the mask", "font_colour": "black"
+    },
+    {
+      "hex": "F7B082", "name": "Apricot Wash",
+      "part": "skin colour", "font_colour": "white"
+    },
+    {
+      "hex": "8F4A2D", "name": "Gingerbread",
+      "part": "shoes color", "font_colour": "white"
+    }
+  ],
+  "branding_images": {
+    "avatar_full": {
+      "name": "Full body",
+      "formats": ["png", "svg"]
+    },
+    "avatar": {
+      "name": "1:1 avatar version",
+      "formats": ["png"]
+    },
+    "xela_winter": {
+      "name": "xelA: Winter",
+      "formats": ["png"]
+    },
+    "xela_spring": {
+      "name": "xelA: Spring",
+      "formats": ["png"]
+    },
+    "xela_summer": {
+      "name": "xelA: Summer",
+      "formats": ["png"]
+    },
+    "xela_autumn": {
+      "name": "xelA: Autumn",
+      "formats": ["png"]
+    },
+    "xela_default": {
+      "name": "xelA: Default",
+      "formats": ["png"]
+    },
+    "xela_halloween": {
+      "name": "xelA: Halloween",
+      "formats": ["png"]
+    },
+    "xela_christmas": {
+      "name": "xelA: Christmas",
+      "formats": ["png"]
+    }
+  }
+}

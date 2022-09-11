@@ -7,18 +7,47 @@
   margin: 0;
 }
 
+
 /* Some custom stuff */
 .arrow svg { fill: #fff; }
 .info-button { cursor: pointer; }
 .info-container { padding-left: 2.5em; }
-.title {
-  font-size: 3em;
-  margin: 0;
+
+/* Avatar */
+.avatar-container {
+  position: relative;
 }
+
+.image-title {
+  position: relative;
+  z-index: auto;
+}
+
+.image-unusual {
+  height: 225px;
+  left: -4em;
+  position: absolute;
+  top: -5.25em;
+  transform: rotate(330deg);
+  width: 225px;
+  z-index: auto;
+}
+
+.image-antlers {
+  height: 125px;
+  left: -5.25em;
+  position: absolute;
+  top: -3.75em;
+  transform: rotate(325deg);
+  width: 200px;
+  z-index: auto;
+}
+
+.title { font-size: 3em; margin: 0; }
+.subtitle { font-size: 1.5em; margin-bottom: 0; }
 
 /* Link bullshit */
 a { color: #1eaedb; }
-a:hover { color: #0fa0ce; }
 
 /* Custom Modesta emojis */
 .norway {
@@ -59,10 +88,13 @@ a:hover { color: #0fa0ce; }
 .image-preview {
   border-radius: 5px;
   border: 3px solid #303030;
-  flex-basis: 48% !important;
   margin-top: .5em !important;
-  max-width: 48% !important;
   position: relative;
+  /*
+    NOTE: Might need, idk, keeping just in case
+    flex-basis: 48% !important;
+    max-width: 48% !important;
+  */
 
   background-size: 20px 20px;
   background-position: 0 0, 30px 30px;
