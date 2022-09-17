@@ -1,6 +1,28 @@
+/* Fonts */
+@font-face {
+  font-family: "runescape";
+  src: url("/static/fonts/runescape.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "snowstorm";
+  src: url("/static/fonts/snowstorm_bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.snowstorm { font-family: "snowstorm"; }
+.runescape {
+  font-family: "runescape";
+  color: #efff00;
+}
+
+.dropshadow-small { text-shadow: rgba(0, 0, 0, .5) .075em .075em 0; }
+
 /* Change a bit default ModestaCSS values */
 .fullscreen h1.title { margin-bottom: 0; letter-spacing: 2px; }
-.undertitle { font-style: italic; }
 .box-container { margin-bottom: .5rem; }
 .box-container p {
   font-size: 18px;
