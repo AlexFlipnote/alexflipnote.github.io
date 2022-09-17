@@ -1,0 +1,20 @@
+<html>
+  <head>
+    {% set title = "AlexFlipnote" %}
+    {% set desc = "Playgroudn root directory" %}
+    {% set path = "/playground" %}
+    {% include "components/_head.html" %}
+  </head>
+  <body class="dark-theme github">
+    <section class="container">
+      <h1>Playground experiments:</h1>
+      <div class="flex-grid">
+        {% for g in playground_names %}
+          <div class="col-xs-3">
+            <a href="./{{ g }}">{{ g }}</a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,5 +1,6 @@
 import sys
 import json
+import os
 
 from jinja2_static import Builder
 
@@ -8,6 +9,12 @@ argument = sys.argv[1] if len(sys.argv) > 1 else None
 
 with open("./data.json", "r", encoding="utf-8") as f:
     data = json.load(f)
+
+
+playground_names = [
+    g for g in os.listdir("./templates/playground")
+    if os.path.isdir(f"./templates/playground/{g}")
+]
 
 
 def branding_builder(name: str):
@@ -30,5 +37,6 @@ def branding_builder(name: str):
 build.generate(
     debug=False if argument == "build" else True,
     URL="https://alexflipnote.dev/", data=data,
-    branding_builder=branding_builder
+    branding_builder=branding_builder,
+    playground_names=playground_names
 )
