@@ -92,6 +92,26 @@ a { color: #1eaedb; }
   z-index: 10;
 }
 
+.colour-margin-top {
+  margin-top: 2em;
+}
+
+.col-no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.box-container .colour-info {
+  padding: .5em 1em;
+  font-size: 2.5vmin;
+  font-style: italic;
+}
+
+.flex-grid .colour.full {
+  max-width: 100%;
+  flex-basis: 100%;
+}
+
 .flex-grid .colour:hover {
   transform: translateY(-.5em) scale(1.05);
   transition: transform 200ms ease-in-out;
