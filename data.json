@@ -21,6 +21,11 @@
       "url": "https://github.com/AlexFlipnote/Modesta"
     },
     {
+      "name": "GiveMeBadge",
+      "desc": "a simple bot script that makes you gain the 'Active Developer' badge on Discord",
+      "url": "https://github.com/AlexFlipnote/GiveMeBadge"
+    },
+    {
       "name": "AlexFlipnote/homepage",
       "desc": "website that can be used as a personal start page with clock and date",
       "url": "https://alexflipnote.dev/homepage"
