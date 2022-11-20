@@ -20,6 +20,7 @@
 }
 
 .dropshadow-small { text-shadow: rgba(0, 0, 0, .5) .075em .075em 0; }
+.dropshadow-medium { text-shadow: rgba(0, 0, 0, .5) .09em .09em 0; }
 
 /* Change a bit default ModestaCSS values */
 .fullscreen h1.title { margin-bottom: 0; letter-spacing: 2px; }
@@ -42,26 +43,6 @@
 
 .image-title {
   position: relative;
-  z-index: auto;
-}
-
-.image-unusual {
-  height: 225px;
-  left: -4em;
-  position: absolute;
-  top: -5.25em;
-  transform: rotate(330deg);
-  width: 225px;
-  z-index: auto;
-}
-
-.image-antlers {
-  height: 125px;
-  left: -5.25em;
-  position: absolute;
-  top: -3.75em;
-  transform: rotate(325deg);
-  width: 200px;
   z-index: auto;
 }
 
