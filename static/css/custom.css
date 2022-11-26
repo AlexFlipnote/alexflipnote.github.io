@@ -1,3 +1,5 @@
+html { scroll-behavior: smooth; }
+
 /* Fonts */
 @font-face {
   font-family: "runescape";
@@ -6,14 +8,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "snowstorm";
-  src: url("/static/fonts/snowstorm_bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-.snowstorm { font-family: "snowstorm"; }
 .runescape {
   font-family: "runescape";
   color: #efff00;
