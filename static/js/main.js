@@ -1,29 +1,50 @@
-function scroll_to(get_id) {
-  // Thanks Bowser65 <3
-  let id = get_id.replace("#", "")
-  const el = document.getElementById(id)
-  el.scrollIntoView({behavior: "smooth", inline: "nearest"})
-  history.pushState(null, null, `#${id}`)
+function christmas_light_pos(scroll_y) {
+  const clights = document.getElementById("lightrope")
+  const scroll_y_limit = 450
+  if (scroll_y <= scroll_y_limit) {
+    clights.style.margin = `${-150 + (scroll_y / 3.5)}px 0 0 0`
+  } else {
+    clights.style.margin = `${-150 + (scroll_y_limit / 3.5)}px 0 0 0`
+  }
+
+  if (scroll_y <= (window.innerHeight - 12)) {
+    clights.style.position = "absolute"
+    clights.style.top = "inherit"
+  } else {
+    clights.style.position = "fixed"
+    clights.style.margin = "-10px 0 0 0"
+    clights.style.top = "0"
+  }
 }
 
-window.addEventListener('scroll', function() {
+function calc_years_coding() {
+  const timestamp_text = document.getElementById("years-of-coding")
+  const years_since = new Date("2015-08-01").getTime()
+  const today = new Date().getTime()
+
+  const years = Math.floor(
+    (today - years_since) / (1000 * 60 * 60 * 24 * 365)
+  )
+
+  timestamp_text.innerText = `${years} years`
+}
+
+window.addEventListener("scroll", () => {
   // Hide arrow button when scrolling down the page
-  var scrollPosition = window.scrollY
-  var logoContainer = document.getElementsByClassName('arrow')[0]
-  if (scrollPosition >= 100) logoContainer.classList.add('arrow--scrolled')
-  else logoContainer.classList.remove('arrow--scrolled')
+  const scroll_y = window.scrollY
+  const arrow = document.getElementById("arrow")
+
+  if (scroll_y >= 100) {
+    arrow.classList.add("arrow--scrolled")
+  } else {
+    arrow.classList.remove("arrow--scrolled")
+  }
+
+  christmas_light_pos(scroll_y)
 })
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Load the time since I coded
-  var years_since = new Date("2015-08-01").getTime()
-  var today = new Date().getTime()
-
-  var ms = today - years_since
-  var m = Math.floor(ms / 60000)
-  var h = Math.floor(m / 60)
-  var d = Math.floor(h / 24)
-  var y = Math.floor(d / 365)
-
-  document.getElementById("years-of-coding").innerText = y + " years"
+document.addEventListener("DOMContentLoaded", () => {
+  // Load essentials
+  calc_years_coding()
+  christmas_light_pos(window.scrollY)
 })
