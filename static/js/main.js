@@ -1,5 +1,7 @@
 function christmas_light_pos(scroll_y) {
   const clights = document.getElementById("lightrope")
+  if (!clights) return
+
   const scroll_y_limit = 450
   if (scroll_y <= scroll_y_limit) {
     clights.style.margin = `${-150 + (scroll_y / 3.5)}px 0 0 0`
@@ -19,6 +21,8 @@ function christmas_light_pos(scroll_y) {
 
 function calc_years_coding() {
   const timestamp_text = document.getElementById("years-of-coding")
+  if (!timestamp_text) return
+
   const years_since = new Date("2015-08-01").getTime()
   const today = new Date().getTime()
 
@@ -27,6 +31,39 @@ function calc_years_coding() {
   )
 
   timestamp_text.innerText = `${years} years`
+}
+
+function spin_video() {
+  const spin = document.getElementById("click-spin-start")
+  const video = document.getElementById("spin-video")
+  const time = document.getElementById("spin-time")
+  if (!spin) return
+
+  spin.addEventListener("click", () => {
+    video.play()
+    spin.remove()
+    let starttime = Date.now()
+
+    window.setInterval(function() {
+      let s = (Date.now() - starttime)/1000
+      let str = ""
+      if (s > 86400) {
+        str = Math.floor(s/86400) + "d "
+        s %= 86400
+      }
+      if (s > 3600) {
+        str += Math.floor(s/3600) + "h "
+        s %= 3600
+      }
+      if (s > 60) {
+        str += Math.floor(s/60) + "m "
+        s %= 60
+      }
+      str += s.toFixed(2) + "s"
+      time.textContent = str
+    }, 10)
+
+  })
 }
 
 window.addEventListener("scroll", () => {
@@ -46,5 +83,6 @@ window.addEventListener("scroll", () => {
 document.addEventListener("DOMContentLoaded", () => {
   // Load essentials
   calc_years_coding()
+  spin_video()
   christmas_light_pos(window.scrollY)
 })
