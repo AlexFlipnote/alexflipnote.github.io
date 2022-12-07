@@ -26,7 +26,7 @@ def branding_builder(name: str):
     ])
 
     return f"""
-        <img src="/static/images/branding/{name}.{brand_data['formats'][0]}">
+        <img src="/static/images/branding/{name}.{brand_data['formats'][0]}" draggable="false">
         <span class="image-text">{brand_data['name']}</span>
         <div class="image-links">
             {download_links}
