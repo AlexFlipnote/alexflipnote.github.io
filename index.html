@@ -31,6 +31,7 @@
 <link href="/static/css/custom.css" type="text/css" rel="stylesheet">
 
 <!-- JavaScript -->
+<script src="/static/js/discord.js" type="text/javascript" charset="utf-8"></script>
 <script src="/static/js/main.js" type="text/javascript" charset="utf-8"></script>
     <link href="/static/css/lights.css" type="text/css" rel="stylesheet">
   </head>
@@ -42,11 +43,26 @@
         <div class="container">
           <section class="me unset">
             <div class="avatar-container">
-              <img draggable="false" src="/static/images/profile_snow.gif" class="image-title" draggable="false">
+              <img
+                draggable="false" class="image-title"
+                src="/static/images/blank.png" id="discord-avatar"
+              >
+              <div id="discord-status-circle"></div>
             </div>
             <div class="unset">
               <h1 class="title github dropshadow-small">AlexFlipnote</h1>
-              <p class="undertitle runescape dropshadow-medium"><i class="emoji norway"></i> I do coding yes yes.</p>
+              <p class="undertitle runescape dropshadow-medium" id="discord-status-loading">
+                Loading status...
+              </p>
+              <div id="discord-status">
+                <p class="undertitle runescape dropshadow-medium" id="discord-status-name"></p>
+              </div>
+              <div id="discord-spotify">
+                <a id="spotify-url" target="_blank">
+                  <img id="spotify-image" src="/static/images/blank.png" draggable="false">
+                  <p class="undertitle runescape dropshadow-medium" id="spotify-title"></p>
+                </a>
+              </div>
             </div>
           </section>
           <div class="buttons">
@@ -99,6 +115,21 @@
           
             <p><a href="https://github.com/AlexFlipnote/diskspace" target="_blank">diskspace</a>, making it possible to use Linux df &amp; du command on Windows</p>
           
+        </div>
+      </div>
+
+      <div class="box-container">
+        <h1 class="title emerald-text"><i class="emoji alex-nerd"></i> Work status:</h1>
+        <div class="info-container">
+          <p>
+            I work for a company named <a href="https://joyn.gg" target="_blank">Joyn</a> and have done since May 2022.
+            My status there is lead developer and I'm responsible for their backend technologies.
+            Some of the Discord bots I have rewritten from scratch are
+            <a href="https://tourneybot.gg/" target="_blank">TourneyBot</a>,
+            <a href="https://zerotwo.bot/" target="_blank">ZeroTwo</a> and
+            <a href="https://top.gg/bot/473370418007244852" target="_blank">Emote Manager</a>.
+            All of these bots together have over 1.5 million servers and 200 million users.
+          </p>
         </div>
       </div>
 
