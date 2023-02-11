@@ -4,36 +4,24 @@
     {% set desc = "My personal homepage" %}
     {% set path = "/" %}
     {% include "components/_head.html" %}
-    <link href="/static/css/lights.css" type="text/css" rel="stylesheet">
   </head>
   <body class="dark-theme github">
     <div class="fullscreen">
-      <div class="background" style="background-image: url('/static/images/background_snow.jpg');"></div>
-      <ul class="lightrope" id="lightrope">{% for _ in range(50) %}<li></li>{% endfor %}</ul>
+      <div class="background" style="background-image: url('/static/images/background2.jpg');"></div>
       <div class="center-object">
         <div class="container">
           <section class="me unset">
             <div class="avatar-container">
               <img
                 draggable="false" class="image-title"
-                src="/static/images/blank.png" id="discord-avatar"
+                src="/static/images/profile.png" id="discord-avatar"
               >
-              <div id="discord-status-circle"></div>
             </div>
             <div class="unset">
               <h1 class="title github dropshadow-small">AlexFlipnote</h1>
               <p class="undertitle runescape dropshadow-medium" id="discord-status-loading">
-                Loading status...
+                I do develop stuff, yes yes
               </p>
-              <div id="discord-status">
-                <p class="undertitle runescape dropshadow-medium" id="discord-status-name"></p>
-              </div>
-              <div id="discord-spotify">
-                <a id="spotify-url" target="_blank">
-                  <img id="spotify-image" src="/static/images/blank.png" draggable="false">
-                  <p class="undertitle runescape dropshadow-medium" id="spotify-title"></p>
-                </a>
-              </div>
             </div>
           </section>
           <div class="buttons">
