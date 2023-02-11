@@ -1,12 +1,7 @@
+@import '_fonts.sass'
+
 html
   scroll-behavior: smooth
-
-/* Fonts */
-@font-face
-  font-family: "runescape"
-  src: url("/static/fonts/runescape.ttf") format("truetype")
-  font-weight: normal
-  font-style: normal
 
 .black-theme
   background-color: #000
@@ -29,10 +24,6 @@ html
 
   &+.fullscreen
     filter: blur(10px)
-
-.runescape
-  font-family: "runescape"
-  color: #efff00
 
 .dropshadow-small
   text-shadow: rgba(0, 0, 0, .5) .075em .075em 0
@@ -140,41 +131,13 @@ a
   overflow: hidden
   white-space: nowrap
 
-// Discord stuff
-#discord-status-circle
-  width: 2em
-  height: 2em
-  border-radius: 50%
-  border: 4px solid #2F3136
-  right: .5em
-  bottom: -.5em
-  position: absolute
-  background-color: #000
+footer p
+  display: flex
+  flex-direction: row
+  justify-content: center
 
-#discord-spotify, #discord-status
-  display: none
-
-#discord-spotify
-  margin-top: .25em
-  height: 50px
-
-  #spotify-url
-    display: flex
-    flex-direction: row
-    align-items: center
-    text-decoration: none
-    transition: transform 300ms ease-in-out
-
-    &:hover
-      transform: translateX(.5em)
-
-  #spotify-title
-    font-size: 2em
-
-  #spotify-image
-    width: 50px
-    height: 50px
-    margin-right: 1em
+  a, span
+    margin: 0 .25em
 
 .image-preview
   $image-linear: linear-gradient(45deg,#2e3033 25%, transparent 0, transparent 75%, #2e3033 0, #2e3033)
