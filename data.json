@@ -107,6 +107,30 @@
     "xela_christmas": {
       "name": "xelA: Christmas",
       "formats": ["png"]
+    },
+    "xela_birthday": {
+      "name": "xelA: Birthday",
+      "formats": ["png"]
+    },
+    "xela_easter": {
+      "name": "xelA: Easter",
+      "formats": ["png"]
+    },
+    "xela_newyear": {
+      "name": "xelA: New Year",
+      "formats": ["png"]
+    },
+    "xela_pride": {
+      "name": "xelA: Pride",
+      "formats": ["png"]
+    },
+    "xela_stpatricks": {
+      "name": "xelA: St. Patrick's",
+      "formats": ["png"]
+    },
+    "xela_valentines": {
+      "name": "xelA: Valentine's",
+      "formats": ["png"]
     }
   }
 }
