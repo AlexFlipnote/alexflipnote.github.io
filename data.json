@@ -41,40 +41,10 @@
       "url": "https://github.com/AlexFlipnote/diskspace"
     }
   ],
-  "branding_colours": [
-    {
-      "hex": "FF4442", "name": "Tomato Frog",
-      "part": "hair", "font_colour": "white"
-    },
-    {
-      "hex": "1A191A", "name": "Eerie Black",
-      "part": "clothes", "font_colour": "white"
-    },
-    {
-      "hex": "9E3716", "name": "Deep Dumpling",
-      "part": "belt colour", "font_colour": "white"
-    },
-    {
-      "hex": "FE860F", "name": "Jubilation",
-      "part": "belt holder colour", "font_colour": "white"
-    },
-    {
-      "hex": "EFE9EF", "name": "Violet Clues",
-      "part": "the mask", "font_colour": "black"
-    },
-    {
-      "hex": "F7B082", "name": "Apricot Wash",
-      "part": "skin colour", "font_colour": "white"
-    },
-    {
-      "hex": "8F4A2D", "name": "Gingerbread",
-      "part": "shoes color", "font_colour": "white"
-    }
-  ],
   "branding_images": {
     "avatar_full": {
       "name": "Full body",
-      "formats": ["png", "svg"]
+      "formats": ["png"]
     },
     "avatar": {
       "name": "1:1 avatar version",
