@@ -6,14 +6,14 @@
       "url": "https://xela.dev"
     },
     {
+      "name": "discord.http",
+      "desc": "Python library that handles interactions from Discord POST requests.",
+      "url": "https://github.com/AlexFlipnote/discord.http"
+    },
+    {
       "name": "KawaiiBot",
       "desc": "a kawaii bot that makes your server more kawaii",
       "url": "https://kawaiibot.dev/"
-    },
-    {
-      "name": "discord_bot.py",
-      "desc": "a simple discord bot that helps you get started within discord.py",
-      "url": "https://github.com/xelA/discord_bot.py"
     },
     {
       "name": "Modesta",
@@ -26,14 +26,14 @@
       "url": "https://github.com/AlexFlipnote/GiveMeBadge"
     },
     {
-      "name": "AlexFlipnote/homepage",
-      "desc": "website that can be used as a personal start page with clock and date",
-      "url": "https://alexflipnote.dev/homepage"
+      "name": "neofetch-win",
+      "desc": "neofetch, but for Windows",
+      "url": "https://github.com/AlexFlipnote/neofetch-win"
     },
     {
-      "name": "CoffeeAPI",
-      "desc": "simple, yet powerful API providing random images",
-      "url": "https://github.com/AlexFlipnote/CoffeeAPI"
+      "name": "dotenvplus",
+      "desc": "Reads key-value pairs from a .env file and supports multiple values with dynamic interpolation.",
+      "url": "https://github.com/AlexFlipnote/dotenvplus"
     },
     {
       "name": "diskspace",
