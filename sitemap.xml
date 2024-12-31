@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://alexflipnote.dev/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://alexflipnote.dev/branding</loc>
+    <lastmod>2024-12-31</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://alexflipnote.dev/playground/hexclock</loc>
+    <lastmod>2024-12-31</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://alexflipnote.dev/playground/spooky</loc>
+    <lastmod>2024-12-31</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>

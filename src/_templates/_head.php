@@ -1,5 +1,8 @@
-{% set URL = 'https://alexflipnote.dev' %}
-<title>{{ title or 'default title' }}</title>
+<?php
+  $URL = "https://alexflipnote.dev";
+?>
+
+<title><?php echo $title ?? "default title"; ?></title>
 
 <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -7,15 +10,15 @@
 <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico"></link>
 <meta property="og:image" content="/static/images/branding/avatar.png" />
 
-<meta content="{{ title or 'Title' }}" property="og:title"/>
-<meta content="{{ desc or 'default description' }}" property="og:description"/>
-<meta content="{{ desc or 'default description' }}" name="description"/>
+<meta content="<?php echo $title ?? "Title"; ?>" property="og:title"/>
+<meta content="<?php echo $desc ?? "default description"; ?>" property="og:description"/>
+<meta content="<?php echo $desc ?? "default description"; ?>" name="description"/>
 
 <meta name="revisit-after" content="2 days"/>
 <meta name="keywords" content="AlexFlipnote, Twitter, Developer, Github"/>
 <meta property="og:locale" content="en_GB"/>
-<link rel="canonical" href="{{ URL }}" />
-<meta property="og:url" content="{{ URL }}" />
+<link rel="canonical" href="<?php echo "{$URL}{$path}"; ?>" />
+<meta property="og:url" content="<?php echo "{$URL}{$path}"; ?>" />
 <meta property="og:site_name" content="AlexFlipnote"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:site" content="@AlexFlipnote"/>

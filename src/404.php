@@ -27,8 +27,8 @@
           Page not found<span class="cursor">_</span>
         </h1>
         <div class="buttons">
-          <a href="/" class="btn alizarin-bg">Back to home</a>
-          <a href="#" class="btn emerald-bg" onclick="window.history.go(-1); return false;">Go one step back</a>
+          <a href="/" class="btn alizarin-bg white-text">Back to home</a>
+          <a href="#" class="btn emerald-bg white-text" onclick="window.history.go(-1); return false;">Go one step back</a>
         </div>
       </div>
     </section>

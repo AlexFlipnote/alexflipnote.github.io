@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /src/
+
+Sitemap: https://alexflipnote.dev/sitemap.xml

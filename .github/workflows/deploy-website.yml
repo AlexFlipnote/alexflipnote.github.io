@@ -14,19 +14,13 @@ jobs:
         with:
           ref: master
 
-      - name: Installing Python
-        uses: actions/setup-python@v2
+      - name: Installing PHP
+        uses: shivammathur/setup-php@v2
         with:
-          python-version: "3.11"
+          php-version: "8.4"
 
-      - name: Installing requirements.txt
-        run: make install
-
-      - name: Compile Flask/Jinja files
+      - name: Compile PHP files
         run: make build
-
-      - name: Copy important GitHub Pages files
-        run: cp ./CNAME ./public/CNAME
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.3

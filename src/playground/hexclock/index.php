@@ -29,10 +29,5 @@
       <h1 id="timetext" class="time no-margin">00:00:00</h1>
       <h1 id="time" class="hex no-margin">#000000</h1>
     </div>
-    <div class="homepage">
-      <p>My homepage plugin uses this as an option with the backgrounds of choice,
-        <a href="https://github.com/AlexFlipnote/homepage" target="_blank">try it out</a> for free.
-      </p>
-    </div>
   </body>
 </html>
