@@ -72,7 +72,7 @@ window.onload = function() {
 
   function showvideo() {
     if (dankmode.style.display !== "none") {
-      element.src = "/static/playground/spooky/video.mp4"
+      element.src = "/static/videos/spooky.mp4"
     }
 
     spookyvid.appendChild(element)
@@ -93,7 +93,7 @@ window.onload = function() {
     clone.style.top = Math.floor(Math.random() * (max - min + 1)) + min + "%"
     clone.style.left = Math.floor(Math.random() * (max - min + 1)) + min + "%"
 
-    var doot = new Audio('/static/playground/spooky/doot.mp3')
+    var doot = new Audio('/static/audios/doot.mp3')
     doot.play()
 
     winerr.appendChild(clone)
@@ -101,7 +101,7 @@ window.onload = function() {
   }
 
   document.getElementById('dank').onclick = function() {
-    element.src = "/static/playground/spooky/video_dank.mp4"
+    element.src = "/static/videos/spooky_dank.mp4"
     dankmode.style.display = "none"
   }
 
