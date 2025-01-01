@@ -11,8 +11,8 @@
 <meta property="og:image" content="/static/images/branding/avatar.png" />
 
 <meta content="<?php echo $title ?? "Title"; ?>" property="og:title"/>
-<meta content="<?php echo $desc ?? "default description"; ?>" property="og:description"/>
-<meta content="<?php echo $desc ?? "default description"; ?>" name="description"/>
+<meta content="<?php echo $description ?? "default description"; ?>" property="og:description"/>
+<meta content="<?php echo $description ?? "default description"; ?>" name="description"/>
 
 <meta name="revisit-after" content="2 days"/>
 <meta name="keywords" content="AlexFlipnote, Twitter, Developer, Github"/>

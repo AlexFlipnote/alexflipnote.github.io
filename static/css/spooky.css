@@ -6,7 +6,7 @@ html, body {
 
 @font-face {
   font-family: "MSsans";
-  src: url("/static/playground/spooky/MS_Sans_Serif.ttf") format("truetype");
+  src: url("/static/fonts/MS_Sans_Serif.ttf") format("truetype");
 }
 
 video {

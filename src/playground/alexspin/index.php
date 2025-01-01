@@ -2,7 +2,7 @@
   <head>
     <?php
       $title = "alexspin";
-      $description = "alexspin";
+      $description = "bottom text";
       $path = "/playground/alexspin";
 
       require_once("./src/_templates/_head.php");
@@ -16,7 +16,7 @@
       <div class="center-object">
         <h1 class="runescape" id="spin-time">0.0s</h1>
         <video loop id="spin-video">
-          <source src="/static/playground/alexspin/alexspin.mp4" type="video/mp4">
+          <source src="/static/videos/alexspin.mp4" type="video/mp4">
         </video>
       </div>
     </div>
