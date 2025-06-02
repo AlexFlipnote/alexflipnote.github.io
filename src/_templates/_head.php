@@ -15,7 +15,7 @@
 <meta content="<?php echo $description ?? "default description"; ?>" name="description"/>
 
 <meta name="revisit-after" content="2 days"/>
-<meta name="keywords" content="AlexFlipnote, Twitter, Developer, Github"/>
+<meta name="keywords" content="<?php echo $keywords ?? "AlexFlipnote, Twitter, Developer, Github"; ?>"/>
 <meta property="og:locale" content="en_GB"/>
 <link rel="canonical" href="<?php echo "{$URL}{$path}"; ?>" />
 <meta property="og:url" content="<?php echo "{$URL}{$path}"; ?>" />
@@ -25,6 +25,7 @@
 
 <!-- CSS -->
 <link href="/static/css/modesta.css" type="text/css" rel="stylesheet">
+<link href="/static/css/markdown.css" type="text/css" rel="stylesheet">
 <link href="/static/css/emojis.css" type="text/css" rel="stylesheet">
 <link href="/static/css/custom.css" type="text/css" rel="stylesheet">
 

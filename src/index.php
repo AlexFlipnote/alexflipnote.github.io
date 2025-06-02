@@ -37,6 +37,7 @@
             <a href="https://github.com/AlexFlipnote" class="btn github-dropshadow white-text animation hover" target="_blank">GitHub</a>
             <a href="/branding" class="btn sun-flower-dropshadow black-text animation hover" target="_blank">Branding</a>
             <a href="/playground" class="btn orange-dropshadow black-text animation hover" target="_blank">Playground</a>
+            <a href="/docs" class="btn peter-river-dropshadow white-text animation hover" target="_blank">Docs</a>
           </div>
         </div>
       </div>

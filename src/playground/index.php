@@ -23,7 +23,7 @@
           foreach ($playground_names as $g) {
             echo <<<HTML
               <div class="col-xs-3">
-                <a href="./{$g}">{$g}</a>
+                <a href="/playground/{$g}">{$g}</a>
               </div>
             HTML;
           }

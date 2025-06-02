@@ -115,6 +115,76 @@ a { color: #1eaedb; }
   display: inline-block;
 }
 
+/* Default layout style */
+.article-list {
+  margin-top: 1em;
+  position: relative;
+}
+
+.index-title .undertitle {
+  color: #666;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.article-list .splitletter {
+  height: 2.25em;
+  position: relative;
+  width: 100%;
+}
+
+.article-list .firstletter {
+  font-size: 2em;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  width: auto;
+}
+
+.article-list .listing {
+  margin: 0;
+  margin-top: .25em;
+}
+
+.article-list ul {
+  list-style-type: none;
+  padding: 0 !important;
+}
+
+/* Blog layout style */
+.markdown-jekyll>*:first-child { margin-top: 0 !important; }
+.markdown-jekyll .blog-splitter { position: relative; }
+.markdown-jekyll .blog-title h1 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.markdown-jekyll .blog-labels span { font-size: 14px; }
+.markdown-jekyll .emoji-lg { vertical-align: -0.3em; }
+.markdown-jekyll pre {
+  background-color: #303030;
+}
+
+.markdown-jekyll img[alt*="BigImage"] { max-width: 70% !important; }
+.markdown-jekyll img[alt*="Center"] { display: block !important; margin: 0 auto !important; }
+
+.markdown-jekyll .blog-labels {
+  position: absolute;
+  top: -.75em;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .markdown-jekyll img[alt*="BigImage"] { max-width: 100% !important; }
+}
+
+@media (max-width: 600px) {
+  .markdown-jekyll .blog-labels { position: relative; top: 0; }
+  .markdown-jekyll .label { margin-bottom: .5em; }
+  .markdown-jekyll hr.blog-split-yes { margin: 12px 0; }
+}
+
 
 /* Custom Modesta emojis */
 .norway {
