@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<title>Clean a drive completely</title>
+
+<meta httpEquiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+<meta name="theme-color" content="#14bae4"/>
+<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico"></link>
+<meta property="og:image" content="/static/images/branding/avatar.png" />
+
+<meta content="Clean a drive completely" property="og:title"/>
+<meta content="Clean all partitions and files of a drive with Windows DiskPart" property="og:description"/>
+<meta content="Clean all partitions and files of a drive with Windows DiskPart" name="description"/>
+
+<meta name="revisit-after" content="2 days"/>
+<meta name="keywords" content="clean, partitions, usb, clean usb, fix usb, fix, windows, diskpart"/>
+<meta property="og:locale" content="en_GB"/>
+<link rel="canonical" href="https://alexflipnote.dev/docs/clean_a_drive_completely" />
+<meta property="og:url" content="https://alexflipnote.dev/docs/clean_a_drive_completely" />
+<meta property="og:site_name" content="AlexFlipnote"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@AlexFlipnote"/>
+
+<!-- CSS -->
+<link href="/static/css/modesta.css" type="text/css" rel="stylesheet">
+<link href="/static/css/markdown.css" type="text/css" rel="stylesheet">
+<link href="/static/css/emojis.css" type="text/css" rel="stylesheet">
+<link href="/static/css/custom.css" type="text/css" rel="stylesheet">
+
+<!-- JavaScript -->
+<script src="/static/js/main.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/countable.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Give each header a topic
+        var headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+
+        for (var i = 0; i < headings.length; i++) {
+          headings[i].innerHTML =
+            '<a style="color: #fff;" href="#' + headings[i].id + '">' +
+              headings[i].innerText +
+            '</a>';
+        }
+
+        // Give an estimated time on when you're done reading
+        var article = document.getElementsByClassName("paper")[0];
+        Countable.count(article, function (counter) {
+          var wpm = 200;
+          var estimatedRaw = counter.words / wpm;
+          var minutes = Math.round(estimatedRaw);
+
+          var effectiveTime = (minutes < 1) ? "a couple of secs" : minutes + " min read";
+          document.getElementById("reading-time").innerHTML += effectiveTime;
+        });
+      }, false);
+    </script>
+  </head>
+  <body class="dark-theme github">
+    <div class="box-container highlight-flat no-border-radius" style="margin-bottom: 0;">
+  <p class="container light-text no-margin no-padding topbar monospace" style="font-size: 16px;">
+      /<a href="/">home</a>/<a href="/docs">docs</a>/clean_a_drive_completely.md  </p>
+</div>
+    <div class="paper-container">
+        <div class="ribbon secondary custom"></div>
+  <style>
+    .custom {
+      background: url('/static/images//docs/clean_a_drive_completely/325182.png') !important;
+      background-repeat: no-repeat;
+      background-size: cover !important;
+      background-position: center;
+    }
+  </style>      <div class="paper markdown-jekyll">
+        <div class="blog-title text-center">
+          <h1 class="no-margin no-padding no-border">Clean a drive completely</h1>
+          <p class="italic no-margin no-padding no-border">Clean all partitions and files of a drive with Windows DiskPart</p>
+        </div>
+        <div class="blog-splitter">
+          <hr class="blog-split-yes">
+          <div class="blog-labels text-center">
+            <span class="label secondary">📅 28 Feb 2019</span>
+            <span class="label secondary" id="reading-time">⏱ </span>
+            <span class="label secondary">📝 Guest</span>
+          </div>
+        </div>
+        <p>Cleaning a drive completely isn't as simple as right clicking the drive on &quot;This-PC&quot; and going for <strong>Format</strong>.
+Sometimes the drive might be in multiple partitions or just corrupt overall.</p>
+<p><img src="/static/images/docs/windows_clean_drive_fully/a824e7.png" alt="Image" /></p>
+<p><img src="/static/images/docs/windows_clean_drive_fully/1405f1.png" alt="Image" /></p>
+<p>Your drive isn't broken at all, you can still clean it completely and recover this, here's how.</p>
+<blockquote>
+<p>NOTE:<br>
+This tutorial is focused on a Windows machine</p>
+</blockquote>
+<h1 id="0-connect-the-drive">0. Connect the drive</h1>
+<p>Be sure to have your drive connected to the PC or mounted. Without it, we can't really do anything of course. You will find drivers when progressing in this tutorial, however those are the machine OS (Windows itself) and you wouldn't want to format that? Though if you want to format your C:\ drive, that's on you, I won't take responsibility on it.</p>
+<h1 id="1-open-diskpart">1. Open DiskPart</h1>
+<p>The easiest way to get started is by pressing <code>Windows Key + R</code> and typing in DiskPart in the run.exe window. Simply press enter after you've typed it in and a new window should pop up.</p>
+<blockquote>
+<p>DiskPart requires Admin privileges, so remember to do this on a computer that has this permission.</p>
+</blockquote>
+<p><img src="/static/images/docs/windows_clean_drive_fully/325182.png" alt="Image" /></p>
+<h1 id="2-find-your-drive">2. Find your drive</h1>
+<p>To start off, type in this window <code>list disk</code> to see if you can spot your drive. It should be really simple if you remember how much space it has. If you have issues with finding out how much it had, just remember that the Gpt with <code>*</code> on it is your primary disk, which is your OS, so don't touch that one.</p>
+<p>In this example, the drive is defined as &quot;Disk 1&quot;, so then you would have to type <code>select disk 1</code> and the DiskPart software would select it as the main target for this session. To confirm that this was done correctly, type in <code>list disk</code> again and see if &quot;Disk 1&quot; (yours might be something else) as a small <code>*</code> before the name of it.</p>
+<p><img src="/static/images/docs/windows_clean_drive_fully/a98bf9.png" alt="Image" /></p>
+<h1 id="3-cleaning-the-drive">3. Cleaning the drive</h1>
+<p>Now that the selected drive is confirmed as the right one, type <code>clean</code> and it should start cleaning the drive fully. This includes partitions and files, so be sure to copy anything if you're interested on recovering some of your files from it.</p>
+<p>After the clean has been done, type all of these three commands in the correct order:</p>
+<ul>
+<li><code>create partition primary</code></li>
+<li><code>select partition 1</code></li>
+<li><code>active</code></li>
+</ul>
+<p>If you've done this all correct, you should have a similar result as the image below.</p>
+<p><img src="/static/images/docs/windows_clean_drive_fully/a92d17.png" alt="Image" /></p>
+<h1 id="4-making-the-drive-usable">4. Making the drive usable</h1>
+<p>The first and only partition has been made, so now we can finally start giving this drive a format type and a name to whatever we desire. There are two types of commonly used formats, named <strong>NTFS</strong> and <strong>FAT32</strong>. If you plan to use the drive on any older computers or making a bootable drive, please consider to use FAT32, else if this is just a normal USB that you're going to have on any Windows 7 on later (Mac and Linux too), go with NTFS, specially if the drive is more than 0.5 TB.</p>
+<p>To give the drive a functional format and name, type the command <code>format FS=NTFS label=EmptyDrive quick</code>. You can replace the <code>FS=NTFS</code> with <code>FS=FAT32</code> if you want the other format instead. When this command is done, you should finally have a bootable drive again as shown bellow.</p>
+<p><img src="/static/images/docs/windows_clean_drive_fully/380d28.png" alt="Image" /></p>
+<p><img src="/static/images/docs/windows_clean_drive_fully/753d02.png" alt="Image" /></p>
+<h2 id="4-2-assign-letter-optional">4.1 Assign letter (Optional)</h2>
+<p>If you need to give the drive a new letter instead of the normally known alpabetic order, do the command <code>assign letter=W</code> and replace W with whatever you desire to have with it. Doing this will show the drive as usual but with a new letter in front now.</p>
+<p><img src="/static/images/docs/windows_clean_drive_fully/5775f9.png" alt="Image" /></p>      </div>
+    </div>
+    
+<footer class="text-center box-container primary-bg">
+  <p className="no-margin">
+    <a href="https://github.com/AlexFlipnote/alexflipnote.github.io/blob/master/LICENSE" target="_blank" rel="noreferrer">LICENSE</a>
+      <span className="footer-name">AlexFlipnote</span>
+    <a href="https://github.com/AlexFlipnote/alexflipnote.github.io" target="_blank" rel="noreferrer">Source</a>
+  </p>
+</footer>
+  </body>
+</html>

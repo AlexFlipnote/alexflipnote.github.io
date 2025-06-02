@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<title>Getting started with SCSS</title>
+
+<meta httpEquiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+<meta name="theme-color" content="#14bae4"/>
+<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico"></link>
+<meta property="og:image" content="/static/images/branding/avatar.png" />
+
+<meta content="Getting started with SCSS" property="og:title"/>
+<meta content="Learning the basics of SCSS" property="og:description"/>
+<meta content="Learning the basics of SCSS" name="description"/>
+
+<meta name="revisit-after" content="2 days"/>
+<meta name="keywords" content="tutorial, start, scss, getting started, easy"/>
+<meta property="og:locale" content="en_GB"/>
+<link rel="canonical" href="https://alexflipnote.dev/docs/getting_started_with_scss" />
+<meta property="og:url" content="https://alexflipnote.dev/docs/getting_started_with_scss" />
+<meta property="og:site_name" content="AlexFlipnote"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@AlexFlipnote"/>
+
+<!-- CSS -->
+<link href="/static/css/modesta.css" type="text/css" rel="stylesheet">
+<link href="/static/css/markdown.css" type="text/css" rel="stylesheet">
+<link href="/static/css/emojis.css" type="text/css" rel="stylesheet">
+<link href="/static/css/custom.css" type="text/css" rel="stylesheet">
+
+<!-- JavaScript -->
+<script src="/static/js/main.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/countable.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Give each header a topic
+        var headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+
+        for (var i = 0; i < headings.length; i++) {
+          headings[i].innerHTML =
+            '<a style="color: #fff;" href="#' + headings[i].id + '">' +
+              headings[i].innerText +
+            '</a>';
+        }
+
+        // Give an estimated time on when you're done reading
+        var article = document.getElementsByClassName("paper")[0];
+        Countable.count(article, function (counter) {
+          var wpm = 200;
+          var estimatedRaw = counter.words / wpm;
+          var minutes = Math.round(estimatedRaw);
+
+          var effectiveTime = (minutes < 1) ? "a couple of secs" : minutes + " min read";
+          document.getElementById("reading-time").innerHTML += effectiveTime;
+        });
+      }, false);
+    </script>
+  </head>
+  <body class="dark-theme github">
+    <div class="box-container highlight-flat no-border-radius" style="margin-bottom: 0;">
+  <p class="container light-text no-margin no-padding topbar monospace" style="font-size: 16px;">
+      /<a href="/">home</a>/<a href="/docs">docs</a>/getting_started_with_scss.md  </p>
+</div>
+    <div class="paper-container">
+        <div class="ribbon secondary"></div>      <div class="paper markdown-jekyll">
+        <div class="blog-title text-center">
+          <h1 class="no-margin no-padding no-border">Getting started with SCSS</h1>
+          <p class="italic no-margin no-padding no-border">Learning the basics of SCSS</p>
+        </div>
+        <div class="blog-splitter">
+          <hr class="blog-split-yes">
+          <div class="blog-labels text-center">
+            <span class="label secondary">📅 28 Feb 2019</span>
+            <span class="label secondary" id="reading-time">⏱ </span>
+            <span class="label secondary">📝 Guest</span>
+          </div>
+        </div>
+        <h1 id="0-installing-scss">0. Installing SCSS</h1>
+<p>If you haven't already, you need to install SCSS to take usage of this language.
+You can visit <a href="https://sass-lang.com/">here</a> if you're unsure on how to install it.</p>
+<h1 id="1-writing-in-scss">1. Writing in SCSS</h1>
+<p>Writing in SCSS is as simple as writing things in CSS, however there are some new differences when it comes to this language. You will notice that SCSS has some more syntaxes included in the language, some of these are as follow:</p>
+<pre><code class="language-scss">/// Variable ///
+$primary-colour: #00FF00;
+
+/// Functions ///
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+
+/// Nesting ///
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+.box-container {
+  display: flex;
+
+  .text { color: #000; }
+  &amp;.center { text-align: center; }
+}</code></pre>
+<h1 id="2-1-variables">2.1 Variables</h1>
+<p>If you're familiar to coding in other languages like Python, Java, PHP, C# and so on, you will know what variable means.
+In a short term, it's a method of defining something inside a document to one specific value, instead of needing to rewrite all of the values you want to change at once.</p>
+<p>Here's an example:</p>
+<pre><code class="language-scss">$primary-colour: #00FF00;
+
+.container {
+  color: $primary-colour;
+
+  .images {
+    background: rgba($primary-colour, 0.5);
+    display: block;
+    margin: auto 0;
+  }
+}</code></pre>
+<p>By using the variable on places that can handle HEX, you will then only need to change one value to change every other.</p>
+<h1 id="2-2-nesting">2.2 Nesting</h1>
+<p>Nesting might seem complicated as seen from the example above, however it's more simple than you think.
+There are multiple ways to do this, and all of them have different benefits.</p>
+<p>Here's an example on how a nested SCSS will render in CSS:</p>
+<pre><code class="language-scss">// SCSS
+.container {
+  background: #000;
+  display: block;
+
+  .text {
+    color: #fff;
+    font-size: 1em;
+    padding-left: 3em;
+  }
+
+  &amp;:after { content: ' '; }
+}</code></pre>
+<pre><code class="language-css">/* CSS */
+.container {
+  background: #000;
+  display: block; }
+
+.container .text {
+  color: #fff;
+  font-size: 1em;
+  padding-left: 3em; }
+
+.container:after {
+  content: ' '; }</code></pre>
+<p>As seen from the example, you can see that it does the most annoying part for you in CSS, having class layers.
+The <code>&amp;</code> symbol helps you to have classes and targets combined like this:</p>
+<pre><code class="language-scss">// SCSS
+.test {
+  content: '';
+  .memes { content: ''; }
+  &amp;.world { content: ''; }
+  &amp;:after { content: ''; }
+}</code></pre>
+<pre><code class="language-css">/* CSS */
+.test {
+  content: ''; }
+
+.test .memes {
+  content: ''; }
+
+.test.world {
+  content: ''; }
+
+.test:after {
+  content: ''; }</code></pre>
+<h1 id="2-3-functions">2.3 Functions</h1>
+<p>If you are coding in different languages, then the word function should sound very familiar for you.
+In a short term, SCSS functions help you make things that would possibly be long or complicated, into one simple placement.
+A great example for this usage is with the different CSS prefixes like webkit, mozilla and so on. With functions, you could make a simple one like this:</p>
+<pre><code class="language-scss">@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }</code></pre>
+<p>Remember that to use these functions, you <strong>always</strong> have to use <code>@include</code> to call it.
+If you have the function in a different file, you can <code>@import</code> it and get it into your working .scss file.</p>
+<h1 id="2-4-imports">2.4 Imports</h1>
+<p>In SCSS, it's possible to import other SCSS files like one that only has functions inside it, variables or simply normal SCSS.
+This is practically useful when you're doing large SCSS projects and need to have a clean way to sort everything in palce.
+If you want to have a SCSS file useable within the <code>@import</code> you <strong>must</strong> always include a <code>_</code> at the name of the file, else it will
+think that it's just a normal file and won't bother importing it.</p>
+<p>An example of how imports could be useful:</p>
+<p>![Image](/posts_assets/{{ page.assetsfolder }}/fc64a3.png)</p>
+<p>To give a short example on how import works from the example image, the file named <strong>modesta.scss</strong> acts like the main caller for all the components, inside this file, there are only imports from the other files like this:</p>
+<pre><code class="language-scss">@import 'components/global';
+@import 'components/keyframes';
+@import 'components/arrow';
+@import 'components/buttons';
+@import 'components/fullscreen';
+@import 'components/grid';
+@import 'components/markdown';
+@import 'components/modal';
+@import 'components/navbar';
+@import 'components/objects';
+@import 'components/responsive';</code></pre>
+<p>This will basically get all content from the files it will get, it's all fine if it has normal SCSS inside it and not only functions/variables.
+Using this method can make it easier to sort your SCSS (CSS) in an easy way to read and find, making you use less time on trying to find that one class inside a large, 2000+ lines of code.</p>
+<h1 id="3-summary">3. Summary</h1>
+<p>By now, you might think that SCSS still look a bit complicated, but consider that it does really save you time and sorting, as well as having a nice method of writing CSS in a nested platform. Just keep in mind that websites <strong>can not</strong> read a .scss file at all, that is why you install the <a href="https://sass-lang.com/">SCSS</a> to render the SCSS into CSS, aka. a useable language for websites.</p>
+<p>You won't escape the .css files, however you are at least making it easier to write them with SCSS.</p>
+<p>If you want a live example of how SCSS works, you can visit my ModestaCSS work to see my structure here:<br>
+<a href="https://github.com/AlexFlipnote/Modesta">https://github.com/AlexFlipnote/Modesta</a></p>
+<p>Good luck with SCSS, hopefully it was useful!</p>      </div>
+    </div>
+    
+<footer class="text-center box-container primary-bg">
+  <p className="no-margin">
+    <a href="https://github.com/AlexFlipnote/alexflipnote.github.io/blob/master/LICENSE" target="_blank" rel="noreferrer">LICENSE</a>
+      <span className="footer-name">AlexFlipnote</span>
+    <a href="https://github.com/AlexFlipnote/alexflipnote.github.io" target="_blank" rel="noreferrer">Source</a>
+  </p>
+</footer>
+  </body>
+</html>

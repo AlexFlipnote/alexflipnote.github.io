@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<title>Create SSH Key</title>
+
+<meta httpEquiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+<meta name="theme-color" content="#14bae4"/>
+<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico"></link>
+<meta property="og:image" content="/static/images/branding/avatar.png" />
+
+<meta content="Create SSH Key" property="og:title"/>
+<meta content="How to create a SSH Key and take usage of it" property="og:description"/>
+<meta content="How to create a SSH Key and take usage of it" name="description"/>
+
+<meta name="revisit-after" content="2 days"/>
+<meta name="keywords" content="ssh, key, secure, linux, ssh-keygen, authorized_keys"/>
+<meta property="og:locale" content="en_GB"/>
+<link rel="canonical" href="https://alexflipnote.dev/docs/create_ssh_key" />
+<meta property="og:url" content="https://alexflipnote.dev/docs/create_ssh_key" />
+<meta property="og:site_name" content="AlexFlipnote"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@AlexFlipnote"/>
+
+<!-- CSS -->
+<link href="/static/css/modesta.css" type="text/css" rel="stylesheet">
+<link href="/static/css/markdown.css" type="text/css" rel="stylesheet">
+<link href="/static/css/emojis.css" type="text/css" rel="stylesheet">
+<link href="/static/css/custom.css" type="text/css" rel="stylesheet">
+
+<!-- JavaScript -->
+<script src="/static/js/main.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/countable.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Give each header a topic
+        var headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+
+        for (var i = 0; i < headings.length; i++) {
+          headings[i].innerHTML =
+            '<a style="color: #fff;" href="#' + headings[i].id + '">' +
+              headings[i].innerText +
+            '</a>';
+        }
+
+        // Give an estimated time on when you're done reading
+        var article = document.getElementsByClassName("paper")[0];
+        Countable.count(article, function (counter) {
+          var wpm = 200;
+          var estimatedRaw = counter.words / wpm;
+          var minutes = Math.round(estimatedRaw);
+
+          var effectiveTime = (minutes < 1) ? "a couple of secs" : minutes + " min read";
+          document.getElementById("reading-time").innerHTML += effectiveTime;
+        });
+      }, false);
+    </script>
+  </head>
+  <body class="dark-theme github">
+    <div class="box-container highlight-flat no-border-radius" style="margin-bottom: 0;">
+  <p class="container light-text no-margin no-padding topbar monospace" style="font-size: 16px;">
+      /<a href="/">home</a>/<a href="/docs">docs</a>/create_ssh_key.md  </p>
+</div>
+    <div class="paper-container">
+        <div class="ribbon secondary"></div>      <div class="paper markdown-jekyll">
+        <div class="blog-title text-center">
+          <h1 class="no-margin no-padding no-border">Create SSH Key</h1>
+          <p class="italic no-margin no-padding no-border">How to create a SSH Key and take usage of it</p>
+        </div>
+        <div class="blog-splitter">
+          <hr class="blog-split-yes">
+          <div class="blog-labels text-center">
+            <span class="label secondary">📅 27 Nov 2018</span>
+            <span class="label secondary" id="reading-time">⏱ </span>
+            <span class="label secondary">📝 Guest</span>
+          </div>
+        </div>
+        <h1 id="0-installing-ssh-key">0. Installing SSH Key</h1>
+<p>If you have the latest <code>Windows 10</code> update, you should already have the OpenSSH installed.</p>
+<p>However if the ssh command doesn't work or you're using an older version of Windows, you can install
+OpenSSH manually by finding it on Google or from <a href="https://chocolatey.org/packages/openssh">https://chocolatey.org/packages/openssh</a></p>
+<h1 id="1-create-ssh-key">1. Create a SSH Key</h1>
+<p>To create this key, you simply type the following command in cmd/terminal:<br>
+<code>ssh-keygen -t rsa -b 4096</code><br>
+Follow the steps that the keygen provides, passphrase is optional.
+When you're done with generating the key, you should have 2 new files in this directory:</p>
+<pre><code>Windows: C:\Users\USER\.ssh
+Mac/Linux: ~/.ssh</code></pre>
+<p>id_rsa.pub = Public key<br>
+id_rsa = Private key (Do NOT share this one to anyone!)</p>
+<h1 id="2-advanced-ssh-server">2. Make a server only accept SSH [ Advanced ]</h1>
+<p>NOTE: Enforcing your server to only accept SSH can be risky if you do mistakes, however, to ensure nothing wrong happens, never close the current SSH window to your server and always test your key with a new SSH session.</p>
+<h3 id="2-1-adding-ssh-keys">2.1 Adding SSH keys</h3>
+<p>When you've logged in to your server, do the following commands inside the home directory of your user choice:</p>
+<pre><code>chmod 700 ~/.ssh
+touch ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys</code></pre>
+<p>When that's done, edit <code>~/.ssh/authorized_keys</code> file with nano/vim and add your Public key inside it.
+If you're going to add more than one, be sure to split between keys, example:</p>
+<pre><code>LONG_KEY_1 LONG_KEY_1 LONG_KEY_1 LONG_KEY_1 LONG_KEY_1
+LONG_KEY_2 LONG_KEY_2 LONG_KEY_2
+LONG_KEY_3 LONG_KEY_3 LONG_KEY_3 LONG_KEY_3</code></pre>
+<h3 id="2-2-enforcing-ssh-key-only">2.2 Enforcing SSH Key only</h3>
+<p>Edit <code>/etc/ssh/sshd_config</code> with nano/vim and ensure that the following settings are set to these:</p>
+<pre><code class="language-md">- PermitRootLogin without-password
+- RSAAuthentication yes
+- PubkeyAuthentication yes
+- PermitEmptyPasswords no
+- PasswordAuthentication no</code></pre>
+<p>After such, reload sshd (Example: systemctl reload sshd) and test with <strong>a new session</strong> if the SSH key works.
+If you can get in to your server without password, you've successfully completed it and ready to go.<br>
+If it didn't work, then check what you did wrong above.</p>
+<h3 id="commands">Commands</h3>
+<p>Command to login with SSH Key:<br>
+<code>ssh username@server.ip</code></p>
+<p>If you're on Windows and it doesn't work, try this:<br>
+<code>ssh -m hmac-sha2-256 username@server.ip</code></p>      </div>
+    </div>
+    
+<footer class="text-center box-container primary-bg">
+  <p className="no-margin">
+    <a href="https://github.com/AlexFlipnote/alexflipnote.github.io/blob/master/LICENSE" target="_blank" rel="noreferrer">LICENSE</a>
+      <span className="footer-name">AlexFlipnote</span>
+    <a href="https://github.com/AlexFlipnote/alexflipnote.github.io" target="_blank" rel="noreferrer">Source</a>
+  </p>
+</footer>
+  </body>
+</html>
