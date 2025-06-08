@@ -12,6 +12,11 @@
       "url" => "https://github.com/AlexFlipnote/discord.http"
     ],
     [
+      "name" => "template.py",
+      "desc" => "A standardized Python template configuration for my projects.",
+      "url" => "https://github.com/AlexFlipnote/template.py"
+    ],
+    [
       "name" => "KawaiiBot",
       "desc" => "A kawaii bot that makes your server more kawaii",
       "url" => "https://kawaiibot.dev/"
