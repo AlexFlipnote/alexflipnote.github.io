@@ -47,11 +47,6 @@
       "url" => "https://github.com/AlexFlipnote/neofetch-win"
     ],
     [
-      "name" => "dotenvplus",
-      "desc" => "Reads key-value pairs from a .env file and supports multiple values with dynamic interpolation.",
-      "url" => "https://github.com/AlexFlipnote/dotenvplus"
-    ],
-    [
       "name" => "diskspace",
       "desc" => "Making it possible to use Linux df & du command on Windows",
       "url" => "https://github.com/AlexFlipnote/diskspace"
