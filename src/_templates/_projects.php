@@ -12,7 +12,7 @@
       "url" => "https://github.com/AlexFlipnote/discord.http"
     ],
     [
-      "name" => "AlexFlipnote/homepage",
+      "name" => "homepage",
       "desc" => "A website that gives you a clean homepage.",
       "url" => "https://github.com/AlexFlipnote/homepage"
     ],
