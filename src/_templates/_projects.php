@@ -12,6 +12,11 @@
       "url" => "https://github.com/AlexFlipnote/discord.http"
     ],
     [
+      "name" => "AlexFlipnote/homepage",
+      "desc" => "A website that gives you a clean homepage.",
+      "url" => "https://github.com/AlexFlipnote/homepage"
+    ],
+    [
       "name" => "template.py",
       "desc" => "A standardized Python template configuration for my projects.",
       "url" => "https://github.com/AlexFlipnote/template.py"
