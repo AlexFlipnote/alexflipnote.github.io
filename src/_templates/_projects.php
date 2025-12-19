@@ -12,9 +12,9 @@
       "url" => "https://github.com/AlexFlipnote/discord.http"
     ],
     [
-      "name" => "homepage",
+      "name" => "Homepage++",
       "desc" => "A website that gives you a clean homepage.",
-      "url" => "https://github.com/AlexFlipnote/homepage"
+      "url" => "https://github.com/AlexFlipnote/homepage_plusplus"
     ],
     [
       "name" => "template.py",
