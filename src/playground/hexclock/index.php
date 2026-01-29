@@ -4,6 +4,7 @@
       $title = "HEX Clock - #000000";
       $description = "The clock that changes the HEX background after 24h clock";
       $path = "/playground/hexclock";
+      $keywords = "hex, clock, background, color, time, playground, alexflipnote";
 
       require_once("./src/_templates/_head.php");
     ?>

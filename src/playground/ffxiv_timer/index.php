@@ -4,6 +4,7 @@
       $title = "FFXIV Event & Reset Timers";
       $description = "Track Final Fantasy XIV weekly resets, daily duties, and the 9-day housing lottery cycle in your local timezone.";
       $path = "/playground/ffxiv_timer";
+      $keywords = "ffxiv, ffxiv timer, final fantasy xiv, reset timer, event timer, housing lottery, dailies, weeklies, playground, alexflipnote";
 
       require_once("./src/_templates/_head.php");
     ?>

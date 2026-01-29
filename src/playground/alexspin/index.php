@@ -4,6 +4,7 @@
       $title = "alexspin";
       $description = "bottom text";
       $path = "/playground/alexspin";
+      $keywords = "alexspin, spin, video, timer, playground, alexflipnote";
 
       require_once("./src/_templates/_head.php");
     ?>
