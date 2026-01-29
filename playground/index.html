@@ -32,17 +32,42 @@
 <script src="/static/js/main.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body class="dark-theme github">
+
+    <style>
+      .playground-item {
+        align-items: center;
+        background-color: #282828;
+        border-radius: .25rem;
+        border: 1px solid #303030;
+        display: flex;
+        filter: drop-shadow(5px 5px 0 #000);
+        justify-content: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 90%;
+        color: white;
+        font-weight: bold;
+        letter-spacing: .1rem;
+        transition: filter 0.2s ease-in-out;
+      }
+
+      .playground-item:hover {
+        filter: drop-shadow(2px 2px 0 #000);
+        transition: filter 0.1s ease-in-out;
+      }
+    </style>
+
     <div class="container">
       <h1>Playground experiments:</h1>
       <div class="flex-grid">
           <div class="col-xs-3">
-    <a href="/playground/alexspin">alexspin</a>
+    <a class="playground-item" href="/playground/alexspin">alexspin</a>
   </div>  <div class="col-xs-3">
-    <a href="/playground/ffxiv_timer">ffxiv_timer</a>
+    <a class="playground-item" href="/playground/ffxiv_timer">ffxiv_timer</a>
   </div>  <div class="col-xs-3">
-    <a href="/playground/hexclock">hexclock</a>
+    <a class="playground-item" href="/playground/hexclock">hexclock</a>
   </div>  <div class="col-xs-3">
-    <a href="/playground/spooky">spooky</a>
+    <a class="playground-item" href="/playground/spooky">spooky</a>
   </div>      </div>
     </div>
   </body>
