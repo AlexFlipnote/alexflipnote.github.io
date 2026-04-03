@@ -12,6 +12,11 @@
       "url" => "https://github.com/AlexFlipnote/discord.http"
     ],
     [
+      "name" => "AlexFlipnote API",
+      "desc" => "A self-made API for people to use tools I have made through HTTP requests for free.",
+      "url" => "https://api.alexflipnote.dev/"
+    ],
+    [
       "name" => "Homepage++",
       "desc" => "A website that gives you a clean homepage.",
       "url" => "https://github.com/AlexFlipnote/homepage_plusplus"
