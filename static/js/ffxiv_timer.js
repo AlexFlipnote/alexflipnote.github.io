@@ -20,7 +20,7 @@ const STATIC_TIMERS = [
       "Custom deliveries allowances/individual allowances",
       "Doman Enclave Reconstruction Effort donations",
       "Adventurer Squadron Priority mission",
-      "Fashion Report"
+      "Fashion Report Theme Reveal"
     ]
   },
   {
@@ -34,7 +34,8 @@ const STATIC_TIMERS = [
       "Duty Roulette daily bonuses",
       "Daily repeatable quests",
       "Frontline Duty Availability",
-      "Housing Message"
+      "Housing Message",
+      "Mini Cactpot"
     ]
   },
   {
@@ -46,6 +47,75 @@ const STATIC_TIMERS = [
     list: [
       "Adventurer Squadron training allowances",
       "Grand Company Supply/Provisioning missions"
+    ]
+  },
+  {
+    id: "fashion_judging",
+    name: "Fashion Report Judging",
+    every: 7 * DAY,
+    offset: (1 * 24 + 8) * 60 * 60 * 1000,  // Thursday + 1 day = Friday 08:00 GMT
+    info: "At this time, the Masked Rose begins judging:",
+    list: [
+      "Fashion Report judging begins"
+    ]
+  },
+  {
+    id: "gates",
+    name: "Gold Saucer GATEs",
+    every: 20 * 60 * 1000,
+    offset: 0,  // Epoch 00:00 aligns perfectly with xx:00, xx:20, xx:40
+    info: "Gold Saucer Active Time Maneuvers begin:",
+    list: [
+      "GATE registration opens",
+      "A random Gold Saucer minigame spawns"
+    ]
+  },
+  {
+    id: "jumbo_cactpot_eu",
+    name: "Jumbo Cactpot (EU)",
+    every: 7 * DAY,
+    offset: (2 * 24 + 19) * 60 * 60 * 1000,  // Saturday 19:00 GMT
+    small: true,
+    info: "The weekly lottery numbers are drawn for Chaos and Light:",
+    list: [
+      "Jumbo Cactpot drawing",
+      "Early bird bonus active for 1 hour"
+    ]
+  },
+  {
+    id: "jumbo_cactpot_na",
+    name: "Jumbo Cactpot (NA)",
+    every: 7 * DAY,
+    offset: (3 * 24 + 2) * 60 * 60 * 1000,  // Sunday 02:00 GMT
+    small: true,
+    info: "The weekly lottery numbers are drawn for Aether, Primal, Crystal, and Dynamis:",
+    list: [
+      "Jumbo Cactpot drawing",
+      "Early bird bonus active for 1 hour"
+    ]
+  },
+  {
+    id: "jumbo_cactpot_jp",
+    name: "Jumbo Cactpot (JP)",
+    every: 7 * DAY,
+    offset: (2 * 24 + 12) * 60 * 60 * 1000,  // Saturday 12:00 GMT
+    small: true,
+    info: "The weekly lottery numbers are drawn for Elemental, Gaia, Mana, and Meteor:",
+    list: [
+      "Jumbo Cactpot drawing",
+      "Early bird bonus active for 1 hour"
+    ]
+  },
+  {
+    id: "jumbo_cactpot_oce",
+    name: "Jumbo Cactpot (OCE)",
+    every: 7 * DAY,
+    offset: (2 * 24 + 9) * 60 * 60 * 1000,  // Saturday 09:00 GMT
+    small: true,
+    info: "The weekly lottery numbers are drawn for Materia:",
+    list: [
+      "Jumbo Cactpot drawing",
+      "Early bird bonus active for 1 hour"
     ]
   }
 ]
@@ -83,17 +153,55 @@ const createTimerElement = (id) => {
   div.className = "timer"
   div.id = `timer-${id}`
   div.innerHTML = `
-    <div class="title"></div>
-    <div class="countdown" id="count-${id}"></div>
-    <div id="append-${id}"></div>
-    <details>
-      <summary>Details</summary>
-      <div class="info" id="info-${id}"></div>
-      <div class="target" id="target-${id}"></div>
-    </details>
+    <div class="timer-header">
+      <div class="title"></div>
+      <button class="info-btn" onclick="openModal('${id}')" title="Details">i</button>
+    </div>
+    <div class="timer-body">
+      <div class="main-col">
+        <div class="countdown" id="count-${id}"></div>
+        <div class="target" id="target-${id}"></div>
+      </div>
+      <div class="side-col" id="append-${id}"></div>
+    </div>
   `
   return div
 }
+
+/** Modal Logic **/
+const TIMER_INFOS = {}
+
+function openModal(id) {
+  const data = TIMER_INFOS[id]
+  if (!data) return
+
+  const dialog = document.getElementById("info-modal")
+  document.getElementById("modal-title").innerText = data.title
+
+  let html = `<p>${data.info}</p>`
+  if (data.list && data.list.length > 0) {
+    html += `<ul>${data.list.map(item => `<li>${item}</li>`).join('')}</ul>`
+  }
+
+  document.getElementById("modal-content").innerHTML = html
+  dialog.showModal()
+}
+
+// Close modal logic
+document.addEventListener("DOMContentLoaded", () => {
+  const dialog = document.getElementById("info-modal")
+
+  // Close on 'X' button
+  document.getElementById("modal-close").addEventListener("click", () => dialog.close())
+
+  // Close when clicking outside the modal box
+  dialog.addEventListener("click", (e) => {
+    const rect = dialog.getBoundingClientRect()
+    if (e.clientY < rect.top || e.clientY > rect.bottom || e.clientX < rect.left || e.clientX > rect.right) {
+      dialog.close()
+    }
+  })
+})
 
 /** Logic Handlers **/
 function updateHousingLogic(now) {
@@ -115,6 +223,13 @@ function updateHousingLogic(now) {
   }
 
   const id = "housing"
+
+  // Store info for the modal dynamically
+  TIMER_INFOS[id] = {
+    title: `Housing: ${currentPhase.name}`,
+    info: currentPhase.info
+  }
+
   let el = document.getElementById(`timer-${id}`)
   if (!el) {
     el = createTimerElement(id)
@@ -124,14 +239,12 @@ function updateHousingLogic(now) {
   el.querySelector(".title").innerText = `Housing: ${currentPhase.name}`
   document.getElementById(`count-${id}`).innerText = formatCountdown(currentEnd - now)
   document.getElementById(`target-${id}`).innerHTML = `<strong>Ends at:</strong> ${formatDate(new Date(currentEnd))}`
-  document.getElementById(`info-${id}`).innerHTML = currentPhase.info
 
+  // Render the two-column inner layout for housing
   const appendEl = document.getElementById(`append-${id}`)
   appendEl.innerHTML = `
-    <div class="sub-timer">
-      <div class="sub-title">Next: ${nextPhase.name}</div>
-      <div style="font-size: 0.8rem">Starts: ${formatDate(new Date(nextStart))}</div>
-    </div>
+    <div class="sub-title">Next: ${nextPhase.name}</div>
+    <div class="target" style="margin-top: 0;">Starts: ${formatDate(new Date(nextStart))}</div>
   `
 }
 
@@ -139,12 +252,17 @@ function updateStaticTimer(timer, now) {
   let el = document.getElementById(`timer-${timer.id}`)
   if (!el) {
     el = createTimerElement(timer.id)
+    if (timer.small) el.classList.add("small")
+
     document.getElementById("timers").appendChild(el)
     el.querySelector(".title").innerText = timer.name
 
-    // Build the detailed list
-    const listHtml = timer.list ? `<ul style="margin: 5px 0; padding-left: 20px;">${timer.list.map(item => `<li>${item}</li>`).join('')}</ul>` : ""
-    el.querySelector(".info").innerHTML = `${timer.info}${listHtml}`
+    // Store info for the modal globally
+    TIMER_INFOS[timer.id] = {
+      title: timer.name,
+      info: timer.info,
+      list: timer.list
+    }
   }
 
   const next = (Math.floor((now - timer.offset) / timer.every) + 1) * timer.every + timer.offset
@@ -154,8 +272,8 @@ function updateStaticTimer(timer, now) {
 
 function renderAll() {
   const now = Date.now()
-  STATIC_TIMERS.forEach(timer => updateStaticTimer(timer, now))
   updateHousingLogic(now)
+  STATIC_TIMERS.forEach(timer => updateStaticTimer(timer, now))
 }
 
 let lastTimestamp = -1000
