@@ -22,15 +22,17 @@ body {
   min-height: 100vh;
 }
 
+/* Page, header and footer */
 .header {
   font-family: "ffxiv-title", serif;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   margin: 0;
   text-align: center;
 
+  /* Gold gradient text effect */
   background: linear-gradient(
     to bottom,
     #f8e08e 0%,
@@ -58,26 +60,83 @@ body {
   padding: .25rem 1rem;
 }
 
+footer {
+  margin-top: auto;
+  font-size: 0.8rem;
+  opacity: 0.5;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+}
+
+/* Main grid layout */
 #timers {
-  column-count: 2;
-  column-gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
   margin-top: 1.25rem;
   max-width: 62.5rem;
   width: 95%;
+  align-items: start;
+  padding-bottom: 1.25rem;
 }
 
+/* Timer card */
 .timer {
   background: var(--card);
   border: 0.0625rem solid var(--border);
   border-radius: 0.375rem;
   padding: 1.25rem;
-  margin-bottom: 1.25rem;
-  break-inside: avoid-column;
-  display: inline-block;
-  width: 100%;
   box-sizing: border-box;
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Modifier for Jumbo Cactpot cards */
+.timer.small {
+  grid-column: span 1;
+  padding: 1rem;
+}
+
+.timer.small .title {
+  font-size: 0.95rem;
+}
+
+.timer.small .countdown {
+  font-size: 1.15rem;
+}
+
+/* Timer inner layout */
+.timer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.timer-header .title {
+  margin-bottom: 0;
+}
+
+.timer-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.side-col {
+  padding-left: 1.25rem;
+  border-left: 0.0625rem solid var(--border);
+  flex: 1;
+}
+
+.side-col:empty {
+  display: none;
+}
+
+/* Timer */
 .title {
   font-size: 1.1rem;
   font-weight: bold;
@@ -91,35 +150,10 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-.sub-timer {
-  margin-top: 0.9375rem;
-  padding-top: 0.9375rem;
-  border-top: 0.0625rem solid var(--border);
-  opacity: 0.7;
-}
-
 .sub-title {
   font-size: 0.9rem;
   font-weight: bold;
   margin-bottom: 0.25rem;
-}
-
-details {
-  margin-top: 0.9375rem;
-  font-size: 0.85rem;
-}
-
-summary {
-  cursor: pointer;
-  color: var(--accent);
-  user-select: none;
-  font-size: 0.9rem;
-}
-
-.info {
-  margin-top: 0.625rem;
-  color: #b0b0b0;
-  line-height: 1.4;
 }
 
 .target {
@@ -128,19 +162,127 @@ summary {
   opacity: 0.7;
 }
 
-footer {
-  margin-top: auto;
-  font-size: 0.8rem;
-  opacity: 0.5;
-  padding: 2.5rem 1.25rem;
-  text-align: center;
+/* Info button */
+.info-btn {
+  background: var(--bg);
+  border: 0.0625rem solid var(--border);
+  color: var(--accent);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
 }
 
-/* Responsive adjustments */
+.info-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+/* Modal Animations */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-1.5rem) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes backdropFade {
+  from {
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+  }
+}
+
+/* Modal */
+dialog {
+  background: var(--card);
+  color: var(--text);
+  border: 0.0625rem solid var(--border);
+  border-radius: 0.375rem;
+  padding: 1.5rem;
+  max-width: 35rem;
+  width: 90%;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+/* Apply animation when the dialog is open */
+dialog[open] {
+  animation: modalSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
+}
+
+/* Apply backdrop animation when the dialog is open */
+dialog[open]::backdrop {
+  animation: backdropFade 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.0625rem solid var(--border);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.close-btn {
+  background: none !important;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.close-btn:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.modal-body p {
+  color: #b0b0b0;
+  line-height: 1.4;
+  margin-top: 0;
+}
+
+.modal-body ul {
+  margin: 0.3rem 0;
+  padding-left: 1.25rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+/* Responsive */
 @media (max-width: 48rem) {
   #timers {
-    column-count: 1;
+    grid-template-columns: 1fr;
   }
+
+  .timer, .timer.small {
+    grid-column: span 1;
+  }
+
   .header {
     font-size: 3rem;
   }

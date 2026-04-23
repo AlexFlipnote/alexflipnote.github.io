@@ -15,7 +15,17 @@
     <div class="tz-note">
       Times displayed are based on your browser's timezone.
     </div>
+
     <main id="timers"></main>
+
+    <dialog id="info-modal">
+      <div class="modal-header">
+        <h2 id="modal-title" class="title" style="margin: 0;"></h2>
+        <button id="modal-close" class="close-btn">&times;</button>
+      </div>
+      <div id="modal-content" class="modal-body"></div>
+    </dialog>
+
     <script src="/static/js/ffxiv_timer.js" type="text/javascript"></script>
   </body>
 </html>
