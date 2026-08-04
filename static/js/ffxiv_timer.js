@@ -208,18 +208,16 @@ function updateHousingLogic(now) {
   const cycleElapsed = (now - HOUSING_PHASES.startTime) % HOUSING_PHASES.totalCycle
   const cycleStart = now - cycleElapsed
 
-  let currentPhase, nextPhase, currentEnd, nextStart
+  let currentPhase, nextPhase, currentEnd
 
   if (cycleElapsed < HOUSING_PHASES.phases[0].duration) {
     currentPhase = HOUSING_PHASES.phases[0]
     nextPhase = HOUSING_PHASES.phases[1]
     currentEnd = cycleStart + currentPhase.duration
-    nextStart = currentEnd
   } else {
     currentPhase = HOUSING_PHASES.phases[1]
     nextPhase = HOUSING_PHASES.phases[0]
     currentEnd = cycleStart + HOUSING_PHASES.totalCycle
-    nextStart = currentEnd
   }
 
   const id = "housing"
@@ -244,7 +242,6 @@ function updateHousingLogic(now) {
   const appendEl = document.getElementById(`append-${id}`)
   appendEl.innerHTML = `
     <div class="sub-title">Next: ${nextPhase.name}</div>
-    <div class="target" style="margin-top: 0;">Starts: ${formatDate(new Date(nextStart))}</div>
   `
 }
 
