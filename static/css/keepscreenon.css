@@ -1,0 +1,191 @@
+:root {
+  --bg: #181818;
+  --card: #282828;
+  --text: #e0e0e0;
+  --accent: #14bae4;
+  --border: #303030;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 1.875rem;
+  transition: background-color 0.3s ease;
+}
+
+body.is-on {
+  background-color: var(--card);
+}
+
+.header {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.075rem;
+  color: var(--text);
+  margin: 0;
+  text-align: center;
+}
+
+/* Toggle button */
+.wake-toggle {
+  position: relative;
+  background: var(--bg);
+  border: 0.09375rem solid var(--border);
+  border-radius: 50%;
+  width: 13.5rem;
+  height: 13.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.wake-toggle:hover {
+  border-color: var(--accent);
+}
+
+.wake-toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.wake-toggle:disabled:hover {
+  border-color: var(--border);
+}
+
+/* Gentle idle pulse inviting a click while asleep */
+.wake-toggle:not(.is-on):not(:disabled) {
+  animation: idle-pulse 3s ease-in-out infinite;
+}
+
+@keyframes idle-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(20, 186, 228, 0.12); }
+  50% { box-shadow: 0 0 1.125rem 0.15rem rgba(20, 186, 228, 0.25); }
+}
+
+.eye-icon {
+  width: 7.5rem;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.eye-closed {
+  stroke: var(--text);
+  stroke-width: 5;
+  stroke-linecap: round;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.eye-open {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.eye-outline {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 5;
+}
+
+.pupil {
+  fill: var(--accent);
+  transition: fill 0.3s ease;
+}
+
+/* Active state: eye opens, glows, and breathes */
+.wake-toggle.is-on .eye-closed {
+  opacity: 0;
+}
+
+.wake-toggle.is-on .eye-open {
+  opacity: 1;
+}
+
+.wake-toggle.is-on {
+  border-color: var(--accent);
+  animation: glow 2.4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 0.375rem 0 rgba(20, 186, 228, 0.25); }
+  50% { box-shadow: 0 0 2.25rem 0.375rem rgba(20, 186, 228, 0.45); }
+}
+
+/* Radar-style pulse rings while active */
+.pulse-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 0.09375rem solid var(--accent);
+  opacity: 0;
+}
+
+.wake-toggle.is-on .pulse-ring {
+  animation: pulse-out 2.4s ease-out infinite;
+}
+
+.wake-toggle.is-on .pulse-ring.delay {
+  animation-delay: 1.2s;
+}
+
+@keyframes pulse-out {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+.status-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text);
+  opacity: 0.6;
+  white-space: nowrap;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.status-text.is-on {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.status-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.status-text.is-on .status-dot {
+  background: var(--accent);
+  animation: dot-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes dot-glow {
+  0%, 100% { box-shadow: 0 0 0.3rem 0 rgba(20, 186, 228, 0.4); }
+  50% { box-shadow: 0 0 0.75rem 0.225rem rgba(20, 186, 228, 0.8); }
+}
+
+.unsupported {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  text-align: center;
+  max-width: 30rem;
+}
+
+.hidden {
+  display: none;
+}
