@@ -11,6 +11,13 @@
   <body class="dark-theme github">
 
     <style>
+      .playground-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        width: 90%;
+      }
+
       .playground-item {
         align-items: center;
         background-color: #282828;
@@ -21,7 +28,6 @@
         justify-content: center;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        width: 90%;
         color: white;
         font-weight: bold;
         letter-spacing: .1rem;
@@ -32,11 +38,17 @@
         filter: drop-shadow(2px 2px 0 #000);
         transition: filter 0.1s ease-in-out;
       }
+
+      @media (max-width: 48rem) {
+        .playground-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
 
     <div class="container">
       <h1>Playground experiments:</h1>
-      <div class="flex-grid">
+      <div class="playground-grid">
         <?php
           $pg_path = "./src/playground";
           $playground_names = array_filter(
@@ -47,9 +59,7 @@
 
           foreach ($playground_names as $g) {
             echo <<<HTML
-              <div class="col-xs-3">
-                <a class="playground-item" href="/playground/{$g}">{$g}</a>
-              </div>
+              <a class="playground-item" href="/playground/{$g}">{$g}</a>
             HTML;
           }
         ?>
