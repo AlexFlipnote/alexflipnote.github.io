@@ -8,7 +8,7 @@
     ],
     [
       "name" => "discord.http",
-      "desc" => "Python library that handles interactions from Discord POST requests.",
+      "desc" => "An HTTP-first Python library for Discord bots, running on HTTP interactions, the gateway, or both, with full cache control.",
       "url" => "https://github.com/AlexFlipnote/discord.http"
     ],
     [
