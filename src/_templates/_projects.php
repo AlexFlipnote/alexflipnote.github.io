@@ -12,6 +12,11 @@
       "url" => "https://github.com/AlexFlipnote/discord.http"
     ],
     [
+      "name" => "ffxiv.watch",
+      "desc" => "A lightning-fast timer dashboard for Final Fantasy XIV.",
+      "url" => "https://ffxiv.watch/"
+    ],
+    [
       "name" => "api.alexflipnote.dev",
       "desc" => "A self-made API for people to use tools I have made through HTTP requests for free.",
       "url" => "https://api.alexflipnote.dev/"
@@ -20,11 +25,6 @@
       "name" => "Homepage++",
       "desc" => "A website that gives you a clean homepage.",
       "url" => "https://github.com/AlexFlipnote/homepage_plusplus"
-    ],
-    [
-      "name" => "template.py",
-      "desc" => "A standardized Python template configuration for my projects.",
-      "url" => "https://github.com/AlexFlipnote/template.py"
     ],
     [
       "name" => "KawaiiBot",
@@ -45,22 +45,7 @@
       "name" => "Modesta",
       "desc" => "🎨 A clean CSS framework made to be dark, responsive and easy to build with.",
       "url" => "https://github.com/AlexFlipnote/Modesta"
-    ],
-    [
-      "name" => "GiveMeBadge",
-      "desc" => "A simple bot script that makes you gain the 'Active Developer' badge on Discord",
-      "url" => "https://github.com/AlexFlipnote/GiveMeBadge"
-    ],
-    [
-      "name" => "neofetch-win",
-      "desc" => "neofetch, but for Windows",
-      "url" => "https://github.com/AlexFlipnote/neofetch-win"
-    ],
-    [
-      "name" => "diskspace",
-      "desc" => "Making it possible to use Linux df & du command on Windows",
-      "url" => "https://github.com/AlexFlipnote/diskspace"
-    ],
+    ]
   ];
 
 ?>
