@@ -1,0 +1,15 @@
+{
+  "name": "alexflipnote-website",
+  "author": "AlexFlipnote",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "mothwing dev",
+    "build": "mothwing build",
+    "clean": "mothwing clean"
+  },
+  "devDependencies": {
+    "marked": "18.1.1",
+    "mothwing": "0.0.4"
+  }
+}

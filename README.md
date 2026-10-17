@@ -2,10 +2,10 @@
 This is my personal website that is shown at https://alexflipnote.dev.
 
 ## How does it work?
-This website is built using PHP and static HTML files. When pushing everything, I simply run `make build` which runs a custom-made PHP compiler to generate everything needed while also copying the necessary files to the output directory.
+This website is plain HTML, built with [mothwing](https://github.com/AlexFlipnote/mothwing). `npm run dev` serves it at http://localhost:8080 while working on it, and pushing to `master` builds it with `npm run build` and deploys it to GitHub Pages.
 
 ## Requirements
-- PHP 8.4 or above
+- Node.js 20.11 or above
 
 ## License information
 | Component | License |

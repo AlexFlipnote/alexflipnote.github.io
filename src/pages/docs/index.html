@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <x-html src="partials/head.html"/>
+    <x-seo title="Documentations" description="Documentations that I made for anyone else to use"/>
+  </head>
+  <body class="dark-theme github">
+    <div class="box-container highlight-flat no-border-radius" style="margin-bottom: 0;">
+      <p class="container light-text no-margin no-padding topbar monospace" style="font-size: 16px;">
+        /<a href="/">home</a>/<a href="/docs/">docs</a>/index.md
+      </p>
+    </div>
+    <div class="markdown-jekyll">
+      <h1 class="no-margin index-title">
+        Documentation homepage
+        <br>
+        <p class="no-margin undertitle">Documentations that I made for anyone else to use</p>
+      </h1>
+      <ul class="article-list">
+        <x-each items="docs.months" as="month">
+        <div class="splitletter">
+          <p class="firstletter">{{ month.month }}</p>
+        </div>
+        <x-each items="month.docs" as="doc">
+        <li class="listing" id="{{ doc.listId }}">
+          <div>
+            <a class="sun-flower-text" href="/docs/{{ doc.id }}/">{{ doc.title }}</a>
+            <i style="color: #999;">{{ doc.description }} <span style="color: #666;">({{ doc.listDate }})</span></i>
+          </div>
+        </li>
+        </x-each>
+        </x-each>
+      </ul>
+    </div>
+  </body>
+</html>

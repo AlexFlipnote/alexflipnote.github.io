@@ -1,0 +1,9 @@
+<img src="/static/images/branding/{{ image.src }}" draggable="false">
+<span class="image-text">{{ image.label }}</span>
+<div class="image-links">
+  <x-each items="image.formats" as="format">
+    <a download="{{ image.name }}" href="/static/images/branding/{{ image.name }}.{{ format }}" target="_blank">
+      .{{ format }}
+    </a>
+  </x-each>
+</div>
