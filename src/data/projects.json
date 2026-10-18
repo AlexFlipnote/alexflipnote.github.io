@@ -15,6 +15,11 @@
     "url": "https://ffxiv.watch/"
   },
   {
+    "name": "mothwing",
+    "desc": "Write HTML, ship HTML. A small static site builder for pages as light as a moth's wing",
+    "url": "https://github.com/AlexFlipnote/mothwing"
+  },
+  {
     "name": "api.alexflipnote.dev",
     "desc": "A self-made API for people to use tools I have made through HTTP requests for free.",
     "url": "https://api.alexflipnote.dev/"
