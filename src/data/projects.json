@@ -20,11 +20,6 @@
     "url": "https://github.com/AlexFlipnote/mothwing"
   },
   {
-    "name": "api.alexflipnote.dev",
-    "desc": "A self-made API for people to use tools I have made through HTTP requests for free.",
-    "url": "https://api.alexflipnote.dev/"
-  },
-  {
     "name": "Homepage++",
     "desc": "A website that gives you a clean homepage.",
     "url": "https://github.com/AlexFlipnote/homepage_plusplus"
@@ -48,5 +43,15 @@
     "name": "Modesta",
     "desc": "🎨 A clean CSS framework made to be dark, responsive and easy to build with.",
     "url": "https://github.com/AlexFlipnote/Modesta"
+  },
+  {
+    "name": "discord_bot.py",
+    "desc": "🍺 A simple discord bot that helps you getting started within discord.py",
+    "url": "https://github.com/AlexFlipnote/discord_bot.py"
+  },
+  {
+    "name": "api.alexflipnote.dev",
+    "desc": "A self-made API for people to use tools I have made through HTTP requests for free.",
+    "url": "https://api.alexflipnote.dev/"
   }
 ]
