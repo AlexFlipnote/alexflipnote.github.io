@@ -1,9 +1,9 @@
-<img src="/static/images/branding/{{ image.src }}" draggable="false">
-<span class="image-text">{{ image.label }}</span>
-<div class="image-links">
-  <x-each items="image.formats" as="format">
-    <a download="{{ image.name }}" href="/static/images/branding/{{ image.name }}.{{ format }}" target="_blank">
-      .{{ format }}
-    </a>
-  </x-each>
-</div>
+<figure class="image-preview">
+  <img src="/static/images/branding/{{ image.src }}" alt="{{ image.label }}" loading="lazy" draggable="false">
+  <figcaption class="image-text">{{ image.label }}</figcaption>
+  <span class="image-links">
+    <x-each items="image.formats" as="format">
+    <a class="label blue-raspberry-bg white-text" download="{{ image.name }}" href="/static/images/branding/{{ image.name }}.{{ format }}">.{{ format }}</a>
+    </x-each>
+  </span>
+</figure>

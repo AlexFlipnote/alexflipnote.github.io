@@ -1,0 +1,21 @@
+// What the playground experiments share on top of Modesta
+
+// The old yellow status text
+.yellow-text {
+  color: #efff00;
+  font-variant-numeric: tabular-nums;
+  text-shadow: rgba(0, 0, 0, .5) .09em .09em 0;
+}
+
+// A cover over the page until it's clicked, for things that need a click first, like sound
+.click-to-start {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: absolute;
+  z-index: 200;
+
+  + .fullscreen { filter: blur(10px); }
+}

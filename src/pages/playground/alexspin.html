@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html src="partials/head.html"/>
+    <x-html src="partials/playground-head.html"/>
     <x-seo title="alexspin" description="bottom text"/>
+    <x-js src="/playground/alexspin/script.js"/>
   </head>
   <body class="dark-theme github">
     <div class="click-to-start" id="click-spin-start">
@@ -10,9 +11,9 @@
     </div>
     <div class="fullscreen">
       <div class="center-object">
-        <h1 class="runescape" id="spin-time">0.0s</h1>
+        <h1 class="yellow-text" id="spin-time">0.0s</h1>
         <video loop id="spin-video">
-          <source src="/static/videos/alexspin.mp4" type="video/mp4">
+          <source src="/playground/alexspin/alexspin.mp4" type="video/mp4">
         </video>
       </div>
     </div>

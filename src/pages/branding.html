@@ -1,70 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="auto-theme">
   <head>
     <x-html src="partials/head.html"/>
     <x-seo title="Branding" description="Branding assets for AlexFlipnote"/>
   </head>
-  <body class="dark-theme github">
-    <section class="container" id="information">
-      <div class="box-container" id="branding">
-        <h1 class="title emerald-text"><i class="emoji alexwholesome"></i> Branding:</h1>
-        <p>
-          Releasing my branding materials if you desire to use it.
-          Only requirement I have for using this is to give proper
-          information/credits about where the image comes from (alexflipnote.dev)
-        </p>
-        <br/>
-        <p>
-          <span class="sun-flower-text bold">Note:</span>
-          All images listed under are made by <a href="https://twitter.com/ApollyonX69" target="_blank">ApollyonX69</a> and licenced under
-          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
-        </p>
+  <body class="github page">
+    <x-html src="partials/navbar.html"/>
 
-        <div class="flex-grid colour-margin-top">
-          <div class="col-xs-8 secondary-bg">
-            <p class="colour-info">
-              Since my favourite is <span class="bold">Blue Raspberry</span>, it is therefore my main colour.
-              Essentially, it is my branding colour and should be used as the main colour, yes yes.
-          </p>
+    <div class="page-content">
+      <main class="container">
+        <h1 class="title emerald-text">Branding</h1>
+        <p class="lede">
+          My branding materials, free to use if you desire. The only requirement is giving proper credit
+          about where the image comes from (alexflipnote.dev).
+        </p>
+        <div class="box-container message secondary-bg">
+          <span class="sun-flower-text bold">Note:</span> All images on this page are made by
+          <a href="https://twitter.com/ApollyonX69" target="_blank" rel="noreferrer">ApollyonX69</a> and licensed under
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noreferrer">CC BY-NC-SA 4.0</a>.
+        </div>
+
+        <h2 class="subtitle">Colour</h2>
+        <div class="flex-grid">
+          <div class="col-xs-8 secondary-bg swatch-info">
+            <h3>Blue Raspberry</h3>
+            <p>
+              Since my favourite is Blue Raspberry, it is therefore my main colour. Essentially, it is my branding colour
+              and should be used as the main colour, yes yes.
+            </p>
           </div>
-          <div class="col-xs-4 col-no-padding">
-            <div class="colour full white-text" style="background-color: #14bae4;">
+          <div class="col-xs-4">
+            <button class="swatch-colour blue-raspberry-bg white-text" type="button" data-copy="#14bae4" title="Copy the HEX">
               <span class="name">Blue Raspberry</span>
               <span class="hex">#14bae4</span>
-            </div>
+            </button>
           </div>
         </div>
 
-        <h2 class="subtitle nephritis-blue-text">Current avatar</h2>
-        <p>The official avatar I use under the username <b>AlexFlipnote</b> online</p>
-        <div class="flex-grid">
+        <h2 class="subtitle">Avatar</h2>
+        <p>The official avatar I use under the username <b>AlexFlipnote</b> online.</p>
+        <div class="flex-grid" style="--ratio: 4 / 3">
           <x-each items="branding.avatars" as="image">
-          <div class="col-xs-6 image-preview center-flex">
+          <div class="col-xs-6">
             <x-html src="partials/branding-image.html"/>
           </div>
           </x-each>
         </div>
 
-        <h2 class="subtitle nephritis-blue-text">Reference sheet</h2>
-        <p>Here is the reference sheet for the character associated with the branding <b>AlexFlipnote</b></p>
-        <div class="flex-grid">
-          <img class="col-xs-12" src="/static/images/branding/sheet.png" draggable="false">
-        </div>
+        <h2 class="subtitle">Reference sheet</h2>
+        <p>The reference sheet for the character associated with the branding <b>AlexFlipnote</b>.</p>
+        <a href="/static/images/branding/sheet.png" target="_blank">
+          <img class="sheet" src="/static/images/branding/sheet.png" alt="AlexFlipnote's reference sheet" loading="lazy" draggable="false">
+        </a>
 
-        <h2 class="subtitle nephritis-blue-text">xelA (simplified version)</h2>
-        <p>The avatar used for xelA, which is a simplified version of the official avatar</p>
-        <x-each items="branding.xelaRows" as="row">
+        <h2 class="subtitle">xelA <span class="label">{{ branding.xela.length }}</span></h2>
+        <p>The avatar used for xelA, a simplified version of the official one, dressed up for every season.</p>
         <div class="flex-grid">
-          <x-each items="row" as="image">
-          <div class="col-xs image-preview center-flex">
+          <x-each items="branding.xela" as="image">
+          <div class="col-xs-6 col-md-3">
             <x-html src="partials/branding-image.html"/>
           </div>
           </x-each>
         </div>
-        </x-each>
-      </div>
-    </section>
+      </main>
 
-    <x-html src="partials/footer.html"/>
+      <x-html src="partials/footer.html"/>
+    </div>
   </body>
 </html>

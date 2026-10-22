@@ -2,6 +2,7 @@
 title: Create SSH Key
 description: How to create a SSH Key and take usage of it
 date: 2018-11-27
+author: AlexFlipnote
 ---
 # 0. Installing SSH Key {#0-installing-ssh-key}
 If you have the latest `Windows 10` update, you should already have the OpenSSH installed.

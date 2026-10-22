@@ -24,8 +24,8 @@ const XELA_SEASONS = {
 
 const xela = Object.entries(XELA_SEASONS).map(([name, season]) => image(name, `xelA: ${season}`))
 
-/** The branding page's images, xelA's in rows of three. */
+/** The branding page's images. */
 export default {
   avatars: [image("avatar_full", "Full body"), image("avatar", "1:1 avatar version")],
-  xelaRows: Array.from({ length: Math.ceil(xela.length / 3) }, (_, i) => xela.slice(i * 3, i * 3 + 3))
+  xela
 }

@@ -1,46 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="auto-theme">
   <head>
     <x-html src="partials/head.html"/>
     <x-seo title="{{ page.title }}" description="{{ page.description }}" section="Docs" name="{{ page.title }}"/>
   </head>
-  <body class="dark-theme github">
-    <div class="box-container highlight-flat no-border-radius" style="margin-bottom: 0;">
-      <p class="container light-text no-margin no-padding topbar monospace" style="font-size: 16px;">
-        /<a href="/">home</a>/<a href="/docs/">docs</a>/{{ page.id }}.md
-      </p>
-    </div>
-    <div class="paper-container">
-      <x-if value="page.banner">
-      <div class="ribbon secondary custom"></div>
-      <style>
-        .custom {
-          background: url('{{ page.banner }}') !important;
-          background-repeat: no-repeat;
-          background-size: cover !important;
-          background-position: center;
-        }
-      </style>
-      </x-if>
-      <x-if not="page.banner">
-      <div class="ribbon secondary"></div>
-      </x-if>
-      <div class="paper markdown-jekyll">
-        <div class="blog-title text-center">
-          <h1 class="no-margin no-padding no-border">{{ page.title }}</h1>
-          <p class="italic no-margin no-padding no-border">{{ page.description }}</p>
-        </div>
-        <div class="blog-splitter">
-          <hr class="blog-split-yes">
-          <div class="blog-labels text-center">
-            <span class="label secondary">📅 {{ page.dateText }}</span>
-            <span class="label secondary">⏱ {{ page.readingTime }}</span>
-            <span class="label secondary">📝 {{ page.author }}</span>
+  <body class="github page">
+    <x-html src="partials/navbar.html"/>
+
+    <div class="page-content">
+      <main class="paper-container">
+        <article class="paper markdown-jekyll">
+          <header class="doc-head text-center">
+            <h1>{{ page.title }}</h1>
+            <p class="italic">{{ page.description }}</p>
+          </header>
+          <div class="doc-split">
+            <hr>
+            <div class="doc-labels">
+              <span class="label">📅 {{ page.dateText }}</span>
+              <span class="label">⏱ {{ page.readingTime }}</span>
+              <span class="label">📝 {{ page.author }}</span>
+            </div>
           </div>
-        <!-- The doc goes after this </div>, not on a line of its own, where every line of it would be indented, code blocks included -->
-        </div>{{{ page.html }}}
-      </div>
+          {{{ page.html }}}
+        </article>
+      </main>
+
+      <x-html src="partials/footer.html"/>
     </div>
-    <x-html src="partials/footer.html"/>
   </body>
 </html>

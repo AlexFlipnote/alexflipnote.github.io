@@ -2,6 +2,7 @@
 title: Getting started with SCSS
 description: Learning the basics of SCSS
 date: 2019-02-28
+author: AlexFlipnote
 ---
 # 0. Installing SCSS {#0-installing-scss}
 If you haven't already, you need to install SCSS to take usage of this language.

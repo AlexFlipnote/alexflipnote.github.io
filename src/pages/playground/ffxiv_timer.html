@@ -1,26 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="auto-theme">
   <head>
     <x-html src="partials/head.html"/>
-    <x-seo title="FFXIV Event &amp; Reset Timers" description="Track Final Fantasy XIV weekly resets, daily duties, and the 9-day housing lottery cycle in your local timezone."/>
-    <link href="/static/css/ffxiv_timer.css" type="text/css" rel="stylesheet"/>
+    <x-seo title="FFXIV timers moved out" description="Got too big for the playground, it lives at ffxiv.watch now."/>
+    <!-- Without JS there's no countdown, this takes over -->
+    <noscript><meta http-equiv="refresh" content="6;url=https://ffxiv.watch/"></noscript>
   </head>
-  <body class="dark-theme github">
-    <h1 class="header">FFXIV Timers</h1>
-    <div class="tz-note">
-      Times displayed are based on your browser's timezone.
+  <body class="github page">
+    <x-html src="partials/navbar.html"/>
+
+    <div class="page-content">
+      <main class="container">
+        <h1 class="title emerald-text">This one moved out.</h1>
+        <p class="lede">
+          The FFXIV timers got too big for the playground. More timers, more tabs, more everything,
+          so they packed their bags and got a place of their own.
+        </p>
+
+        <section class="box-container primary-bg move" data-move>
+          <div class="move-ends monospace">
+            <span class="move-from">~/playground/ffxiv_timer</span>
+            <span class="move-to">ffxiv.watch</span>
+          </div>
+          <div class="move-track" aria-hidden="true">
+            <span class="move-fill"></span>
+            <span class="move-box">📦</span>
+          </div>
+          <p class="move-status text-center" data-move-status aria-live="polite">Taking you there in <strong data-move-count>6</strong>...</p>
+          <div class="buttons">
+            <a class="btn blue-raspberry-bg white-text" href="https://ffxiv.watch/">Take me there now</a>
+            <button class="btn" type="button" data-move-stay>Stay in the playground</button>
+          </div>
+        </section>
+      </main>
+
+      <x-html src="partials/footer.html"/>
     </div>
 
-    <main id="timers"></main>
+    <script>
+      const SECONDS = 6
+      const move = document.querySelector("[data-move]")
+      const count = document.querySelector("[data-move-count]")
+      let left = SECONDS
 
-    <dialog id="info-modal">
-      <div class="modal-header">
-        <h2 id="modal-title" class="title" style="margin: 0;"></h2>
-        <button id="modal-close" class="close-btn">&times;</button>
-      </div>
-      <div id="modal-content" class="modal-body"></div>
-    </dialog>
+      const timer = setInterval(() => {
+        left -= 1
+        count.textContent = left
+        if (left <= 0) {
+          clearInterval(timer)
+          location.href = "https://ffxiv.watch/"
+        }
+      }, 1000)
 
-    <script src="/static/js/ffxiv_timer.js" type="text/javascript"></script>
+      document.querySelector("[data-move-stay]").addEventListener("click", (event) => {
+        clearInterval(timer)
+        move.classList.add("is-staying")
+        document.querySelector("[data-move-status]").textContent = "Fair enough, staying put. It's always at ffxiv.watch if you change your mind."
+        event.currentTarget.replaceWith(Object.assign(document.createElement("a"), {
+          className: "btn secondary-bg theme-text", href: "/playground/", textContent: "Back to the playground"
+        }))
+      })
+    </script>
   </body>
 </html>

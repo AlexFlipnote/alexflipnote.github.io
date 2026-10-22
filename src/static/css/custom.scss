@@ -1,0 +1,384 @@
+$blue-raspberry: #14bae4;
+$link: #1eaedb;
+$radius: .375rem;
+
+// Modesta's sm breakpoint, where its columns stack
+$phone: 550px;
+
+@mixin phone {
+  @media (max-width: $phone) { @content; }
+}
+
+a { color: $link; text-decoration: none; }
+
+/*
+ * The navbar stays put and only what's under it scrolls, so the scrollbar starts below it.
+ * Both keep room for a scrollbar, a page that has one lines up with a page that doesn't.
+ */
+body.page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.page-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+
+  > main { flex: 1; width: 100%; }
+}
+
+.title {
+  font-size: 3em;
+  margin: 0;
+
+  @include phone { font-size: 2em; }
+}
+
+.subtitle {
+  font-size: 1.5em;
+  margin: 2em 0 .75em;
+}
+
+.subtitle .label, .title .label { font-size: 14px; }
+
+.lede {
+  font-size: 18px;
+  margin: .5em 0 1.5em;
+
+  // Links in running text are underlined, so they read as links whatever their colour
+  a {
+    text-decoration: underline;
+    text-underline-offset: .15em;
+  }
+}
+
+// The 404's path to where it was meant to go
+.crumb {
+  margin: 0 0 .5em;
+  opacity: .6;
+
+  a:not([class]) { color: inherit; }
+}
+
+// Navbar
+.topbar {
+  // Above what scrolls under it, so the shadow falls on the page
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+  flex-shrink: 0;
+  overflow-y: hidden;
+  position: relative;
+  scrollbar-gutter: stable;
+  z-index: 1;
+
+  .container {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    height: 3.5rem;
+    justify-content: space-between;
+    padding-top: 0;
+
+    // The path gets its own line, the links go under it
+    @include phone {
+      flex-wrap: wrap;
+      height: auto;
+      padding: .6rem 1rem;
+      row-gap: .35rem;
+    }
+  }
+
+  // The old /home/docs/index.md bar, the path to the page
+  .path {
+    font-size: 15px;
+    margin: 0;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+
+    // A long doc name wraps on its own line instead of being cut off
+    @include phone {
+      overflow-wrap: anywhere;
+      white-space: normal;
+      width: 100%;
+    }
+
+    .blue-raspberry-text { font-weight: bold; }
+    a:not([class]) { color: var(--modesta-text); opacity: .7; }
+  }
+
+  ul {
+    display: flex;
+    flex-shrink: 0;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    overflow-x: auto;
+    padding: 0;
+    scrollbar-width: none;
+
+    @include phone { gap: .9rem; }
+  }
+
+  ul a {
+    color: var(--modesta-text);
+    font-weight: bold;
+    opacity: .7;
+
+    // mothwing's activeLinks marks the page's own link and the section it's in
+    &[aria-current] { color: $blue-raspberry; opacity: 1; }
+  }
+}
+
+// Homepage, the avatar sits next to the title
+.intro {
+  align-items: center;
+  display: flex;
+  gap: 1.25rem;
+
+  .now { margin: .25em 0 0; opacity: .7; }
+}
+
+.avatar {
+  border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
+  height: 6rem;
+  width: 6rem;
+}
+
+// Boxes in a grid, the whole box is the link
+.tile {
+  border: 1px solid var(--modesta-secondary);
+  border-radius: $radius;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  transition: filter 200ms ease, transform 200ms ease;
+
+  // As tall as the others in its grid row
+  .flex-grid & { height: 100%; }
+
+  p { margin: .35em 0 0; }
+  .tile-title { font-weight: bold; }
+  .tile-title::after { content: ""; inset: 0; position: absolute; }
+  .tile-desc { flex: 1; }
+  .tile-foot { font-size: 14px; opacity: .5; overflow-wrap: anywhere; }
+
+  &:has(.tile-title:hover) {
+    filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, .6));
+    transform: translateY(-.25em);
+  }
+}
+
+// Branding
+.swatch-info {
+  padding: 1em 1.5em;
+
+  h3 { margin: 0 0 .25em; }
+  p { margin: 0; }
+}
+
+.swatch-colour {
+  border: 0;
+  cursor: copy;
+  font: inherit;
+  height: 100%;
+  min-height: 160px;
+  position: relative;
+  width: 100%;
+
+  .name, .hex {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+  }
+
+  .name { left: .5em; top: .25em; }
+  .hex { bottom: .5em; right: .5em; }
+}
+
+.image-preview {
+  $checker: linear-gradient(45deg, var(--modesta-secondary) 25%, transparent 0 75%, var(--modesta-secondary) 0);
+
+  align-items: center;
+  aspect-ratio: var(--ratio, 1);
+  background-color: var(--modesta-primary);
+  background-image: $checker, $checker;
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  border: 3px solid var(--modesta-secondary);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 2.5em 1em;
+  position: relative;
+
+  img {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .image-text {
+    font-weight: bold;
+    left: .5em;
+    position: absolute;
+    top: .4em;
+  }
+
+  .image-links {
+    bottom: .5em;
+    position: absolute;
+    right: .5em;
+  }
+}
+
+.sheet {
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+}
+
+// Docs
+.doc {
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: space-between;
+  position: relative;
+
+  @include phone { align-items: flex-start; flex-direction: column; gap: .25em; }
+
+  + .doc { margin-top: .75em; }
+
+  .label {
+    margin: .2em 0 .2em 6px;
+
+    @include phone { margin: .2em 6px .2em 0; }
+  }
+}
+
+.doc-labels {
+  flex-shrink: 0;
+  text-align: right;
+
+  @include phone { text-align: left; }
+}
+
+.markdown-jekyll {
+  // A heading is a link to itself, in its own colour, Modesta's markdown underlines it on hover
+  .heading-link {
+    color: inherit;
+    text-underline-offset: .15em;
+  }
+
+  .doc-head h1 {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .doc-head p { margin: .25em 0 0; opacity: .7; }
+}
+
+.doc-split {
+  position: relative;
+
+  .doc-labels {
+    position: absolute;
+    text-align: center;
+    top: -.6em;
+    width: 100%;
+
+    @include phone { position: relative; top: 0; }
+  }
+}
+
+// 404
+.lost-title { font-size: 3em; }
+.cursor { animation: blink 1s step-end infinite; }
+
+.notfound-container {
+  margin-top: 1rem;
+
+  .notfound-btn {
+    padding: .5em 1em;
+    transition: opacity ease-in-out .25s;
+
+    &:hover { opacity: .5; }
+  }
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+// Moved out of the playground, a box on its way to the new place
+.move {
+  border-radius: $radius;
+  max-width: 42rem;
+
+  &.is-staying .move-fill,
+  &.is-staying .move-box { animation-play-state: paused; }
+}
+
+.move-ends {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  opacity: .7;
+}
+
+.move-from { text-decoration: line-through; }
+.move-to { color: $blue-raspberry; }
+
+.move-track {
+  background-color: var(--modesta-secondary);
+  border-radius: 1rem;
+  height: .35rem;
+  margin: 2.25rem 0 1.5rem;
+  position: relative;
+}
+
+.move-fill {
+  animation: move-fill 6s linear forwards;
+  background-color: $blue-raspberry;
+  border-radius: inherit;
+  inset: 0 auto 0 0;
+  position: absolute;
+}
+
+.move-box {
+  animation: move-box 6s linear forwards, hop .5s ease-in-out infinite alternate;
+  font-size: 1.6rem;
+  left: 0;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -60%);
+}
+
+@keyframes move-fill { from { width: 0; } to { width: 100%; } }
+@keyframes move-box { from { left: 0; } to { left: 100%; } }
+@keyframes hop { to { margin-top: -.3rem; } }
+
+// Footer
+footer {
+  &.box-container { margin: 3em 0 0; }
+
+  p { margin: 0; }
+  .links a, .links span { margin: 0 .25em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

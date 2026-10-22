@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <x-html src="partials/head.html"/>
+    <x-html src="partials/playground-head.html"/>
     <x-seo title="Keep Screen On" description="Stop your screen from dimming or locking while this tab is open. No timers, no clicks, just a toggle."/>
-    <link href="/static/css/keepscreenon.css" type="text/css" rel="stylesheet"/>
+    <x-css src="/playground/keepscreenon/style.css"/>
   </head>
   <body class="dark-theme github">
     <h1 class="header">Keep Screen On</h1>
@@ -28,6 +28,6 @@
     </div>
     <div id="unsupported" class="unsupported hidden">Your browser doesn't support the Wake Lock API, sorry.</div>
 
-    <script src="/static/js/keepscreenon.js" type="text/javascript"></script>
+    <x-js src="/playground/keepscreenon/script.js"/>
   </body>
 </html>
