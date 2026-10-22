@@ -11,20 +11,20 @@ function getTime(hex) {
   var second = pad(now.getSeconds())
 
   if (hex == "hex") {
-    return hour.toString() + minute.toString() + second.toString()
+    return hour + minute + second
   } else {
     return hour + ":" + minute + ":" + second
   }
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function() {
   var bg = document.getElementById("bg")
   var time = document.getElementById("time")
   var timetext = document.getElementById("timetext")
   var metaThemeColor = document.querySelector("meta[name=theme-color]")
 
   function timeInHex() {
-    gettime = "#" + getTime("hex") // Lazy HEX maker
+    var gettime = "#" + getTime("hex") // Lazy HEX maker
 
     bg.style.backgroundColor = gettime // Website background
     time.innerHTML = gettime // Upper time

@@ -19,7 +19,7 @@ function updateUI() {
 async function requestWakeLock() {
   try {
     wakeLock = await navigator.wakeLock.request("screen")
-  } catch (err) {
+  } catch {
     enabled = false
     updateUI()
   }
