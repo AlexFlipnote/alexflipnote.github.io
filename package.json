@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "marked": "18.1.1",
-    "mothwing": "^0.1.3",
+    "mothwing": "^0.3.2",
     "sass": "^1.105.2"
   }
 }
