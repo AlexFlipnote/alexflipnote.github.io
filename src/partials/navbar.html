@@ -1,10 +1,19 @@
-<nav class="topbar primary-bg">
-  <div class="container">
-    <p class="path monospace"><x-path/></p>
-    <ul>
-      <li><a href="/playground/">Playground</a></li>
-      <li><a href="/docs/">Docs</a></li>
-      <li><a href="/branding/">Branding</a></li>
-    </ul>
+<nav class="navbar primary-bg">
+  <div class="navbar-inner container">
+    <button class="navbar-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navbar-links">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <line class="burger-top" x1="4" y1="7" x2="20" y2="7"/>
+        <line class="burger-middle" x1="4" y1="12" x2="20" y2="12"/>
+        <line class="burger-bottom" x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
+    <a href="/" class="navbar-title">AlexFlipnote</a>
+    <!-- Before the links, so the open menu is drawn over it -->
+    <div class="navbar-backdrop" aria-hidden="true"></div>
+    <div class="navbar-links" id="navbar-links">
+      <a href="/playground/">Playground</a>
+      <a href="/docs/">Docs</a>
+      <a href="/branding/">Branding</a>
+    </div>
   </div>
 </nav>

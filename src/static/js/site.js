@@ -34,9 +34,30 @@ function swatches() {
   })
 }
 
+/** The phone's menu, opened by the hamburger. */
+function navbar() {
+  const nav = document.querySelector(".navbar")
+  if (!nav) return
+  const hamburger = nav.querySelector(".navbar-hamburger")
+
+  /** @param {boolean} opened */
+  const setOpened = (opened) => {
+    nav.classList.toggle("opened", opened)
+    hamburger.setAttribute("aria-expanded", opened)
+  }
+
+  hamburger.addEventListener("click", () => setOpened(!nav.classList.contains("opened")))
+  // The backdrop covers the page while the menu is open, so a tap next to it only closes it
+  nav.querySelector(".navbar-backdrop").addEventListener("click", () => setOpened(false))
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setOpened(false)
+  })
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   tick()
   yearsSince()
   swatches()
+  navbar()
   setInterval(tick, 1000)
 })
