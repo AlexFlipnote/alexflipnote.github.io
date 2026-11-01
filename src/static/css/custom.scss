@@ -257,7 +257,17 @@ $ease: cubic-bezier(.16, 1, .3, 1);
   display: flex;
   gap: 1.25rem;
 
-  .now { margin: .25em 0 0; opacity: .7; }
+  // Faded through its colour rather than opacity, so the flag keeps its own
+  .now {
+    color: color-mix(in srgb, var(--modesta-text) 70%, transparent);
+    margin: .25em 0 0;
+  }
+
+  .flag {
+    height: 1.4em;
+    vertical-align: middle;
+    width: 1.4em;
+  }
 }
 
 .avatar {
