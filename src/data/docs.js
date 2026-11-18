@@ -93,6 +93,8 @@ export default () => {
       title: meta.title,
       description: meta.description,
       author: meta.author ?? "Guest",
+      // Still built at its URL for anyone with the link, but left out of the list, the sitemap and search engines
+      hidden: meta.hidden === "true",
       date,
       dateText: format(date, { day: "2-digit", month: "short", year: "numeric" }),
       listDate: format(date, { day: "numeric", month: "long", year: "numeric" }),
@@ -107,6 +109,6 @@ export default () => {
 
   return {
     list: docs,
-    months: [...Map.groupBy(docs, (doc) => doc.month)].map(([month, list]) => ({ month, docs: list }))
+    months: [...Map.groupBy(docs.filter((doc) => !doc.hidden), (doc) => doc.month)].map(([month, list]) => ({ month, docs: list }))
   }
 }

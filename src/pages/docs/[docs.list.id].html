@@ -2,7 +2,7 @@
 <html lang="en" class="auto-theme">
   <head>
     <x-html src="partials/head.html"/>
-    <x-seo title="{{ page.title }}" description="{{ page.description }}" section="Docs" name="{{ page.title }}"/>
+    <x-seo title="{{ page.title }}" description="{{ page.description }}" section="Docs" name="{{ page.title }}" noindex="{{ page.hidden }}"/>
   </head>
   <body class="github page">
     <x-html src="partials/navbar.html"/>
