@@ -5,7 +5,7 @@ date: 2026-11-18
 author: AlexFlipnote
 hidden: true
 ---
-> Last updated: 18 November 2026
+> Last updated: 20 November 2026
 
 BluePod is an Android app by AlexFlipnote that shows the battery of your wireless earbuds and lets you change their settings. This policy explains what the app does with your data.
 
@@ -32,7 +32,15 @@ This is deleted when you use "Forget buds" in the app, clear the app's data, or 
 
 ## Debug reports
 
-If you choose "Send debug report" in Settings, BluePod creates a text report with your phone model, Android version, the app's settings and recent app logs, so a problem can be investigated. Your earbuds' Bluetooth address and serial numbers are left out. The report is only sent if you pick where to send it through Android's share menu, and it goes only to the person or app you choose.
+Debug reports are opt-in. If you choose "Send debug report" in Settings, BluePod creates a text report so a problem can be investigated, or support for new earbuds can be added. It contains:
+
+- Your phone model and Android version, and the app's version, permissions and settings
+- What Android knows about your connected headphones: their name, the Bluetooth services they offer and how they are connected
+- A count of nearby Bluetooth broadcasts by manufacturer, without any device addresses
+- Which known earbud makers' apps are installed
+- Recent app logs
+
+Bluetooth addresses and serial numbers are removed from the report, including from the logs. The report is only sent if you pick where to send it through Android's share menu, and it goes only to the person or app you choose.
 
 ## Children
 
